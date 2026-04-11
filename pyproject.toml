@@ -5,7 +5,7 @@ description = "Agentic LLM interface for SAST scanning"
 requires-python = ">=3.11"
 readme = "README.md"
 license = "MIT"
-dependencies = []
+dependencies = ["requests"]
 
 [project.optional-dependencies]
 dev = [

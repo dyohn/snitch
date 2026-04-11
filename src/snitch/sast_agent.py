@@ -1,0 +1,84 @@
+import json
+from typing import Any, Dict
+import requests
+
+from snitch.prompts import LLM_SAST_PROMPT, LLM_USER_TEMPLATE
+
+
+class SastAgent:
+    def __init__(
+        self,
+        model_name: str = "llama3.1",
+        base_url: str = "http://localhost:11434",
+    ):
+        """Local FREE detector powered by Ollama
+
+        Requirements:
+          - Ollama installed (https://ollama.com)
+          - Ollama server running:  `ollama serve`
+          - Model pulled, e.g.,:    `ollama pull llama3.1`
+        """
+        self.model_name = model_name
+        self.base_url = base_url.rstrip("/")
+        self.chat_url = f"{self.base_url}/api/chat"
+
+    def _call_llm_raw(self, text: str) -> str:
+        """Call Ollama chat aPI and return raw text response"""
+        payload = {
+            "model": self.model_name,
+            "messages": [
+                {"role": "system", "content": LLM_SAST_PROMPT},
+                {
+                    "role": "user",
+                    "content": LLM_USER_TEMPLATE.format(text=text),
+                },
+            ],
+            "stream": False,
+        }
+
+        resp = requests.post(self.chat_url, json=payload)
+        resp.raise_for_status()
+        data = resp.json()
+
+        # Ollama chat API returns:
+        # {"message": {"role": "...", "content": "..."}, ...}
+        raw = data.get("message", {}).get("content", "")
+        if not raw:
+            # fallback if something weird happens
+            raw = "{}"
+        return raw
+
+    def _parse_json(self, raw: str) -> Dict[str, Any]:
+        raw = raw.strip()
+
+        # Handle ```json ...``` wrappers if the model adds them
+        if raw.startswith("```"):
+            raw = raw.strip("`")
+            if raw.lower().startswith("json"):
+                raw = raw[4:].strip()
+
+        try:
+            parsed = json.loads(raw)
+        except Exception:
+            parsed = {
+                "where": "skipped",
+                "what": "skipped",
+                "why": "skipped",
+                "fix": "skipped",
+            }
+
+        # TODO Normalize / cleanup here?
+
+        return parsed
+
+    def analyze(self, text: str) -> Dict[str, Any]:
+        """Return a dict with:
+        {
+            "where": file:startLine-endLine,
+            "what": "...",
+            "why": "...",
+            "fix": "..."
+        }
+        """
+        raw = self._call_llm_raw(text)
+        return self._parse_json(raw)
