@@ -9,7 +9,7 @@ def read_sourcecode(path: Path) -> str:
         return f.read()
 
 
-def read_all_from_folder(path: Path) -> list[tuple(str, str)]:
+def read_all_from_folder(path: Path) -> list[tuple[str, str]]:
     """Return a list of the contents of a folder, where each entry in the listing is a
     tuple of the form (filename, file_content)
     """
