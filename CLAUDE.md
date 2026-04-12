@@ -45,12 +45,11 @@ Each finding dict has four keys: `where` (file:startLine-endLine), `what`, `why`
 
 - **`sast_agent.py`** — `SastAgent` class: the core LLM client. Builds the HTTP payload from prompts, POSTs to Ollama's `/api/chat` endpoint (default: `http://localhost:11434`), and parses the JSON response. Falls back to a `"skipped"` sentinel dict on parse failure.
 - **`prompts.py`** — System prompts. `LLM_SAST_PROMPT` is the active prompt (injected via role `system`); `LLM_USER_TEMPLATE` wraps user code. `AMBITIOUS_LLM_SAST_PROMPT` is defined but not yet wired in.
-- **`file_utils.py`** — `read_sourcecode(path)` is implemented (UTF-8, errors ignored). `read_all_from_folder(path)` is a stub returning `list[tuple[str, str]]`.
+- **`file_utils.py`** — `read_sourcecode(path)` reads a file as a UTF-8 string (errors ignored). `read_all_from_folder(path)` recursively walks a directory and returns `list[tuple[str, str]]` (filename, content); symlinks are skipped.
 - **`repo_io.py`** — `SourceCodeFile` dataclass and `RepositoryIO` class skeleton. `RepositoryIO.read_repository()` is a stub.
 
 ### What's not yet implemented
 
-- `file_utils.read_all_from_folder()` — directory walker
 - `RepositoryIO.read_repository()` — repository-level file discovery
 - Orchestrator / CLI entry point for end-to-end scanning
 - Test suite (`tests/` is empty)
