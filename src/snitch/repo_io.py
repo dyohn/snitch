@@ -1,5 +1,8 @@
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Generator
+
+from snitch.file_utils import read_all_from_folder
 
 
 @dataclass
@@ -14,11 +17,14 @@ class RepositoryIO:
 
     def __init__(self, repo_path: Path):
         self.repo_path = repo_path
-        self.files: list[SourceCodeFile] = list()
 
-    def read_repository(self, path: Path) -> list[SourceCodeFile]:
-        """Walk the contents of a provided folder path, gathering up the contents of all the
-        source code files into a listing that can be used to communicate with the SastAgent
+    def read_repository(self) -> Generator[SourceCodeFile, None, None]:
+        """Yield a SourceCodeFile for every file found under repo_path.
+        Symlinks are skipped. Directories are walked recursively.
         """
-        # TODO implement
-        pass
+        for filepath, content in read_all_from_folder(self.repo_path):
+            yield SourceCodeFile(
+                filename=filepath.name,
+                filepath=filepath,
+                content=content,
+            )
