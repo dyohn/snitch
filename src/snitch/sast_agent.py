@@ -1,8 +1,11 @@
 import json
+from collections.abc import Iterator
 from typing import Any, Dict
 import requests
 
+from snitch.models import SastResult
 from snitch.prompts import LLM_SAST_PROMPT, LLM_USER_TEMPLATE
+from snitch.repo_io import RepositoryIO
 
 
 class SastAgent:
@@ -70,6 +73,16 @@ class SastAgent:
         # TODO Normalize / cleanup here?
 
         return parsed
+
+    def run(self, repo: RepositoryIO) -> Iterator[SastResult]:
+        """Iterate every file in repo and yield a SastResult for each."""
+        for src_file in repo.read_repository():
+            finding = self.analyze(src_file.content)
+            yield SastResult(
+                filename=src_file.filename,
+                filepath=src_file.filepath,
+                finding=finding,
+            )
 
     def analyze(self, text: str) -> Dict[str, Any]:
         """Return a dict with:
