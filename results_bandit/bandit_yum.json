@@ -1,0 +1,870 @@
+{
+  "errors": [
+    {
+      "filename": "yum/bin/yum-updatesd.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/callback.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/cli.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/completion-helper.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/docs/sphinxdocs/rstgenerator.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/output.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/po/pygettext.py",
+      "reason": "exception while scanning file"
+    },
+    {
+      "filename": "yum/rpmUtils/miscutils.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/rpmUtils/oldUtils.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/rpmUtils/tests/updates-test.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/rpmUtils/transaction.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/rpmUtils/updates.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/shell.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/test/packagetests.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/test/rpmdb-cache.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/test/simpleobsoletestests.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/test/simpleupdatetests.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/test/skipbroken-tests.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/test/testbase.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/test/transactiontests.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/test/yum-leak-test.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/utils.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum-cron/yum-cron.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum-updatesd.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/__init__.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/comps.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/config.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/depsolve.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/drpm.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/history.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/i18n.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/igroups.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/logginglevels.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/mdparser.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/metalink.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/misc.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/packageSack.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/packages.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/parser.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/pgpmsg.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/pkgtag_db.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/plugins.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/repoMDObject.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/repos.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/rpmsack.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/rpmtrans.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/sqlitesack.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/sqlutils.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/transactioninfo.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/update_md.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yum/yumRepo.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yumcommands.py",
+      "reason": "syntax error while parsing AST from file"
+    },
+    {
+      "filename": "yum/yummain.py",
+      "reason": "syntax error while parsing AST from file"
+    }
+  ],
+  "generated_at": "2026-04-14T14:47:44Z",
+  "metrics": {
+    "_totals": {
+      "CONFIDENCE.HIGH": 6,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 6,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 44923,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/bin/yum-updatesd.py": {
+      "loc": 21,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/callback.py": {
+      "loc": 191,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/cli.py": {
+      "loc": 2089,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/completion-helper.py": {
+      "loc": 64,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/docs/sphinxdocs/conf.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 30,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/docs/sphinxdocs/rstgenerator.py": {
+      "loc": 132,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/output.py": {
+      "loc": 2915,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/po/pygettext.py": {
+      "loc": 334,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/rpmUtils/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 4,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/rpmUtils/arch.py": {
+      "CONFIDENCE.HIGH": 2,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 378,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/rpmUtils/miscutils.py": {
+      "loc": 316,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/rpmUtils/oldUtils.py": {
+      "loc": 290,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/rpmUtils/tests/updates-test.py": {
+      "loc": 48,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/rpmUtils/transaction.py": {
+      "loc": 134,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/rpmUtils/updates.py": {
+      "loc": 508,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/shell.py": {
+      "loc": 400,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/check-po-yes-no.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 112,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/complexremovetests.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 61,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/depsolvetests.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 924,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/merge-history-transactions-tests.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 716,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/misc-tests.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 135,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/operationstests.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 240,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/packagetests.py": {
+      "loc": 213,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/pubringtests.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 52,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/revdepupdatetests.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 51,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/rpmdb-cache.py": {
+      "loc": 71,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/settestpath.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 4,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/simpleobsoletestests.py": {
+      "loc": 624,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/simpleremovetests.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 99,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/simpleupdatetests.py": {
+      "loc": 1018,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/skipbroken-tests.py": {
+      "loc": 738,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/testbase.py": {
+      "loc": 434,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/transactiontests.py": {
+      "loc": 139,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/test/yum-leak-test.py": {
+      "loc": 114,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/utils.py": {
+      "loc": 354,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum-cron/yum-cron.py": {
+      "loc": 550,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum-updatesd.py": {
+      "loc": 667,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/Errors.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 120,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/__init__.py": {
+      "loc": 5626,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/callbacks.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 115,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/comps.py": {
+      "loc": 717,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/config.py": {
+      "loc": 1086,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/constants.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 69,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/depsolve.py": {
+      "loc": 1321,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/drpm.py": {
+      "loc": 267,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/failover.py": {
+      "CONFIDENCE.HIGH": 1,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 1,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 95,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/fssnapshots.py": {
+      "CONFIDENCE.HIGH": 2,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 281,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/history.py": {
+      "loc": 1376,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/i18n.py": {
+      "loc": 420,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/igroups.py": {
+      "loc": 229,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/logginglevels.py": {
+      "loc": 159,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/mdparser.py": {
+      "loc": 147,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/metalink.py": {
+      "loc": 217,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/misc.py": {
+      "loc": 1033,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/packageSack.py": {
+      "loc": 849,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/packages.py": {
+      "loc": 1865,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/parser.py": {
+      "loc": 164,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/pgpmsg.py": {
+      "loc": 1041,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/pkgtag_db.py": {
+      "loc": 100,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/plugins.py": {
+      "loc": 576,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/repoMDObject.py": {
+      "loc": 230,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/repos.py": {
+      "loc": 369,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/rpmsack.py": {
+      "loc": 1500,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/rpmtrans.py": {
+      "loc": 477,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/sqlitesack.py": {
+      "loc": 1444,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/sqlutils.py": {
+      "loc": 153,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/transactioninfo.py": {
+      "loc": 714,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/update_md.py": {
+      "loc": 537,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/updateinfo.py": {
+      "CONFIDENCE.HIGH": 1,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 1,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 415,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yum/yumRepo.py": {
+      "loc": 1700,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yumcommands.py": {
+      "loc": 4040,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "yum/yummain.py": {
+      "loc": 301,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "318             return \"ppc64p7\"\n319     except:\n320         pass\n321 \n",
+      "col_offset": 4,
+      "end_col_offset": 12,
+      "filename": "yum/rpmUtils/arch.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Try, Except, Pass detected.",
+      "line_number": 319,
+      "line_range": [
+        319,
+        320
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b110_try_except_pass.html",
+      "test_id": "B110",
+      "test_name": "try_except_pass"
+    },
+    {
+      "code": "380             return arch\n381         except:\n382             pass\n383         \n",
+      "col_offset": 8,
+      "end_col_offset": 16,
+      "filename": "yum/rpmUtils/arch.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Try, Except, Pass detected.",
+      "line_number": 381,
+      "line_range": [
+        381,
+        382
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b110_try_except_pass.html",
+      "test_id": "B110",
+      "test_name": "try_except_pass"
+    },
+    {
+      "code": "118         random.seed()\n119         self.offset = random.randint(0, 37)\n120     \n",
+      "col_offset": 22,
+      "end_col_offset": 43,
+      "filename": "yum/yum/failover.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 119,
+      "line_range": [
+        119
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "7 \n8 import subprocess\n9 from yum import _\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "yum/yum/fssnapshots.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 8,
+      "line_range": [
+        8
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "71     if not names: # Could be just broken...\n72         p = subprocess.Popen([\"/sbin/lvm\", \"vgs\", \"-o\", \"vg_name\"],\n73                              stdout=subprocess.PIPE, stderr=subprocess.PIPE)\n74         err = p.wait()\n",
+      "col_offset": 12,
+      "end_col_offset": 76,
+      "filename": "yum/yum/fssnapshots.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 72,
+      "line_range": [
+        72,
+        73
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "294             data = repo.repoXML.getData('updateinfo');\n295         except:\n296             continue # No data is fine...\n297 \n",
+      "col_offset": 8,
+      "end_col_offset": 20,
+      "filename": "yum/yum/updateinfo.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Try, Except, Continue detected.",
+      "line_number": 295,
+      "line_range": [
+        295,
+        296
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b112_try_except_continue.html",
+      "test_id": "B112",
+      "test_name": "try_except_continue"
+    }
+  ]
+}
