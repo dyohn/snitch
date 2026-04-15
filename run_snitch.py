@@ -6,6 +6,7 @@ Usage (venv must be active):
 """
 
 import argparse
+import logging
 import sys
 from pathlib import Path
 
@@ -65,6 +66,12 @@ def build_parser() -> argparse.ArgumentParser:
 def main() -> None:
     parser = build_parser()
     args = parser.parse_args()
+
+    logging.basicConfig(
+        level=logging.DEBUG if args.verbose else logging.WARNING,
+        format="%(levelname)s %(name)s: %(message)s",
+        stream=sys.stderr,
+    )
 
     target_dir = Path(args.target_dir)
     output_dir = Path(args.output_dir)

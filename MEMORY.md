@@ -31,3 +31,17 @@ Three formatters (`write_json`, `write_csv`, `write_text`) plus a `write_output(
 ## `run_snitch.py` — CLI driver at repo root
 
 `argparse`-based script with positional `target_dir` / `output_dir` and optional `--format` (nargs="+"), `--model`, `--ollama-url`, `--verbose`. `--format` accepts multiple values in one invocation. Connection errors from Ollama produce a clear message and exit 1. Run with venv active: `python run_snitch.py <target_dir> <output_dir>`.
+
+---
+
+## Merge from collaborator branch (PR #1, 2026-04-15)
+
+Collaborator fixed the core JSON parsing problem: the LLM wraps its JSON object in prose, so `json.loads` on the full response always failed. Fix added `re.search(r'\{[^{}]*"where"[^{}]*\}', raw, re.DOTALL)` to extract the JSON object from anywhere in the response before falling back to raw parsing. Python requirement also lowered from 3.11 to 3.10. First-pass scan results collected for three repos (beaverhabits, yum, fail2ban) against llama3.1; Bandit baseline results also collected. Comparison spreadsheet and `RESULTS_README.md` added. The `.py` filter and logging instrumentation that had been added in the prior session were reverted in this merge.
+
+## `.py` filter reapplied (2026-04-15)
+
+`file_utils.read_all_from_folder` — `entry.suffix == ".py"` guard restored so non-Python files are skipped. Reverted in the collaborator merge; reapplied by request.
+
+## Logging instrumentation reapplied (2026-04-15)
+
+`sast_agent.py` — `logger = logging.getLogger(__name__)` added. DEBUG log emits raw LLM response; WARNING logs fire on both parse failure paths (regex extraction and final fallback). `run_snitch.py` — `logging.basicConfig` configured in `main()`: DEBUG level when `--verbose` is set, WARNING otherwise.

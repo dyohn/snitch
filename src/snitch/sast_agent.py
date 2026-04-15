@@ -1,11 +1,16 @@
 import json
+import logging
 import re
 from collections.abc import Iterator
 from typing import Any, Dict
+
 import requests
+
 from snitch.models import SastResult
 from snitch.prompts import LLM_SAST_PROMPT, LLM_USER_TEMPLATE
 from snitch.repo_io import RepositoryIO
+
+logger = logging.getLogger(__name__)
 
 
 class SastAgent:
@@ -46,20 +51,30 @@ class SastAgent:
         return raw
 
     def _parse_json(self, raw: str) -> Dict[str, Any]:
+        logger.debug("Raw LLM response:\n%s", raw)
         raw = raw.strip()
         match = re.search(r'\{[^{}]*"where"[^{}]*\}', raw, re.DOTALL)
         if match:
             try:
                 return json.loads(match.group())
-            except Exception:
-                pass
+            except Exception as exc:
+                logger.warning(
+                    "Regex-extracted JSON failed to parse (%s): %s",
+                    exc,
+                    match.group(),
+                )
         if raw.startswith("```"):
             raw = raw.strip("`")
             if raw.lower().startswith("json"):
                 raw = raw[4:].strip()
         try:
             return json.loads(raw)
-        except Exception:
+        except Exception as exc:
+            logger.warning(
+                "JSON parse failed (%s). Raw content was:\n%s",
+                exc,
+                raw,
+            )
             return {
                 "where": "skipped",
                 "what": "skipped",
