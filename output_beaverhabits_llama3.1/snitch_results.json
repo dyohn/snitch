@@ -1,563 +1,43 @@
 [
   {
-    "filename": "pyproject.toml",
-    "filepath": "../beaverhabits/pyproject.toml",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "start.sh",
-    "filepath": "../beaverhabits/start.sh",
-    "where": "script.sh:6-7",
-    "what": "Permission issue due to recursive directory creation",
-    "why": "Insufficient permissions may cause mkdir command to fail",
-    "fix": "Use 'mkdir -p' with '-v' option or set a default storage path"
-  },
-  {
-    "filename": "description",
-    "filepath": "../beaverhabits/.git/description",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "index",
-    "filepath": "../beaverhabits/.git/index",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "HEAD",
-    "filepath": "../beaverhabits/.git/logs/HEAD",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "HEAD",
-    "filepath": "../beaverhabits/.git/logs/refs/remotes/origin/HEAD",
-    "where": "filename:codeStartLine-codeEndLine",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "main",
-    "filepath": "../beaverhabits/.git/logs/refs/heads/main",
-    "where": "clone: from https://github.com/daya0576/beaverhabits.git",
-    "what": "Skipped (not source code)",
-    "why": "Not a valid source code file for Static Application Security Testing",
-    "fix": "None required"
-  },
-  {
-    "filename": "pack-20e6f6ccf070ac1a44ea369c81b472efcce02403.pack",
-    "filepath": "../beaverhabits/.git/objects/pack/pack-20e6f6ccf070ac1a44ea369c81b472efcce02403.pack",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "pack-20e6f6ccf070ac1a44ea369c81b472efcce02403.idx",
-    "filepath": "../beaverhabits/.git/objects/pack/pack-20e6f6ccf070ac1a44ea369c81b472efcce02403.idx",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "commit-msg.sample",
-    "filepath": "../beaverhabits/.git/hooks/commit-msg.sample",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "update.sample",
-    "filepath": "../beaverhabits/.git/hooks/update.sample",
-    "where": "update:12-18",
-    "what": "Insecure Command",
-    "why": "The script uses 'sed' command with user-controlled input, which can lead to Command Injection attacks.",
-    "fix": "Replace user-controlled inputs with safer alternatives or sanitize the input before passing it to commands."
-  },
-  {
-    "filename": "pre-commit.sample",
-    "filepath": "../beaverhabits/.git/hooks/pre-commit.sample",
-    "where": "pre-commit.sh:9-10",
-    "what": "Potential command injection vulnerability in $allownonascii variable",
-    "why": "$allownonascii value is obtained from configuration file, which may allow malicious commands to be injected if not properly sanitized",
-    "fix": "Use secure function like git config --get-regexp to retrieve $allownonascii value"
-  },
-  {
-    "filename": "post-update.sample",
-    "filepath": "../beaverhabits/.git/hooks/post-update.sample",
-    "where": "post-update:2-3",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "pre-rebase.sample",
-    "filepath": "../beaverhabits/.git/hooks/pre-rebase.sample",
-    "where": "pre-rebase.sh:1-123",
-    "what": "Unrestricted use of external command /usr/bin/perl without proper sanitization.",
-    "why": "This could lead to shell injection vulnerabilities if the user passes malicious input to the script.",
-    "fix": "Replace the line with a properly sanitized and escaped string, or consider using a more secure way to execute Perl code."
-  },
-  {
-    "filename": "applypatch-msg.sample",
-    "filepath": "../beaverhabits/.git/hooks/applypatch-msg.sample",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "prepare-commit-msg.sample",
-    "filepath": "../beaverhabits/.git/hooks/prepare-commit-msg.sample",
-    "where": "script.sh:7-10",
-    "what": "Potential Shellshock vulnerability",
-    "why": "The use of `/usr/bin/perl` without proper escaping can lead to shell injection attacks, allowing an attacker to inject malicious commands.",
-    "fix": "Use `perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/);' \"$COMMIT_MSG_FILE\"` instead of `/usr/bin/perl -i.bak -ne ...`"
-  },
-  {
-    "filename": "push-to-checkout.sample",
-    "filepath": "../beaverhabits/.git/hooks/push-to-checkout.sample",
-    "where": "update-index.sh:8-8",
-    "what": "Insecure use of git command without proper error handling.",
-    "why": "If the git update-index command fails, it will print an error message and exit with a non-zero status. However, this may not be sufficient to prevent unauthorized access or data corruption. It is recommended to handle errors more robustly by checking the return value of the command and taking appropriate action if it fails.",
-    "fix": "Modify the code to check the return value of git update-index and take action if it fails."
-  },
-  {
-    "filename": "pre-push.sample",
-    "filepath": "../beaverhabits/.git/hooks/pre-push.sample",
-    "where": "script.sh:6-6",
-    "what": "Insecure use of environment variables ($1 and $2)",
-    "why": "Using environment variables directly in your script can lead to command injection attacks, as an attacker could manipulate these variables to execute arbitrary commands.",
-    "fix": "Use the `git config --get` or `git config --get-all` command to retrieve remote names and URLs instead of relying on environment variables."
-  },
-  {
-    "filename": "fsmonitor-watchman.sample",
-    "filepath": "../beaverhabits/.git/hooks/fsmonitor-watchman.sample",
-    "where": "query-watchman:21-22",
-    "what": "Potential Command Injection Vulnerability",
-    "why": "The watchman_query function uses qx to execute a command, which can lead to command injection attacks if an attacker is able to manipulate the $last_update_token variable.",
-    "fix": "Use IPC::Open2 or another secure method to execute commands, and validate user input."
-  },
-  {
-    "filename": "pre-merge-commit.sample",
-    "filepath": "../beaverhabits/.git/hooks/pre-merge-commit.sample",
-    "where": "script.sh:1-2",
-    "what": "Missing shebang specification for Git hook script",
-    "why": "The shebang line is missing, which can lead to unexpected behavior when running the script. Git hooks should always start with a shebang specifying the interpreter.",
-    "fix": "Replace the first two lines with a proper shebang specification, e.g., `#!/bin/sh` or `#!/usr/bin/env sh`."
-  },
-  {
-    "filename": "pre-receive.sample",
-    "filepath": "../beaverhabits/.git/hooks/pre-receive.sample",
-    "where": "pre-receive:15-16",
-    "what": "Potential Security Risk: Command Injection (again)",
-    "why": "The script uses eval again, this time in the `exit` command. This allows an attacker to inject malicious shell code, potentially leading to arbitrary command execution.",
-    "fix": "Remove the use of eval and instead use a direct comparison or other safer method to determine if the value is 'reject'."
-  },
-  {
-    "filename": "pre-applypatch.sample",
-    "filepath": "../beaverhabits/.git/hooks/pre-applypatch.sample",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "code.txt",
-    "filepath": "../beaverhabits/.git/HEAD",
-    "where": "code.txt:1-1",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "config",
-    "filepath": "../beaverhabits/.git/config",
-    "where": ".git/config",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "packed-refs",
-    "filepath": "../beaverhabits/.git/packed-refs",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "HEAD",
-    "filepath": "../beaverhabits/.git/refs/remotes/origin/HEAD",
-    "where": "file not found",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "main",
-    "filepath": "../beaverhabits/.git/refs/heads/main",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "exclude",
-    "filepath": "../beaverhabits/.git/info/exclude",
-    "where": ".gitignore:1-7",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "pytest.ini",
-    "filepath": "../beaverhabits/pytest.ini",
-    "where": "tests/main.py:1-3",
-    "what": "Hardcoded secrets/credentials",
-    "why": "The `main.py` file is directly referenced in the configuration, which could potentially expose sensitive information or allow unauthorized access.",
-    "fix": "Consider using a more secure approach to specify the main test file, such as loading it dynamically or using an environment variable."
-  },
-  {
-    "filename": ".gitignore",
-    "filepath": "../beaverhabits/.gitignore",
-    "where": "",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "LICENSE",
-    "filepath": "../beaverhabits/LICENSE",
-    "where": "skipped",
-    "what": "None",
-    "why": "No source code provided",
-    "fix": "None"
-  },
-  {
-    "filename": ".gitmodules",
-    "filepath": "../beaverhabits/.gitmodules",
-    "where": "statics/astro:1-2",
-    "what": "Insecure Git submodule URL",
-    "why": "The URL for the submodule 'beaverhabits-landing' is hardcoded and publicly accessible. This could allow an attacker to manipulate the submodule's contents or use it as a pivot point for further attacks.",
-    "fix": "Use SSH URLs instead of HTTPS, or consider using a more secure method like Git submodules with SSH keys. Also, make sure to update the URL to a canonical one (e.g., https://github.com/username/repository.git) and avoid using hardcoded credentials."
-  },
-  {
     "filename": "healthcheck.py",
     "filepath": "../beaverhabits/healthcheck.py",
-    "where": "check_service():5-6",
-    "what": "Potential Insecure Direct Object Reference (IDOR) vulnerability",
-    "why": "The `requests.get()` call to 'http://localhost:8080/health' may allow an attacker to bypass authentication or access unauthorized data if the URL is crafted maliciously.",
-    "fix": "Use a secure way to construct URLs, such as parameterizing the endpoint with user-input values and sanitizing them properly. For example, consider using a library like `urllib.parse` to construct the URL."
-  },
-  {
-    "filename": "unknown",
-    "filepath": "../beaverhabits/.python-version",
-    "where": "unknown",
-    "what": "skipped",
-    "why": "not a valid source code file"
-  },
-  {
-    "filename": "sitemap.xml",
-    "filepath": "../beaverhabits/statics/sitemap.xml",
-    "where": "sitemap.xml:1-35",
-    "what": "No SAST problems found.",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "apple-touch-icon-v4.png",
-    "filepath": "../beaverhabits/statics/images/apple-touch-icon-v4.png",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "favicon.svg",
-    "filepath": "../beaverhabits/statics/images/favicon.svg",
-    "where": "",
-    "what": "No security vulnerabilities found.",
-    "why": "The code appears clean and does not contain any obvious security risks.",
-    "fix": "N/A"
-  },
-  {
-    "filename": "apple-touch-icon.png",
-    "filepath": "../beaverhabits/statics/images/apple-touch-icon.png",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "331492564-c0ce98cf-5a44-4bbc-8cd3-c7afb20af671.jpg",
-    "filepath": "../beaverhabits/statics/images/pricing/331492564-c0ce98cf-5a44-4bbc-8cd3-c7afb20af671.jpg",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "331492565-0418fa41-8985-46ef-b623-333b62b2f92e.jpg",
-    "filepath": "../beaverhabits/statics/images/pricing/331492565-0418fa41-8985-46ef-b623-333b62b2f92e.jpg",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "331492575-516c19ca-9f55-4c21-9e6d-c8f0361a5eb2.jpg",
-    "filepath": "../beaverhabits/statics/images/pricing/331492575-516c19ca-9f55-4c21-9e6d-c8f0361a5eb2.jpg",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "robots.txt",
-    "filepath": "../beaverhabits/statics/robots.txt",
-    "where": "# Beaver Habit Tracker - robots.txt",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "service_worker.js",
-    "filepath": "../beaverhabits/statics/pwa/service_worker.js",
-    "where": "service-worker.js:14-15",
-    "what": "Insecure caching of URLs",
-    "why": "The `CACHE_URLS` array is not properly validated or sanitized before being cached. This could lead to a cache poisoning attack if an attacker can manipulate the `url` parameter.",
-    "fix": "Use a secure way to populate the `CACHE_URLS` array, such as using a trusted source or validating user input. Additionally, consider using a more robust caching strategy that includes validation and error handling."
-  },
-  {
-    "filename": "manifest.json",
-    "filepath": "../beaverhabits/statics/pwa/manifest.json",
-    "where": "beaverhabits:1-1",
-    "what": "No SAST problems found.",
-    "why": "The code does not contain any security vulnerabilities or sensitive data.",
-    "fix": "No action required."
-  },
-  {
-    "filename": "sitemap_index.xml",
-    "filepath": "../beaverhabits/statics/sitemap_index.xml",
-    "where": "sitemap.xml:1-5",
-    "what": "Insecure XML namespace",
-    "why": "The xmlns attribute is not properly secured, which can lead to XPath injection attacks. An attacker could inject malicious XPath expressions by manipulating the namespace.",
-    "fix": "Use a secure XML namespace or validate user input before processing it."
-  },
-  {
-    "filename": "sortable.min.js",
-    "filepath": "../beaverhabits/statics/libs/sortable.min.js",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "long-press-event.min.js",
-    "filepath": "../beaverhabits/statics/libs/long-press-event.min.js",
-    "where": "long-press-event.js:15-15",
-    "what": "Insecure use of setTimeout",
-    "why": "The use of `setTimeout` without checking for its cancellation can lead to memory leaks and performance issues.",
-    "fix": "Use `requestAnimationFrame` instead, which is more efficient and cancellable."
-  },
-  {
-    "filename": "uv.lock",
-    "filepath": "../beaverhabits/uv.lock",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "settings.local.json",
-    "filepath": "../beaverhabits/.claude/settings.local.json",
-    "where": "/Users/henry/repo/private/beaver_habits/.claude/hooks/session_start.sh:1-1",
-    "what": "Command Injection Vulnerability",
-    "why": "The `command` field in the session_start hook is set to a hardcoded path `/Users/henry/repo/private/beaver_habits/.claude/hooks/session_start.sh`, which contains user input. This allows an attacker to inject arbitrary commands by manipulating this path.",
-    "fix": "Use a secure way to execute the command, such as using the `command` attribute with a specific command and arguments, or using a more secure method like exec."
-  },
-  {
-    "filename": "session_start.sh",
-    "filepath": "../beaverhabits/.claude/hooks/session_start.sh",
-    "where": "filename:11-13",
-    "what": "Potential command injection vulnerability",
-    "why": "The use of the echo statement followed by a redirection operator (>>) can lead to command injection vulnerabilities if an attacker controls the input. This is because an attacker could manipulate the input to inject malicious commands.",
-    "fix": "Avoid using echo statements with redirection operators. Instead, use a single echo statement or remove the redirection operator altogether."
-  },
-  {
-    "filename": "README.md",
-    "filepath": "../beaverhabits/README.md",
-    "where": "filename:7-8",
-    "what": "Insecure Docker Volume Mount",
-    "why": "Allows unauthorized access to sensitive data and potentially allows an attacker to escape the container.",
-    "fix": "Use a more secure approach, such as mounting a specific directory or using a volume with restricted permissions."
-  },
-  {
-    "filename": ".dockerignore",
-    "filepath": "../beaverhabits/.dockerignore",
-    "name": "gitignore.txt",
-    "where": "gitignore.txt",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "Dockerfile.nobuildkit.arm32",
-    "filepath": "../beaverhabits/docker/Dockerfile.nobuildkit.arm32",
-    "where": "Dockerfile:21-22",
-    "what": "Hardcoded Secret/Credential",
-    "why": "Hardcoded secrets/credentials are potential security risks.",
-    "fix": "Consider using environment variables or more secure ways to pass the required data."
-  },
-  {
-    "filename": "Dockerfile",
-    "filepath": "../beaverhabits/docker/Dockerfile",
-    "where": "FROM python:3.14-slim AS python-base (1-2)",
-    "what": "Hardcoded credentials/credentials in a source file",
-    "why": "The use of hardcoded credentials (`UV_COMPILE_BYTECODE=1`) can lead to unauthorized access or data breaches.",
-    "fix": "Use environment variables or configuration files instead of hardcoding credentials."
-  },
-  {
-    "filename": "Dockerfile.buildkit.arm32",
-    "filepath": "../beaverhabits/docker/Dockerfile.buildkit.arm32",
-    "where": "Dockerfile:7-8",
-    "what": "Insecure package installation using apt-get with --no-install-recommends flag",
-    "why": "Using the --no-install-recommends flag can lead to incomplete installations, making the system vulnerable to potential security issues. It's recommended to use a more secure way of installing packages, such as specifying individual dependencies or using a tool like pip.",
-    "fix": "Remove the --no-install-recommends flag and specify individual dependencies where necessary, or use a more secure package manager like pip for Python dependencies."
-  },
-  {
-    "filename": "fly.dockerfile",
-    "filepath": "../beaverhabits/docker/fly.dockerfile",
-    "where": "Dockerfile:11-14",
-    "what": "Insecure environment variable assignment for VENV_PATH",
-    "why": "Hardcoding a sensitive path (e.g., /opt/pysetup/.venv) in an environment variable can lead to unintended behavior or exposure of sensitive data.",
-    "fix": "Use a secure method to define the VENV_PATH, such as using a .env file or a configuration management tool."
-  },
-  {
-    "filename": "fly.toml",
-    "filepath": "../beaverhabits/fly.toml",
-    "where": "fly.toml:1-27",
-    "what": "No SAST issues found.",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "copilot-instructions.md",
-    "filepath": "../beaverhabits/.github/copilot-instructions.md",
-    "where": "beaverhabits-main-repo:1-2",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "commit_workflow.sh",
-    "filepath": "../beaverhabits/.github/copilot/commit_push.prompt.md",
-    "where": "commit_workflow.sh:1-99",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "funding.yml",
-    "filepath": "../beaverhabits/.github/funding.yml",
-    "where": "filename:1-3",
-    "what": "Hardcoded credentials",
-    "why": "Hardcoded credentials are stored in plain text, making them easily accessible to anyone who views the source code. This is a security risk as unauthorized individuals can obtain access to sensitive resources or data.",
-    "fix": "Replace hardcoded credentials with environment variables or a secrets management system to secure sensitive information."
-  },
-  {
-    "filename": "pr.yml",
-    "filepath": "../beaverhabits/.github/workflows/pr.yml",
-    "where": "name: Pull Request Test Workflow:1-3",
-    "what": "Potential issue with relative path in YAML file",
-    "why": "Using a relative path can lead to issues if the current directory changes.",
-    "fix": "Specify an absolute path or a more robust way to reference the workflow file."
-  },
-  {
-    "filename": "release.yml",
-    "filepath": "../beaverhabits/.github/workflows/release.yml",
-    "where": "name: Create manifest list and push -> working-directory: /tmp/digests",
-    "what": "Potential directory traversal vulnerability by using user-input data in the working directory.",
-    "why": "An attacker could manipulate the directory path to access sensitive information or execute malicious code.",
-    "fix": "Validate and sanitize any user-input data before using it in the workflow."
-  },
-  {
-    "filename": "fly.yml",
-    "filepath": "../beaverhabits/.github/workflows/fly.yml",
-    "where": "github-workflow.yml:9-15",
-    "what": "Hardcoded Secrets/Credentials",
-    "why": "The GitHub Personal Access Token (GH_PAT) and PADDLE_CLIENT_SIDE_TOKEN, PADDLE_PRICE_ID are hardcoded in the workflow. This is a problem because if these credentials are compromised or leaked, an attacker can access the repository and perform malicious actions.",
-    "fix": "Use environment variables instead of hardcoding secrets. Consider using a more secure way to store sensitive information like encrypted variables or a secrets manager."
-  },
-  {
-    "filename": "pre-deployment-test.yml",
-    "filepath": "../beaverhabits/.github/workflows/pre-deployment-test.yml",
-    "where": "filename:5-9",
-    "what": "Insecure command injection in 'uv sync' command",
-    "why": "The 'uv sync --group fly' command may allow an attacker to inject malicious commands by manipulating the 'fly' argument.",
-    "fix": "Avoid using insecure external commands. Instead, use the `uv` library to execute the test with a safe and controlled environment."
-  },
-  {
-    "filename": "SKILL.md",
-    "filepath": "../beaverhabits/openclaw/SKILL.md",
-    "where": "beaverhabits:16-18",
-    "what": "Hardcoded API Key",
-    "why": "Sensitive information like API keys should not be hardcoded.",
-    "fix": "Use environment variables or a secure secrets management system."
-  },
-  {
-    "filename": "settings.json",
-    "filepath": "../beaverhabits/.vscode/settings.json",
-    "where": "config.json:1-3",
-    "what": "Hardcoded secret/credentials",
-    "why": "The presence of sensitive configuration data (e.g., chat.promptFilesLocations) in this file could allow unauthorized access to internal system settings.",
-    "fix": "Move sensitive configuration data to environment variables or a secure secrets management system."
+    "where": "main.py:6-10",
+    "what": "Insecure Use of requests.get() Method with Unvalidated User Input",
+    "why": "Potential security issues if an attacker manipulates the URL to inject malicious data or code.",
+    "fix": "Use a more secure approach like urllib and parameterize the URL with input validation and sanitization."
   },
   {
     "filename": "scheduler.py",
     "filepath": "../beaverhabits/beaverhabits/scheduler.py",
-    "where": "beaverhabits/views.py:17-19",
-    "what": "Potential SQL Injection vulnerability",
-    "why": "The `views.backup_all_users()` function is called without any input validation, making it vulnerable to SQL injection attacks.",
-    "fix": "Validate user inputs and ensure that the database queries are properly parameterized. Consider using an ORM (Object-Relational Mapping) library like SQLAlchemy or Django's built-in ORM."
+    "where": "backup_all_users.py:13-15",
+    "what": "Hardcoded secret/credential in settings.DAILY_BACKUP_INTERVAL",
+    "why": "Settings.DAILY_BACKUP_INTERVAL is hardcoded and exposed to the environment, which can lead to unauthorized access or data exposure.",
+    "fix": "Use a secure method to store sensitive configuration values, such as environment variables or a secrets manager."
   },
   {
     "filename": "note.py",
     "filepath": "../beaverhabits/beaverhabits/core/note.py",
-    "where": "beaverhabits.py:1-35",
-    "what": "Hardcoded secret/credentials",
-    "why": "Hardcoding sensitive information like colors can lead to security vulnerabilities if accessed by unauthorized users.",
-    "fix": "Consider using environment variables or a secure storage mechanism for storing and retrieving color palettes."
+    "where": "habits.py:1-12",
+    "what": "Hardcoded secrets/credentials",
+    "why": "If the utils module contains hardcoded secrets or credentials, they will be exposed to anyone who has access to the code.",
+    "fix": "Refactor the code to use environment variables or secure storage for sensitive data."
   },
   {
     "filename": "completions.py",
     "filepath": "../beaverhabits/beaverhabits/core/completions.py",
-    "where": "beaverhabits/storage/storage.py",
-    "what": "Unvalidated User Input",
-    "why": "Potential security vulnerability due to unvalidated user input for period_type.",
-    "fix": "Validate and sanitize user input for period_type."
+    "where": "habits.py:1-4",
+    "what": "Potential logging vulnerability",
+    "why": "The logger is used directly from beaverhabits.logger without any security considerations. This could lead to sensitive information being logged.",
+    "fix": "Use a secure logging mechanism, such as using a library like loguru with proper configuration."
   },
   {
     "filename": "backup.py",
     "filepath": "../beaverhabits/beaverhabits/core/backup.py",
-    "where": "backup_to_telegram.py:9-12",
-    "what": "Hardcoded secret/credential - Telegram API token",
-    "why": "Hardcoding secrets or credentials in source code can lead to security breaches if an attacker gains access to the code.",
-    "fix": "Consider using environment variables or a secure secrets management system to store sensitive information."
+    "where": "backup_to_telegram.py:11-12",
+    "what": "Insecure API Usage - Using sendDocument endpoint with file data in request body and query parameters.",
+    "why": "This usage of the Telegram API can lead to sensitive information being exposed, as the file data is included in both the request body and query parameters. This makes it easier for an attacker to intercept and modify the request.",
+    "fix": "Instead of using sendDocument endpoint, use the sendFile endpoint which only accepts a file path and not the entire file contents."
   },
   {
     "filename": "crud.py",
@@ -570,66 +50,66 @@
   {
     "filename": "auth.py",
     "filepath": "../beaverhabits/beaverhabits/app/auth.py",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
+    "where": "user_authenticate:12-15",
+    "what": "Insecure Password Storage",
+    "why": "Storing passwords in plain text is a significant security risk.",
+    "fix": "Use a secure password hashing library, such as `bcrypt` or `argon2`, to hash and store passwords securely."
   },
   {
     "filename": "schemas.py",
     "filepath": "../beaverhabits/beaverhabits/app/schemas.py",
-    "where": "checked_record.py:10-13",
-    "what": "Potential SQL injection vulnerability in `CheckedRecord` class",
-    "why": "The `id` field is expected to be of type `str`, which could potentially allow an attacker to inject malicious SQL queries if not properly sanitized.",
-    "fix": "Change the type of `id` to a safer one, such as `int`, or use a library like Pydantic's `constrained` for further validation and sanitization."
+    "where": "checked_record.py:14-15",
+    "what": "Insecure path traversal in HabitRead.items",
+    "why": "The use of list['CheckedRecord'] allows an attacker to inject arbitrary types and cause errors or unexpected behavior. This is a problem because it can lead to a denial-of-service attack.",
+    "fix": "Use list[CheckedRecord] instead of list[\"CheckedRecord\"]"
   },
   {
     "filename": "users.py",
     "filepath": "../beaverhabits/beaverhabits/app/users.py",
-    "where": "main.py:13-13",
-    "what": "Hardcoded secrets/credentials",
-    "why": "Sensitive information should never be stored in plain text within the application codebase.",
-    "fix": "Use environment variables or a secure configuration management system to store sensitive information."
+    "where": "filename:17-18",
+    "what": "Insecure hardcoded JWT secret",
+    "why": "Hardcoding sensitive information such as JWT secrets in source code poses a significant security risk. If an attacker gains access to the source code, they can obtain the secret and use it to authenticate with your application.",
+    "fix": "Consider using environment variables or a secrets manager to store sensitive information like JWT secrets."
   },
   {
     "filename": "dependencies.py",
     "filepath": "../beaverhabits/beaverhabits/app/dependencies.py",
-    "where": "get_bearer_token:10-12",
-    "what": "Potential SQL injection vulnerability in get_bearer_token function",
-    "why": "The function does not properly sanitize user input, allowing for potential SQL injection attacks.",
-    "fix": "Use parameterized queries or prepared statements to prevent SQL injection."
+    "where": "beaverhabits/app.py:10-11",
+    "what": "Insufficient validation and sanitization of input email addresses",
+    "why": "An attacker could manipulate trusted headers or local emails to inject malicious email addresses, potentially leading to unauthorized access or security issues.",
+    "fix": "Use a whitelist of trusted domains or email patterns to validate and sanitize input email addresses before passing them to user_get_by_email."
   },
   {
     "filename": "db.py",
     "filepath": "../beaverhabits/beaverhabits/app/db.py",
-    "where": "user_configs.py:23-24",
-    "what": "Hardcoded secret key in database configuration",
-    "why": "Sensitive information exposed if deployed publicly or accessed by unauthorized parties.",
-    "fix": "Use environment variables instead of hardcoded values."
+    "where": "database.py:7-10",
+    "what": "Hardcoded Database Credentials",
+    "why": "Hardcoding database credentials makes it easy for attackers to access the database without needing the password.",
+    "fix": "Instead of hardcoding the credentials, consider using environment variables or a secrets manager."
   },
   {
     "filename": "__init__.py",
     "filepath": "../beaverhabits/beaverhabits/app/__init__.py",
-    "where": "example.txt:1-1",
-    "what": "Skipped file due to lack of code content",
-    "why": "The provided input was empty and does not contain any source code",
-    "fix": "Please provide the actual source code for analysis"
+    "where": "filename:1-10",
+    "what": "Potential SQL Injection vulnerability",
+    "why": "The use of user input in the query without proper sanitization makes it vulnerable to SQL injection attacks.",
+    "fix": "Use parameterized queries or prepared statements to prevent SQL injection."
   },
   {
     "filename": "middelwares.py",
     "filepath": "../beaverhabits/beaverhabits/app/middelwares.py",
-    "where": "example.txt:1-0",
-    "what": "No security vulnerabilities found",
-    "why": "",
-    "fix": ""
+    "where": "filename:1-1",
+    "what": "Insecure Use of `eval()` function",
+    "why": "Using eval() can pose a significant risk to your application. It allows an attacker to inject malicious code, leading to potential remote code execution (RCE) attacks.",
+    "fix": "Replace eval() with safer alternatives like JSON.parse(), or use a library that provides safe parsing and evaluation functions."
   },
   {
     "filename": "app.py",
     "filepath": "../beaverhabits/beaverhabits/app/app.py",
-    "where": "init_auth_routes:7-9",
-    "what": "Insecure framework/API misuse",
-    "why": "The `app.include_router` method is used without proper validation or sanitization of user input, which can lead to potential security vulnerabilities.",
-    "fix": "Use the built-in FastAPI features and libraries (such as Depends) to validate and sanitize user input."
+    "where": "filename.py:4-4",
+    "what": "Insecure Path Traversal vulnerability",
+    "why": "Unvalidated URL parameters can lead to path traversal attacks.",
+    "fix": "Validate and sanitize all URLs before use. Consider using libraries like urllib.parse or custom validation functions."
   },
   {
     "filename": "components.py",
@@ -642,26 +122,26 @@
   {
     "filename": "stats_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/stats_page.py",
-    "where": "stats_page_ui.py:14-17",
-    "what": "Insecure use of redirect function",
-    "why": "Cross-Site Scripting (XSS) vulnerability possible if redirect URL contains malicious code.",
-    "fix": "Validate and sanitize the redirect URL before passing it to the redirect function."
+    "where": "stats_page_ui:23-29",
+    "what": "Potential SQL injection vulnerability in get_stats_date_range() function",
+    "why": "The get_stats_date_range() function is not shown in this code snippet, but it's used to retrieve the start and end dates. If these dates are user-controlled or derived from untrusted sources, an attacker could inject malicious SQL queries.",
+    "fix": "Use parameterized queries or prepared statements to prevent SQL injection attacks."
   },
   {
     "filename": "add_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/add_page.py",
-    "where": "add_ui.py:14-17",
-    "what": "Unvalidated user input in HabitNameInput component",
-    "why": "The HabitNameInput component allows users to input habit names directly, which could lead to cross-site scripting (XSS) attacks if the input is not properly sanitized.",
-    "fix": "Validate and sanitize user input using a library like bleach or html5lib before rendering it in the UI."
+    "where": "add_page_ui.py:4-4",
+    "what": "Direct import of components module without authentication or authorization checks.",
+    "why": "This could lead to a situation where an attacker can manipulate the code by modifying the components module, potentially introducing security vulnerabilities.",
+    "fix": "Consider using a secure way of importing modules, such as requiring explicit authentication or authorization for imports."
   },
   {
     "filename": "admin.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/admin.py",
-    "where": "admin_page.py:5-9",
-    "what": "Insecure Direct Object Reference (IDOR) and Input Validation",
-    "why": "An attacker could manipulate the user object's ID to access unauthorized data, leading to sensitive information disclosure.",
-    "fix": "Validate and sanitize the input before calling crud.get_user_count(). Implement proper input validation to ensure that only authorized users' data is accessed."
+    "where": "admin_page function on line 12",
+    "what": "Potential SQL Injection vulnerability in user_email.value",
+    "why": "The `user_email.value` variable is not properly sanitized before being used in the `views.promote_user_to_pro` function, which may lead to a SQL injection attack.",
+    "fix": "Use parameterized queries or sanitize the input value using a library like sqlparse to prevent SQL injection."
   },
   {
     "filename": "icons.py",
@@ -674,42 +154,42 @@
   {
     "filename": "index_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/index_page.py",
-    "where": "beaverhabits/frontend/layout.py:31",
-    "what": "Insecure Use of JavaScript's `eval()` function",
-    "why": "The `layout` function uses JavaScript's `eval()` function to execute code, which can lead to XSS vulnerabilities if user input is not properly sanitized.",
-    "fix": "Replace `eval()` with a safer alternative, such as `Function()`, or use a library that handles JavaScript execution safely."
+    "where": "filename:16-20",
+    "what": "Missing input validation for days and active_habits",
+    "why": "Input validation is crucial to prevent potential security vulnerabilities like injection attacks or DoS.",
+    "fix": "Implement proper input validation mechanisms, such as using NiceGUI's built-in type checking or custom validation functions."
   },
   {
     "filename": "order_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/order_page.py",
-    "where": "habit_list.py:17-18",
-    "what": "SQL Injection vulnerability in HabitListBuilder.status()",
-    "why": "Unvalidated input parameter used to filter habits",
-    "fix": "Validate input parameter using whitelist approach and use parameterized queries"
+    "where": "habit_list.py:34-38",
+    "what": "Insecure Direct Object Reference (IDOR)",
+    "why": "Allows an attacker to bypass authentication and access unauthorized habit data by manipulating the habit ID.",
+    "fix": "Use a more secure method to identify habits, such as their actual object instance."
   },
   {
     "filename": "javascript.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/javascript.py",
-    "where": "PADDLE_JS_TEMPLATE:4-17",
-    "what": "Insecure use of JavaScript",
-    "why": "Allows potential attackers to inject malicious code and steal sensitive information.",
-    "fix": "Use Jinja2's templating engine to sanitize user input, or store sensitive values securely."
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
   },
   {
     "filename": "intersection_observer.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/intersection_observer.py",
-    "where": "intersection_observer.js:-:-",
-    "what": "Insecure Cross-Site Scripting (XSS) due to unescaped UIEventArguments",
-    "why": "The `handle_event` function can lead to XSS attacks if an attacker manages to inject malicious code. The `UiEventArguments` object is not properly sanitized, allowing for JavaScript code execution.",
-    "fix": "Use a secure way to handle user input or event arguments, such as using HTML escaping or a proper sanitization library. Consider using a framework that provides built-in protection against XSS attacks."
+    "where": "intersection_observer.py:5-10",
+    "what": "Potential Command Injection Vulnerability",
+    "why": "The `handle_event` function is being called with user-provided input (`on_intersection`) as an argument. This can lead to command injection attacks if the `on_intersection` callback contains malicious code.",
+    "fix": "Use a whitelist of allowed functions or use a safer method to invoke callbacks, such as using a FunctionRegistry to validate and sanitize function references."
   },
   {
     "filename": "css.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/css.py",
-    "where": "TEXTAREA_CSS:7-11",
-    "what": "Insecure CSS styling - `field-sizing` property",
-    "why": "This can cause unexpected behavior and may lead to security vulnerabilities.",
-    "fix": "Replace `field-sizing` with the correct CSS property, such as `min-height`."
+    "where": "WHITE_FLASH_PREVENT.css:18-25",
+    "what": "Preventing user selection of text",
+    "why": "Accessibility issue and potential problems with assistive technologies",
+    "fix": "Remove the line or set value back to default (auto)"
   },
   {
     "filename": "pricing_page.py",
@@ -722,50 +202,50 @@
   {
     "filename": "__init__.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/__init__.py",
-    "where": "empty_file:0-0",
-    "what": "No source code found",
-    "why": "",
-    "fix": ""
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
   },
   {
     "filename": "import_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/import_page.py",
-    "where": "import_ui_page.py:17-18",
-    "what": "Insecure Direct Object Reference (IDOR)",
-    "why": "Allows an attacker to access another user's habit list by manipulating the user object.",
-    "fix": "Implement proper validation and sanitization of the user object before accessing their habit list. Consider implementing RBAC to restrict access based on user roles or permissions."
+    "where": "import_from_csv.py:12-22",
+    "what": "Insecure usage of csv.DictReader without checking for CSV header fields",
+    "why": "If a malicious user uploads a CSV file with custom headers, it can lead to unexpected behavior or even code injection attacks.",
+    "fix": "Validate the CSV header fields before processing them."
   },
   {
     "filename": "export_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/export_page.py",
-    "where": "backup_panel.py:16-16",
-    "what": "Insecure use of lambda function to define closure",
-    "why": "The use of a lambda function can lead to issues with variable scope and can make it harder to debug the code.",
-    "fix": "Replace the lambda function with a regular function definition, or consider using a more functional programming approach."
+    "where": "export_page.py:17-22",
+    "what": "Hardcoded secret/credential",
+    "why": "The DARK_COLOR constant is hardcoded, which can be a security risk if this color is used to display sensitive information or is transmitted over the network.",
+    "fix": "Use a secure way to store and retrieve colors, such as environment variables or a secrets management system."
   },
   {
     "filename": "habit_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/habit_page.py",
-    "where": "habits_frontend/layout.py:34-37",
-    "what": "Insecure path traversal due to missing proper input validation and sanitization",
-    "why": "The `habit.name` variable is directly used as a title in the layout function without any proper input validation or sanitization. This can lead to potential security vulnerabilities such as path traversal attacks.",
-    "fix": "Properly validate and sanitize the `habit.name` variable before using it as a title, for example by using a whitelisting approach or properly escaping user-input data."
+    "where": "beaverhabits.frontend.components:24",
+    "what": "Potential SQL Injection Vulnerability in habit_history function",
+    "why": "User-input data may be used to construct an SQL query, allowing for malicious SQL code injection.",
+    "fix": "Parameterize database queries or use an ORM."
   },
   {
     "filename": "textarea.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/textarea.py",
-    "where": "filename:1-3",
-    "what": "Insecure library usage (nicegui)",
-    "why": "The nicegui library may not be properly sanitized or validated, making it vulnerable to potential security risks such as XSS attacks.",
-    "fix": "Use a more secure and well-maintained GUI library. Consider alternatives like Tkinter, PyQt, or wxPython for Python applications."
+    "where": "Textarea:1-2",
+    "what": "Insecure framework/API misuse",
+    "why": "The component parameter could inject malicious JavaScript code.",
+    "fix": "Validate and sanitize user-inputted data, including the values passed to the component parameter."
   },
   {
     "filename": "menu.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/menu.py",
-    "where": "stats_menu.py:35",
-    "what": "Insecure Direct Object Reference (IDOR)",
-    "why": "Allows an attacker to manipulate the order of habits, potentially leading to unauthorized access or data tampering.",
-    "fix": "Implement input validation for habit_list.order_by and ensure that only authorized values are accepted."
+    "where": "stats_date_pick_menu:16-32",
+    "what": "Potential SQL injection vulnerability due to unvalidated user input.",
+    "why": "The parse_date_range_str function does not properly validate the user-input date range string, which can lead to a SQL injection attack if an attacker provides malicious input.",
+    "fix": "Validate and sanitize the user-input date range string using a library like dateutil.parser.isoparse() or by implementing custom validation."
   },
   {
     "filename": "layout.py",
@@ -778,66 +258,50 @@
   {
     "filename": "streaks.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/streaks.py",
-    "where": "filename: 6-7",
-    "what": "Insecure usage of hardcoded secrets/credentials",
-    "why": "The `settings.FIRST_DAY_OF_WEEK` variable is being used without proper validation or sanitization.",
-    "fix": "Ensure that sensitive settings like `FIRST_DAY_OF_WEEK` are properly validated and sanitized before use."
+    "where": "beaverhabits.frontend.layout:12",
+    "what": "Uncaught Habit object",
+    "why": "If an unhandled error occurs in the Habit object, it could lead to a Denial of Service (DoS) attack.",
+    "fix": "Catch and handle potential errors when working with the Habit object."
   },
   {
     "filename": "paddle_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/paddle_page.py",
-    "where": "markdown.py:7-14",
-    "what": "Insecure Email Address Exposed in Code",
-    "why": "Exposing email addresses directly in the code is a security risk as it allows attackers to send spam or phishing emails from the same account, compromising its integrity and potentially leading to authentication issues for legitimate users.",
-    "fix": "Replace the hardcoded email address with an environment variable or a secure configuration file."
-  },
-  {
-    "filename": "intersection_observer.js",
-    "filepath": "../beaverhabits/beaverhabits/frontend/intersection_observer.js",
-    "where": "filename:1-7",
-    "what": "Insecure cross-site scripting (XSS) vulnerability",
-    "why": "The `template` property uses inline HTML which can be prone to XSS attacks. An attacker could inject malicious JavaScript code by manipulating the DOM of this template.",
-    "fix": "Replace the inline HTML with a properly sanitized template or use a library like Vue.js's built-in `v-html` directive."
+    "where": "filename:1-14",
+    "what": "Hardcoded secret/credential (email address)",
+    "why": "Hardcoding an email address in source code can expose it to potential attackers. This can lead to phishing, spam, or even security breaches if the account is compromised.",
+    "fix": "Replace hardcoded email address with a secure contact mechanism, such as a contact form or a public contact page."
   },
   {
     "filename": "chip_sets_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/chip_sets_page.py",
-    "where": "beaverhabits/frontend/layout.py:15-17",
-    "what": "Insecure framework/API misuse",
-    "why": "The `ui.input_chips` widget is used without any validation or sanitization of user input, which could lead to code injection attacks. Additionally, the `new_value_mode='add-unique'` parameter may not be secure by default and could allow arbitrary values to be added.",
-    "fix": "Use a secure framework or library for user input handling, such as `wtforms` or `flask-wtf`. Validate and sanitize user input before processing it. Review the security implications of using `new_value_mode='add-unique'`."
-  },
-  {
-    "filename": "textarea.js",
-    "filepath": "../beaverhabits/beaverhabits/frontend/textarea.js",
-    "where": "filename:5-13",
-    "what": "SQL injection vulnerability",
-    "why": "String concatenation can lead to SQL injection attacks if user input is not properly sanitized.",
-    "fix": "Use parameterized queries or prepared statements instead of string concatenation."
+    "where": "beaverhabits/frontend/layout.py:24-27",
+    "what": "Potential injection vulnerability in ui.label() and ui.link() functions",
+    "why": "The ui.label() and ui.link() functions can be vulnerable to injection attacks if the input is not properly sanitized. An attacker could inject malicious HTML or JavaScript code, potentially leading to a cross-site scripting (XSS) attack.",
+    "fix": "Use the |safe attribute to prevent escaping of HTML characters, e.g., `ui.label('Default status buttons shown in the note dialog (e.g. yes, no, skip).'|safe)`"
   },
   {
     "filename": "tokens_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/tokens_page.py",
-    "where": "tokens_page.py:34-44",
-    "what": "Insecure API Token Handling",
-    "why": "Sensitive data like API tokens should not be stored in plaintext or made easily accessible to users.",
-    "fix": "Remove the ui.input field and instead use a secure method for displaying the token."
+    "where": "tokens_page.py:10-11",
+    "what": "Potential SQL Injection vulnerability",
+    "why": "The crud.get_user_api_token function is used without any input validation or sanitization.",
+    "fix": "Validate and sanitize the user parameter before passing it to the crud.get_user_api_token function."
   },
   {
     "filename": "settings_page.py",
     "filepath": "../beaverhabits/beaverhabits/frontend/settings_page.py",
-    "where": "settings_page function:14-22",
-    "what": "Potential Security Risk: Insecure Direct Object Reference (IDOR)",
-    "why": "The `update_custom_css` function updates the custom CSS for a user without proper validation or authorization, allowing an attacker to inject malicious code. This is a potential security risk.",
-    "fix": "Implement proper input validation and authorization checks in the `update_custom_css` function to prevent IDOR attacks."
+    "where": "settings.py:1-53",
+    "what": "None",
+    "why": "None",
+    "fix": "None"
   },
   {
     "filename": "const.py",
     "filepath": "../beaverhabits/beaverhabits/const.py",
-    "where": "example.py:1-7",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
+    "where": "filename:1-9",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The HOME_PAGE and IMPORT_WIKI_PAGE variables contain sensitive information (GitHub repository URL) which could be used by an attacker to gain unauthorized access.",
+    "fix": "Replace the hardcoded URLs with environment variables or a secure configuration mechanism to prevent exposing sensitive information."
   },
   {
     "filename": "utils.py",
@@ -850,34 +314,34 @@
   {
     "filename": "configs.py",
     "filepath": "../beaverhabits/beaverhabits/configs.py",
-    "where": "settings.py:23-26",
-    "what": "Hardcoded secret",
-    "why": "This is a problem because hardcoding secrets makes them easily accessible in the source code, which can lead to unauthorized access or misuse.",
-    "fix": "Store secrets securely using environment variables or a secure key management system."
+    "where": "settings.py:34-38",
+    "what": "Hardcoded secret key in JWT_SECRET variable",
+    "why": "The value of JWT_SECRET is hardcoded as 'SECRET', which means it's not generated randomly and could be easily guessed or obtained by an attacker.",
+    "fix": "Generate a random secret key using a secure method, such as os.urandom(32) and store it in an environment variable or a secrets management system."
   },
   {
     "filename": "paddle.py",
     "filepath": "../beaverhabits/beaverhabits/plan/paddle.py",
-    "where": "webhook.py:8-14",
-    "what": "Unprotected API endpoint",
-    "why": "An attacker can exploit this endpoint by sending a malicious request with a valid Paddle notification, potentially leading to data breaches or other security issues.",
-    "fix": "Mark the endpoint as `include_in_schema=True` and ensure that authentication and authorization mechanisms are in place to protect it."
+    "where": "main.py:1-19",
+    "what": "Unprotected callbacks can lead to arbitrary code execution.",
+    "why": "The @callback decorator allows any function to be registered as a callback without checking its security implications. An attacker could potentially register a malicious function, leading to arbitrary code execution.",
+    "fix": "Implement proper access control and authentication mechanisms for callback functions."
   },
   {
     "filename": "plan.py",
     "filepath": "../beaverhabits/beaverhabits/plan/plan.py",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
+    "where": "filename:5-5",
+    "what": "Insecure dependency on nicegui",
+    "why": "Cross-site scripting (XSS) vulnerabilities if user input is not properly validated or sanitized.",
+    "fix": "Use a secure version of the library, ensure proper input validation and sanitization."
   },
   {
     "filename": "__init__.py",
     "filepath": "../beaverhabits/beaverhabits/__init__.py",
-    "where": "your_package/__init__.py:1-3",
-    "what": "Missing import statement",
-    "why": "The `importlib.metadata` module is used without importing it. This could lead to a `ModuleNotFoundError` if the module is not found.",
-    "fix": "Add an import statement for `importlib.metadata`, e.g., `from importlib.metadata import version`."
+    "where": "__init__.py:1-5",
+    "what": "Potential Security Vulnerability",
+    "why": "The use of `importlib.metadata.version(__name__)` can lead to information disclosure. This function returns the version of the current package, but it does not perform any validation on the input. An attacker could potentially manipulate the value returned by this function to disclose sensitive information.",
+    "fix": "Use a secure method to obtain the package version, such as using a environment variable or a secret stored in a secure location."
   },
   {
     "filename": "views.py",
@@ -890,10 +354,10 @@
   {
     "filename": "user_db.py",
     "filepath": "../beaverhabits/beaverhabits/storage/user_db.py",
-    "where": "app.py:9-11",
-    "what": "Potential SQL Injection vulnerability through crud.get_user_habit_list() and crud.update_user_habit_list()",
-    "why": "The functions get_user_habit_list() and update_user_habit_list() use user input directly in database queries, which can lead to SQL injection attacks if not properly sanitized.",
-    "fix": "Use parameterized queries or prepared statements to prevent SQL injection."
+    "where": "storage.py:8-16",
+    "what": "Potential SQL injection vulnerability in crud.get_user_habit_list()",
+    "why": "The function does not sanitize or escape user input, making it susceptible to SQL injection attacks.",
+    "fix": "Use parameterized queries or ORM (Object-Relational Mapping) to prevent SQL injection."
   },
   {
     "filename": "dict.py",
@@ -906,18 +370,18 @@
   {
     "filename": "session_file.py",
     "filepath": "../beaverhabits/beaverhabits/storage/session_file.py",
-    "where": "session_dict_storage.py:6-7",
-    "what": "Insecure direct object reference (IDOR)",
-    "why": "Allows an attacker to access arbitrary user's habit list by manipulating the key in the storage, which may lead to unauthorized disclosure of sensitive data.",
-    "fix": "Add authentication and authorization checks before returning the user's habit list."
+    "where": "session_dict_storage.py:4-4",
+    "what": "Insecure use of nicegui.app.storage.user as a global object",
+    "why": "The use of nicegui.app.storage.user directly may lead to security vulnerabilities if not properly sanitized or validated.",
+    "fix": "Instead of using nicegui.app.storage.user directly, consider injecting a trusted storage instance into the class through its constructor."
   },
   {
     "filename": "meta.py",
     "filepath": "../beaverhabits/beaverhabits/storage/meta.py",
-    "where": "storage.py:8-12",
-    "what": "Insecure path traversal vulnerability",
-    "why": "The is_page_demo() function checks if the current page path starts with DEMO_ROOT_PATH or contains 'pricing'. This can lead to insecure path traversals, where an attacker could manipulate the URL to access unauthorized pages.",
-    "fix": "Use a more secure method to determine whether the current page is a demo page. For example, you can store a boolean flag in the session or use a more restrictive path checking mechanism."
+    "where": "habit.py:4-5",
+    "what": "Path Traversal Vulnerability",
+    "why": "An attacker could manipulate the path to access files outside of the intended directory.",
+    "fix": "Use a whitelist approach or use pathlib to construct paths safely."
   },
   {
     "filename": "storage.py",
@@ -930,34 +394,34 @@
   {
     "filename": "images.py",
     "filepath": "../beaverhabits/beaverhabits/storage/images.py",
-    "where": "database_image_storage.py:6-7",
-    "what": "Hardcoded secret/credential - email address of user",
-    "why": "Including sensitive information like email addresses in your code can lead to data breaches and compromise user privacy.",
-    "fix": "Replace hardcoded value with a placeholder or environment variable, then use a secure method to retrieve the actual email address."
+    "where": "save:8-12",
+    "what": "Insecure Direct Object Reference (IDOR) vulnerability",
+    "why": "The `get` method does not properly validate the UUID, allowing an attacker to retrieve any image by manipulating the `uuid` parameter.",
+    "fix": "Validate the UUID against a whitelist of expected values or use a more robust validation mechanism."
   },
   {
     "filename": "__init__.py",
     "filepath": "../beaverhabits/beaverhabits/storage/__init__.py",
-    "where": "storage.py:9-10",
-    "what": "Unsecured hardcoded credentials stored in the settings.",
-    "why": "Hardcoded credentials are a security risk as they can be easily accessed and exploited by an attacker if the settings file is compromised or accessed through other means.",
-    "fix": "Instead of hardcoding credentials directly, use environment variables or a secure configuration management system to store sensitive information."
+    "where": "filename:6-7",
+    "what": "Hardcoded credentials",
+    "why": "The `user_disk_storage` and `user_database_storage` instances are created with hardcoded paths, which can be insecure if these paths are not properly sanitized.",
+    "fix": "Instead of hardcoding the paths, consider using environment variables or a configuration file to store sensitive information."
   },
   {
     "filename": "user_file.py",
     "filepath": "../beaverhabits/beaverhabits/storage/user_file.py",
-    "where": "file_persistent_dict.py:23-25",
-    "what": "Unvalidated user input in JSON data loading",
-    "why": "Arbitrary code execution vulnerabilities if malicious JSON data is injected.",
-    "fix": "Validate the user input using a library like pydantic or implement custom validation."
+    "where": "storage.py:23-27",
+    "what": "Insecure path traversal vulnerability",
+    "why": "The `Path` constructor can be used to create paths outside of the intended directory, potentially leading to a path traversal attack.",
+    "fix": "Use an absolute path for the `USER_DATA_FOLDER` variable, and ensure that it is properly sanitized before creating file paths."
   },
   {
     "filename": "session_memory.py",
     "filepath": "../beaverhabits/beaverhabits/storage/session_memory.py",
-    "where": "habit_storage.py:9-12",
-    "what": "Potential insecure caching behavior",
-    "why": "Using a TTLCache with a fixed time-to-live (60 minutes) can lead to stale data being stored. Additionally, the use of `session_id` as the cache key may not be secure in all scenarios.",
-    "fix": "Consider using a more robust caching solution that allows for dynamic time-to-live and uses secure session identifiers."
+    "where": "storage.py:8-10",
+    "what": "Insecure Storage of User Data",
+    "why": "Storing sensitive user data in memory can lead to data loss and security issues.",
+    "fix": "Consider using a database or a more secure caching solution like Redis."
   },
   {
     "filename": "routes.py",
@@ -970,34 +434,34 @@
   {
     "filename": "metrics.py",
     "filepath": "../beaverhabits/beaverhabits/routes/metrics.py",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
+    "where": "/debug/heap/:line-128",
+    "what": "Insecure Direct Object Reference (IDOR)",
+    "why": "Arbitrary access to heap objects via path parameter can lead to exposure of sensitive data or unauthorized access.",
+    "fix": "Restrict allowed paths and ensure authorized users can only access specific heap objects."
   },
   {
     "filename": "google_one_tap.py",
     "filepath": "../beaverhabits/beaverhabits/routes/google_one_tap.py",
-    "where": "google_auth.py:22-28",
-    "what": "Insecure direct object reference (IDOR) in Google One Tap authentication.",
-    "why": "The credential parameter passed to the http_client.get() method directly contains the ID token, which can be used for unauthorized access if an attacker obtains it.",
-    "fix": "Use a secure method to authenticate users, such as using OAuth 2.0 or OpenID Connect, and store the user's authentication information securely."
+    "where": "beaverhabits/app/settings.py:1-10",
+    "what": "Hardcoded credentials",
+    "why": "The `settings.GOOGLE_ONE_TAP_CLIENT_ID` and `settings.GOOGLE_ONE_TAP_CALLBACK_URL` are hardcoded in the code, which can lead to security risks if these values are not properly handled.",
+    "fix": "Store sensitive values in environment variables or a secure storage mechanism instead of hardcoding them in the code."
   },
   {
     "filename": "__init__.py",
     "filepath": "../beaverhabits/beaverhabits/routes/__init__.py",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
+    "where": "example.py:5-6",
+    "what": "SQL Injection Vulnerability",
+    "why": "Directly using user-input data in an SQL query without sanitization allows SQL injection attacks.",
+    "fix": "Use parameterized queries or prepared statements with a library like sqlite3."
   },
   {
     "filename": "astro.py",
     "filepath": "../beaverhabits/beaverhabits/routes/astro.py",
-    "where": "/home/user/code/ filename:35-35",
-    "what": "Insecure Direct Object Reference (IDOR)",
-    "why": "The `manual_backup` function calls `views.backup_all_users()` without any parameter validation.",
-    "fix": "Validate and sanitize input parameters before calling the `backup_all_users` function."
+    "where": "init_astro_routes:22-23",
+    "what": "Insecure path traversal in FileResponse()",
+    "why": "The code uses absolute paths to serve files without proper validation, which could lead to path traversal attacks.",
+    "fix": "Use a path validator or provide relative paths to ensure secure file serving."
   },
   {
     "filename": "api.py",
@@ -1010,42 +474,42 @@
   {
     "filename": "accessibility.py",
     "filepath": "../beaverhabits/beaverhabits/accessibility.py",
-    "where": "build_weeks_text_alternative(today: datetime.date, ticked_days: list[datetime.date])",
-    "what": "Potential arithmetic overflow vulnerability in calculation of 'end' date.",
-    "why": "The line `end = today - timedelta(days=today.weekday() + 7 * i)` can potentially lead to an arithmetic overflow if the value of `today.weekday()` is high, causing the subtraction operation to result in a very large negative number. This could be exploited by attackers to bypass security checks or cause unexpected behavior.",
-    "fix": "Use safer date calculations and consider using libraries like 'dateutil' for more robust operations."
+    "where": "index.py:14-15",
+    "what": "Insecure Sanitization of User-Controlled Input",
+    "why": "Cross-site scripting (XSS) attacks can occur if an attacker injects malicious HTML code.",
+    "fix": "Use sanitize=True when rendering user-controlled input with ui.html."
   },
   {
     "filename": "logger.py",
     "filepath": "../beaverhabits/beaverhabits/logger.py",
-    "where": "filename:3-5",
-    "what": "Hardcoded Secret/Credential (settings)",
-    "why": "The 'settings' object may contain sensitive information such as database credentials or API keys. Exposing this in the code can lead to security breaches.",
-    "fix": "Extract settings into environment variables or a secure configuration file, and use them within the application."
+    "where": "filename:1-4",
+    "what": "Hardcoded logging level in production environment",
+    "why": "The logging level is hardcoded to 'INFO' for production environments, which could lead to sensitive information being logged.",
+    "fix": "Consider using a more secure approach, such as dynamically setting the logging level based on the environment or using a configuration file."
   },
   {
     "filename": "version.py",
     "filepath": "../beaverhabits/beaverhabits/version.py",
-    "where": "version.py:3-4",
-    "what": "Hardcoded version and identity information",
-    "why": "This can be a problem if the hardcoded version and identity information are exposed or leaked, potentially allowing attackers to exploit known vulnerabilities or impersonate the application.",
-    "fix": "Use environment variables or configuration files to store sensitive information instead of hardcoding it."
+    "where": "identity.py:3-4",
+    "what": "Hardcoded secret/credential",
+    "why": "The IDENTITY variable contains a hardcoded version string, which could be used as an attack vector if compromised. Hardcoding secrets or credentials is generally discouraged and can lead to security issues.",
+    "fix": "This IDENTITY variable should not be manually edited. The recommended way to handle the version information is through GitHub Actions during release."
   },
   {
     "filename": "main.py",
     "filepath": "../beaverhabits/beaverhabits/main.py",
-    "where": "filename:4-6",
-    "what": "Hardcoded secret/credential",
-    "why": "Allows an attacker to gain access to the admin account by modifying this setting in the configuration file.",
-    "fix": "Remove or obfuscate this secret, and use environment variables or a secrets manager instead."
+    "where": "lifespan.py:7-13",
+    "what": "Hardcoded secret: ADMIN_EMAIL",
+    "why": "It's a security risk if an attacker can obtain the email address of the admin account.",
+    "fix": "Move ADMIN_EMAIL to environment variables or a secrets management system."
   },
   {
     "filename": "test_gui.py",
     "filepath": "../beaverhabits/tests/test_gui.py",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
+    "where": "None",
+    "what": "No security vulnerabilities found",
+    "why": "",
+    "fix": ""
   },
   {
     "filename": "test_apis.py",
@@ -1058,36 +522,34 @@
   {
     "filename": "test_storage.py",
     "filepath": "../beaverhabits/tests/test_storage.py",
-    "where": "beaverhabits.py:3-4",
-    "what": "Insecure storage of email and password credentials",
-    "why": "Hardcoding sensitive information like passwords is a security risk.",
-    "fix": "Consider using environment variables or a secrets management system to securely store these values."
+    "where": "filename:line 22-25",
+    "what": "Hardcoded email address and password in the habit_user fixture.",
+    "why": "Using hardcoded credentials makes it easy for attackers to exploit vulnerabilities without needing to crack passwords. It's also a bad practice for testing, as it can lead to inconsistent results if the test is run multiple times.",
+    "fix": "Use environment variables or a secrets management system to securely store sensitive data."
   },
   {
-    "filename": "filename:1-0",
+    "filename": "__init__.py",
     "filepath": "../beaverhabits/tests/__init__.py",
-    "where": "filename:1-0",
-    "what": "No issues found",
+    "where": "filename:empty",
+    "what": "",
     "why": "",
     "fix": ""
   },
   {
     "filename": "test_utils.py",
     "filepath": "../beaverhabits/tests/test_utils.py",
-    "where": "utils/format_date_difference.py:7-12",
-    "what": "Potential SQL Injection via format string vulnerability",
-    "why": "The datetime.strptime function can be vulnerable to a format string attack if the input 'date_str' is not properly sanitized. This could allow an attacker to inject malicious SQL code.",
-    "fix": "Use parameterized queries or pass the date format as a separate argument, instead of formatting it in the string."
+    "where": "s2d(date_str):6-7",
+    "what": "Insecure deserialization of user input",
+    "why": "The function s2d() uses strptime to parse a date string. If an attacker can manipulate this date string, they may be able to inject malicious data into the application.",
+    "fix": "Use a safe way to parse dates, such as using the dateutil library's parser.parse function."
   },
   {
-    "filename": "test.py",
+    "filename": "conftest.py",
     "filepath": "../beaverhabits/tests/conftest.py",
-    "codeStartLine": 1,
-    "codeEndLine": 2,
-    "where": "test.py:1-2",
-    "what": "Insecure plugin loading",
-    "why": "The 'nicegui.testing.plugin' plugin is being loaded without any validation or authentication. This could allow an attacker to inject malicious code into the test environment.",
-    "fix": "Verify the plugin's source and ensure it's trusted before loading. Alternatively, consider using a secure method for loading plugins, such as whitelisting allowed modules."
+    "where": "py_test.py:1-1",
+    "what": "Insecure Import of Plugin",
+    "why": "The 'nicegui.testing.plugin' plugin may be vulnerable to security risks, allowing attackers to inject malicious code or data. This is because the plugin is not properly validated or sanitized.",
+    "fix": "Replace 'nicegui.testing.plugin' with a secure and trusted plugin, or validate and sanitize any user-supplied input."
   },
   {
     "filename": "test_api_tokens.py",
@@ -1101,8 +563,8 @@
     "filename": "main.py",
     "filepath": "../beaverhabits/tests/main.py",
     "where": "filename:1-4",
-    "what": "Hardcoded secret/credentials: 'storage_secret'",
-    "why": "The storage_secret value, 'NEEDTOBEREPLACED', is hardcoded in plain text. This makes it accessible to unauthorized parties if the code is exposed.",
-    "fix": "Replace the hardcoded value with an environment variable or a secure configuration method."
+    "what": "Hardcoded Secret/ Credential",
+    "why": "The storage secret 'NEEDTOBEREPLACED' is hardcoded in the source code, which can lead to security issues if the application is compromised.",
+    "fix": "Replace 'NEEDTOBEREPLACED' with an environment variable or a secure secret management system."
   }
 ]

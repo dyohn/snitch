@@ -1,384 +1,7 @@
 [
   {
-    "filename": "da.po",
-    "filepath": "../yum/po/da.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "eu.po",
-    "filepath": "../yum/po/eu.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "gu.po",
-    "filepath": "../yum/po/gu.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "mr.po",
-    "filepath": "../yum/po/mr.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "ca.po",
-    "filepath": "../yum/po/ca.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "fr.po",
-    "filepath": "../yum/po/fr.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "vi.po",
-    "filepath": "../yum/po/vi.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "en_GB.po",
-    "filepath": "../yum/po/en_GB.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "pt_PT.po",
-    "filepath": "../yum/po/pt_PT.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "hu.po",
-    "filepath": "../yum/po/hu.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "es.po",
-    "filepath": "../yum/po/es.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "pl.po",
-    "filepath": "../yum/po/pl.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "id_ID.po",
-    "filepath": "../yum/po/id_ID.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "it.po",
-    "filepath": "../yum/po/it.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "tr.po",
-    "filepath": "../yum/po/tr.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "pa.po",
-    "filepath": "../yum/po/pa.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "el.po",
-    "filepath": "../yum/po/el.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "pt_BR.po",
-    "filepath": "../yum/po/pt_BR.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "bg.po",
-    "filepath": "../yum/po/bg.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "lt_LT.po",
-    "filepath": "../yum/po/lt_LT.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": ".gitignore",
-    "filepath": "../yum/po/.gitignore",
-    "where": "*.mo",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "zh_CN.po",
-    "filepath": "../yum/po/zh_CN.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "ms.po",
-    "filepath": "../yum/po/ms.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "nb.po",
-    "filepath": "../yum/po/nb.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "fi.po",
-    "filepath": "../yum/po/fi.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "pt.po",
-    "filepath": "../yum/po/pt.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "nl.po",
-    "filepath": "../yum/po/nl.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "ru.po",
-    "filepath": "../yum/po/ru.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "id.po",
-    "filepath": "../yum/po/id.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "nl_NL.po",
-    "filepath": "../yum/po/nl_NL.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "sk.po",
-    "filepath": "../yum/po/sk.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "hi.po",
-    "filepath": "../yum/po/hi.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "POTFILES.skip",
-    "filepath": "../yum/po/POTFILES.skip",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "yum.pot",
-    "filepath": "../yum/po/yum.pot",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "sv.po",
-    "filepath": "../yum/po/sv.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "Makevars",
-    "filepath": "../yum/po/Makevars",
-    "where": "filename:1-1",
-    "what": "Hardcoded credential",
-    "why": "The XGETTEXT_OPTIONS variable contains hardcoded credentials (P_:1,2) which could be used by an attacker if exposed.",
-    "fix": "Replace hardcoded credentials with environment variables or a secure configuration file."
-  },
-  {
-    "filename": "POTFILES.in",
-    "filepath": "../yum/po/POTFILES.in",
-    "name": "callback.py",
-    "where": "callback.py:0-0",
-    "what": "No code available",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "ur.po",
-    "filepath": "../yum/po/ur.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "sr@latin.po",
-    "filepath": "../yum/po/sr@latin.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "bn_IN.po",
-    "filepath": "../yum/po/bn_IN.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "zh_TW.po",
-    "filepath": "../yum/po/zh_TW.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "Makefile",
-    "filepath": "../yum/po/Makefile",
-    "where": "refresh-po:Makefile:23-30",
-    "what": "Insecure use of environment variable expansion in command execution.",
-    "why": "Possible injection of malicious code by manipulating the NLSPACKAGE environment variable.",
-    "fix": "Sanitize the $(MSGMERGE) variable using a safe string substitution method, or use a safer alternative to intltool-update."
-  },
-  {
-    "filename": "cs.po",
-    "filepath": "../yum/po/cs.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "de.po",
-    "filepath": "../yum/po/de.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
     "filename": "pygettext.py",
     "filepath": "../yum/po/pygettext.py",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "sr.po",
-    "filepath": "../yum/po/sr.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "uk.po",
-    "filepath": "../yum/po/uk.po",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "ja.po",
-    "filepath": "../yum/po/ja.po",
     "where": "skipped",
     "what": "skipped",
     "why": "skipped",
@@ -419,10 +42,10 @@
   {
     "filename": "sqlutils.py",
     "filepath": "../yum/yum/sqlutils.py",
-    "where": "executeSQLPyFormat (line 154-line 162)",
-    "what": "SQL Injection Vulnerability",
-    "why": "Lack of parameterization and proper sanitization",
-    "fix": "Use executeSQLQmark function or parameterize user input"
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
   },
   {
     "filename": "rpmtrans.py",
@@ -483,10 +106,10 @@
   {
     "filename": "constants.py",
     "filepath": "../yum/yum/constants.py",
-    "where": "yum_constants.py:1-2",
-    "what": "Insecure Hardcoded Credentials",
-    "why": "Hardcoded credentials may lead to unauthorized access to the repository.",
-    "fix": "Remove hardcoded credentials and use environment variables or secure storage instead."
+    "where": "",
+    "what": "",
+    "why": "",
+    "fix": ""
   },
   {
     "filename": "config.py",
@@ -507,10 +130,10 @@
   {
     "filename": "failover.py",
     "filepath": "../yum/yum/failover.py",
-    "where": "baseFailOverMethod.py:15-30",
-    "what": "Missing input validation in get_serverurl method",
-    "why": "The method does not validate the input parameter i, which can lead to potential issues if an invalid value is passed.",
-    "fix": "Add input validation for i in the get_serverurl method."
+    "where": "failover.py:22-24",
+    "what": "Unvalidated user input in get_serverurl method",
+    "why": "The get_serverurl method allows an attacker to specify a custom index 'i' which can lead to arbitrary code execution.",
+    "fix": "Validate the user input 'i' before using it as an index."
   },
   {
     "filename": "misc.py",
@@ -523,10 +146,10 @@
   {
     "filename": "Errors.py",
     "filepath": "../yum/yum/Errors.py",
-    "where": "yum.py:1-2",
-    "what": "Hardcoded secrets/credentials",
-    "why": "A hardcoded address that could potentially be used for phishing or other malicious purposes.",
-    "fix": "Replace the hardcoded address with a more secure method of displaying contact information."
+    "where": "yum.py:11-15",
+    "what": "Hardcoded credentials in copyright notice",
+    "why": "Hardcoding sensitive information such as email addresses or URLs can lead to security issues if the code is publicly exposed.",
+    "fix": "Replace the hardcoded email address with a placeholder and configure it through environment variables or configuration files."
   },
   {
     "filename": "comps.py",
@@ -547,10 +170,10 @@
   {
     "filename": "pkgtag_db.py",
     "filepath": "../yum/yum/pkgtag_db.py",
-    "where": "PackageTagDB:16-20",
-    "what": "Insecure Database Connection String",
-    "why": "The `sqlite_file` parameter is not properly sanitized, which could lead to SQL injection attacks if an attacker can manipulate this parameter.",
-    "fix": "Use parameterized queries or prepared statements to prevent SQL injection."
+    "where": "filename:11-11",
+    "what": "Hardcoded credentials",
+    "why": "Sensitive information is hardcoded, making it vulnerable to exposure.",
+    "fix": "Use environment variables or a secure configuration file for database connection credentials."
   },
   {
     "filename": "repoMDObject.py",
@@ -633,20 +256,12 @@
     "fix": "skipped"
   },
   {
-    "filename": "Makefile",
-    "filepath": "../yum/yum/Makefile",
-    "where": "filename:10-11",
-    "what": "Insecure command injection",
-    "why": "The `basename` command is executed within a shell, which can lead to command injection vulnerabilities.",
-    "fix": "Use `$(notdir $(CURDIR))` instead of `$(shell basename $(pwd))` to avoid shell execution."
-  },
-  {
     "filename": "callbacks.py",
     "filepath": "../yum/yum/callbacks.py",
-    "where": "download_base_callback.py:43-49",
-    "what": "Potential SQL Injection Vulnerability",
-    "why": "The `updateProgress` method in the `DownloadBaseCallback` class takes user input (`self.text`) and uses it directly without any sanitization or validation. This could lead to a potential SQL injection vulnerability if the user input is used to construct a SQL query.",
-    "fix": "Sanitize and validate all user input before using it in database queries. Consider using parameterized queries or prepared statements."
+    "where": "filename:5-6",
+    "what": "Insecure use of logging module",
+    "why": "The logger's name is vulnerable to SQL injection attacks.",
+    "fix": "Configure logging properly using the `logging.config` module."
   },
   {
     "filename": "update_md.py",
@@ -665,32 +280,16 @@
     "fix": "skipped"
   },
   {
-    "filename": "yum",
-    "filepath": "../yum/bin/yum",
-    "where": "yum.py:9-12",
-    "what": "Insecure error message with sensitive information",
-    "why": "The error message printed to sys.stderr contains sensitive information about the yum module and Python version, which could be used by an attacker to exploit vulnerabilities.",
-    "fix": "Instead of printing sensitive information directly to the error message, consider using a logging framework like Python's built-in logging module or a more secure alternative."
-  },
-  {
     "filename": "yum-updatesd.py",
     "filepath": "../yum/bin/yum-updatesd.py",
-    "where": "filename:4-5",
-    "what": "Insecure import statement",
-    "why": "The `os` module is imported without specifying the correct path, which can lead to importing unintended modules or functions. This can cause unexpected behavior or security vulnerabilities.",
-    "fix": "Specify the correct path for the `os` module, e.g., `import os as sys_os`"
+    "where": "",
+    "what": "",
+    "why": "",
+    "fix": ""
   },
   {
     "filename": "utils.py",
     "filepath": "../yum/utils.py",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "COPYING",
-    "filepath": "../yum/COPYING",
     "where": "skipped",
     "what": "skipped",
     "why": "skipped",
@@ -707,10 +306,10 @@
   {
     "filename": "yum-leak-test.py",
     "filepath": "../yum/test/yum-leak-test.py",
-    "where": "yum-leak-test.py:24-25",
-    "what": "Potential SQL injection vulnerability in the `yb.repos` and `yb.rpmdb.returnPackages()` calls.",
-    "why": "The `yb.repos.setCacheDir(yum.misc.getCacheDir())` line sets the cache directory based on user input, which could lead to a SQL injection attack if not properly sanitized.",
-    "fix": "Ensure that any user input is properly sanitized and validated before passing it to the database."
+    "where": "yum-leak-test.py:12-15",
+    "what": "Missing Input Validation",
+    "why": "The sys.argv variable is directly accessed without any input validation, which can lead to security vulnerabilities if an attacker manipulates the command-line arguments.",
+    "fix": "Validate user input using functions like argparse or by explicitly checking the length of sys.argv."
   },
   {
     "filename": "skipbroken-tests.py",
@@ -745,36 +344,28 @@
     "fix": "skipped"
   },
   {
-    "filename": "yum-pylintrc",
-    "filepath": "../yum/test/yum-pylintrc",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
     "filename": "pubringtests.py",
     "filepath": "../yum/test/pubringtests.py",
-    "where": "imported.py:14-15",
-    "what": "Insecure Hardcoded Key ID and Fingerprint",
-    "why": "These values can be used by attackers to sign malicious packages using your GPG key.",
-    "fix": "Store these values securely, such as in environment variables or configuration files that are not committed to version control."
+    "where": "yum.py:15-16",
+    "what": "Hardcoded secret (GPG key ID and fingerprint)",
+    "why": "Hardcoding secrets, such as GPG key IDs or fingerprints, is a security risk because it makes it easier for an attacker to access the system if they get hold of the code.",
+    "fix": "Replace hardcoded secrets with environment variables or configuration files."
   },
   {
     "filename": "revdepupdatetests.py",
     "filepath": "../yum/test/revdepupdatetests.py",
-    "where": "testbase.py:24-29",
-    "what": "Insecure Deserialization",
-    "why": "The `pkgs.installed_1.addRequiringPkg(pkgs.installed_2)` and similar lines of code are using `addRequiringPkg` method which can lead to insecure deserialization. An attacker could manipulate the `require` string to inject malicious code.",
-    "fix": "Use secure methods to add requiring packages, such as using a whitelist of allowed package names or using a secure data serialization format like JSON."
+    "where": "revdepupdate.py:17-23",
+    "what": "Potential SQL Injection vulnerability due to unescaped data in yumdb_info.reason",
+    "why": "The yumdb_info.reason attribute is assigned a string value from an external source (the 'reason' parameter). This could potentially lead to a SQL injection attack if the input is not properly sanitized.",
+    "fix": "Use parameterized queries or prepared statements with sanitized user input to prevent SQL injection. Alternatively, escape any special characters in the input before assigning it to yumdb_info.reason."
   },
   {
     "filename": "complexremovetests.py",
     "filepath": "../yum/test/complexremovetests.py",
-    "where": "no_problem",
-    "what": "No security vulnerabilities found.",
-    "why": "",
-    "fix": ""
+    "where": "buildPkgs:23-35",
+    "what": "Insecure usage of hardcoded credentials in FakePackage objects",
+    "why": "Hardcoded credentials can be exploited by attackers if they gain access to the system.",
+    "fix": "Use environment variables or secure storage mechanisms to store sensitive information."
   },
   {
     "filename": "operationstests.py",
@@ -787,10 +378,10 @@
   {
     "filename": "settestpath.py",
     "filepath": "../yum/test/settestpath.py",
-    "where": "filename:2-3",
-    "what": "Insecure Path Traversal",
-    "why": "The code inserts parent directory paths using sys.path.insert(), which can lead to path traversal attacks.",
-    "fix": "Use absolute or relative paths that are less susceptible to manipulation."
+    "where": "filename:1-5",
+    "what": "Insecure path traversal",
+    "why": "The use of '.' and '..' in sys.path inserts can lead to an attacker being able to access any file on the system, potentially leading to code execution vulnerabilities.",
+    "fix": "Only include necessary directories in sys.path and avoid using '.' and '..' to prevent potential path traversal attacks. Instead, specify the correct path to the module or directory."
   },
   {
     "filename": "testbase.py",
@@ -811,22 +402,14 @@
   {
     "filename": "check-po-yes-no.py",
     "filepath": "../yum/test/check-po-yes-no.py",
-    "where": "glob.glob()",
-    "what": "Potential path traversal attack via glob function",
-    "why": "glob function does not sanitize input strings, allowing attackers to access files outside intended directory",
-    "fix": "Use safer method to construct file paths, such as pathlib.Path or os.path.join()"
+    "where": "po.py:6-8",
+    "what": "SQL injection vulnerability due to string concatenation with user input",
+    "why": "This can lead to arbitrary command execution if an attacker is able to inject malicious input into the glob.glob() function.",
+    "fix": "Use safe string formatting or parameterized queries to prevent injection attacks."
   },
   {
     "filename": "depsolvetests.py",
     "filepath": "../yum/test/depsolvetests.py",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "yum-release-test.sh",
-    "filepath": "../yum/test/yum-release-test.sh",
     "where": "skipped",
     "what": "skipped",
     "why": "skipped",
@@ -841,268 +424,20 @@
     "fix": "skipped"
   },
   {
-    "filename": "key.pub",
-    "filepath": "../yum/test/gpg/key.pub",
-    "where": "filename:1-24",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "repomd.xml.asc",
-    "filepath": "../yum/test/gpg/repomd.xml.asc",
-    "where": "pgp_signature.txt",
-    "what": "skipped",
-    "why": "This is not a source code file.",
-    "fix": "Please provide a valid source code file for analysis."
-  },
-  {
-    "filename": "repomd.xml",
-    "filepath": "../yum/test/gpg/repomd.xml",
-    "where": "repomd.xml:1-100",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "release.sh",
-    "filepath": "../yum/test/release.sh",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
     "filename": "rpmdb-cache.py",
     "filepath": "../yum/test/rpmdb-cache.py",
-    "where": "test.py:10-12",
-    "what": "Insecure use of `assert` statement",
-    "why": "The `assert` statement can be disabled in Python, which means this check will not occur when running the code. This could lead to a security vulnerability if the assertion is intended to prevent something from happening.",
-    "fix": "Replace `assert` with an `if` statement or use a different method to ensure the condition is met."
-  },
-  {
-    "filename": "yum-release-i18n-test.sh",
-    "filepath": "../yum/test/yum-release-i18n-test.sh",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
+    "where": "filename:1-4",
+    "what": "Missing Input Validation and Error Handling",
+    "why": "The code does not validate user input or handle errors properly, which can lead to security vulnerabilities such as SQL injection or cross-site scripting (XSS).",
+    "fix": "Implement proper input validation and error handling mechanisms to prevent security breaches."
   },
   {
     "filename": "simpleremovetests.py",
     "filepath": "../yum/test/simpleremovetests.py",
-    "where": "testbase.py:10-12",
-    "what": "Unrestricted use of FakePackage objects without proper validation",
-    "why": "The `FakePackage` objects are created with arbitrary data, which can lead to unintended behavior or security issues. It is essential to validate the input and ensure that only authorized packages can be used.",
-    "fix": "Implement proper validation for `FakePackage` objects before using them."
-  },
-  {
-    "filename": "Unnamed repository; edit this file",
-    "filepath": "../yum/.git/description",
-    "where": "Unnamed repository; edit this file",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "index",
-    "filepath": "../yum/.git/index",
     "where": "skipped",
     "what": "skipped",
     "why": "skipped",
     "fix": "skipped"
-  },
-  {
-    "filename": "HEAD",
-    "filepath": "../yum/.git/logs/HEAD",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "HEAD",
-    "filepath": "../yum/.git/logs/refs/remotes/origin/HEAD",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "master",
-    "filepath": "../yum/.git/logs/refs/heads/master",
-    "where": "filename:codeStartLine-codeEndLine",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "pack-2ae76e150c9912e4ce68005e1efca8d4d3edaa9e.pack",
-    "filepath": "../yum/.git/objects/pack/pack-2ae76e150c9912e4ce68005e1efca8d4d3edaa9e.pack",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "pack-2ae76e150c9912e4ce68005e1efca8d4d3edaa9e.idx",
-    "filepath": "../yum/.git/objects/pack/pack-2ae76e150c9912e4ce68005e1efca8d4d3edaa9e.idx",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "commit-msg.sample",
-    "filepath": "../yum/.git/hooks/commit-msg.sample",
-    "where": "commit-msg:6-9",
-    "what": "Hardcoded secret/credentials in a script (`git var GIT_AUTHOR_IDENT`)",
-    "why": "Hardcoding secrets or credentials in scripts can lead to exposure of sensitive information.",
-    "fix": "Instead of hardcoding the `GIT_AUTHOR_IDENT` variable, consider using environment variables or configuration files to store sensitive information."
-  },
-  {
-    "filename": "update.sample",
-    "filepath": "../yum/.git/hooks/update.sample",
-    "where": "update:13-14",
-    "what": "Potential Security Issue: Unnecessary echo statements.",
-    "why": "These echo statements can be potential security risks if an attacker gains access to your system, as they can inject arbitrary commands. Instead, consider using logging mechanisms or other safer alternatives.",
-    "fix": "Replace the echo statements with a safer alternative, such as using logging mechanisms like systemd-journald or the Linux kernel's syslog."
-  },
-  {
-    "filename": "pre-commit.sample",
-    "filepath": "../yum/.git/hooks/pre-commit.sample",
-    "where": "pre-commit:4-10",
-    "what": "Potential SQL Injection vulnerability",
-    "why": "The code uses a hardcoded SQL query to select files, which could allow an attacker to inject malicious SQL commands. This is a security risk because it allows an attacker to execute arbitrary SQL queries.",
-    "fix": "Use parameterized queries or prepared statements instead of concatenating user input into the SQL query."
-  },
-  {
-    "filename": "post-update",
-    "filepath": "../yum/.git/hooks/post-update.sample",
-    "where": "post-update:1-6",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "pre-rebase.sample",
-    "filepath": "../yum/.git/hooks/pre-rebase.sample",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "applypatch-msg.sample",
-    "filepath": "../yum/.git/hooks/applypatch-msg.sample",
-    "where": "applypatch-msg:3-3",
-    "what": "Potential SQL Injection vulnerability through user input (Git commit message)",
-    "why": "The use of unescaped and unsanitized user input in a command can lead to SQL injection vulnerabilities, allowing attackers to inject malicious commands.",
-    "fix": "Validate and sanitize the commit message before using it as input for any commands. Consider using parameterized queries or prepared statements if applicable."
-  },
-  {
-    "filename": "prepare-commit-msg.sample",
-    "filepath": "../yum/.git/hooks/prepare-commit-msg.sample",
-    "where": "prepare-commit-msg:5-6",
-    "what": "Potential command injection in /usr/bin/perl call",
-    "why": "Malicious input could lead to unauthorized system actions",
-    "fix": "Use a secure way of executing code or sanitize input variables"
-  },
-  {
-    "filename": "push-to-checkout.sample",
-    "filepath": "../yum/.git/hooks/push-to-checkout.sample",
-    "where": "hook.sh:9-26",
-    "what": "Insecure use of git commands",
-    "why": "Potential for code injection or data tampering due to lack of error handling and sanitization.",
-    "fix": "Use secure methods to execute git commands, such as exec() with careful parameter validation and sanitization."
-  },
-  {
-    "filename": "pre-push.sample",
-    "filepath": "../yum/.git/hooks/pre-push.sample",
-    "where": "filename:13-15",
-    "what": "Command Injection Vulnerability",
-    "why": "Arbitrary code execution on the system, potentially allowing unauthorized access or manipulation of sensitive information.",
-    "fix": "Use parameterized queries or properly escape user input when executing commands."
-  },
-  {
-    "filename": "fsmonitor-watchman.sample",
-    "filepath": "../yum/.git/hooks/fsmonitor-watchman.sample",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "pre-merge-commit.sample",
-    "filepath": "../yum/.git/hooks/pre-merge-commit.sample",
-    "where": "git-hooks.sh:3-3",
-    "what": "Insecure path traversal",
-    "why": "The script does not properly sanitize input, allowing for potential path traversal attacks. An attacker could manipulate the `$GIT_DIR` variable to access unauthorized files or directories.",
-    "fix": "Ensure that the `$GIT_DIR` variable is properly sanitized and validated before using it in file operations."
-  },
-  {
-    "filename": "pre-receive.sample",
-    "filepath": "../yum/.git/hooks/pre-receive.sample",
-    "where": "pre-receive:3-6",
-    "what": "Hardcoded secret/credentials in the script",
-    "why": "The 'echoback' option is hardcoded and can be exploited to extract sensitive information from the server.",
-    "fix": "Instead of hardcoding the options, consider using environment variables or a configuration file to store them."
-  },
-  {
-    "filename": "pre-applypatch.sample",
-    "filepath": "../yum/.git/hooks/pre-applypatch.sample",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "HEAD",
-    "filepath": "../yum/.git/HEAD",
-    "where": "filename:1-2",
-    "what": "Empty or missing file content",
-    "why": "The file appears to be empty or not contain any source code, which makes it difficult to identify potential security vulnerabilities.",
-    "fix": "Add relevant source code to the file."
-  },
-  {
-    "filename": "gitconfig",
-    "filepath": "../yum/.git/config",
-    "where": "gitconfig:1-7",
-    "what": "Git configuration file, but no code to analyze",
-    "why": "There is no code to analyze in this file. This file only contains Git configuration settings.",
-    "fix": "Not applicable"
-  },
-  {
-    "filename": "packed-refs",
-    "filepath": "../yum/.git/packed-refs",
-    "where": "git-config.txt:1-1",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "HEAD",
-    "filepath": "../yum/.git/refs/remotes/origin/HEAD",
-    "where": "filename:1-1",
-    "what": "No SAST problems found.",
-    "why": "The provided code does not contain any typical SAST issues.",
-    "fix": ""
-  },
-  {
-    "filename": "master",
-    "filepath": "../yum/.git/refs/heads/master",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "gitattributes",
-    "filepath": "../yum/.git/info/exclude",
-    "where": "gitattributes:1-3",
-    "what": "Insecure path traversal",
-    "why": "The code is using `git ls-files` with an exclude pattern that can lead to path traversal attacks. This allows an attacker to access files outside of the intended directory.",
-    "fix": "Review and secure the exclude patterns used in the code, ensure they are properly sanitized and validated to prevent path traversal attacks."
   },
   {
     "filename": "callback.py",
@@ -1115,10 +450,10 @@
   {
     "filename": "completion-helper.py",
     "filepath": "../yum/completion-helper.py",
-    "where": "filename:1-26",
-    "what": "Command injection vulnerability in get_pattern() function",
-    "why": "The use of shlex.split() without proper error handling can lead to arbitrary shell commands being executed.",
-    "fix": "Use argparse or optparse instead of shlex.split()"
+    "where": "filename:24-25",
+    "what": "Unvalidated input in get_pattern function",
+    "why": "Insecure use of shlex.split() without proper validation of user input.",
+    "fix": "Validate the input before passing it to shlex.split(), e.g., by checking for suspicious characters."
   },
   {
     "filename": "yummain.py",
@@ -1126,14 +461,6 @@
     "where": "skipped",
     "what": "skipped",
     "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": ".gitignore",
-    "filepath": "../yum/.gitignore",
-    "where": "*.pyc",
-    "what": "skipped",
-    "why": "No SAST problems found, but rather a .gitignore file contents.",
     "fix": "skipped"
   },
   {
@@ -1155,10 +482,10 @@
   {
     "filename": "__init__.py",
     "filepath": "../yum/rpmUtils/__init__.py",
-    "where": "rpm_utils.py:3-4",
-    "what": "Hardcoded path in shebang line",
-    "why": "The hardcoded path '/usr/bin/python' can be vulnerable to path traversal attacks if an attacker controls the contents of the '/usr/bin/' directory. It's also a security best practice to use the system's default Python interpreter, which is typically specified by the 'python' command.",
-    "fix": "Use the 'python' command instead of the hardcoded path: #!/usr/bin/env python -tt"
+    "where": "rpm_utils.py:2-3",
+    "what": "Insecure Import Statement",
+    "why": "The use of '-tt' as an import statement in a shebang line is not secure. This can lead to unexpected behavior or even code injection.",
+    "fix": "Replace the insecure import statement with the correct Python interpreter path, e.g., '/usr/bin/python3'."
   },
   {
     "filename": "updates.py",
@@ -1179,26 +506,18 @@
   {
     "filename": "transaction.py",
     "filepath": "../yum/rpmUtils/transaction.py",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "Makefile",
-    "filepath": "../yum/rpmUtils/Makefile",
-    "where": "install:18-20",
-    "what": "Potential privilege escalation vulnerability due to hardcoded install directory",
-    "why": "The `DESTDIR` variable can be set by an attacker, allowing them to control where files are installed. This could lead to arbitrary code execution or other security issues.",
-    "fix": "Use a secure way to determine the installation directory, such as using `sys.prefix` like in the `PYSYSDIR` definition"
+    "where": "transaction_wrapper.py:3-11",
+    "what": "Insecure use of hardcoded credentials",
+    "why": "The script uses a hardcoded root directory '/'. This is a security risk because an attacker could potentially exploit this to gain access to sensitive files.",
+    "fix": "Replace the hardcoded root directory with a configurable or dynamically determined value."
   },
   {
     "filename": "updates-test.py",
     "filepath": "../yum/rpmUtils/tests/updates-test.py",
-    "where": "filename:1-4",
-    "what": "Potential SQL Injection vulnerability",
-    "why": "The code uses string concatenation to build a query, which can lead to SQL injection attacks if user-input data is not properly sanitized.",
-    "fix": "Use parameterized queries or prepared statements instead of string concatenation to prevent SQL injection."
+    "where": "filename.py:4-6",
+    "what": "Unvalidated User Input",
+    "why": "This can lead to injection attacks, such as SQL injection or command injection.",
+    "fix": "Validate user input using techniques like whitelisting, sanitization, or parameterized queries."
   },
   {
     "filename": "yumcommands.py",
@@ -1209,38 +528,6 @@
     "fix": "skipped"
   },
   {
-    "filename": "INSTALL",
-    "filepath": "../yum/INSTALL",
-    "where": "README:1-5",
-    "what": "No issues found",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "yum-cron.sysvinit",
-    "filepath": "../yum/yum-cron/yum-cron.sysvinit",
-    "where": "yum-cron:12-14",
-    "what": "Hardcoded secret/credential (`/etc/sysconfig/yum-cron` file)",
-    "why": "This file contains sensitive configuration settings that could potentially be modified by an attacker to compromise the system.",
-    "fix": "Avoid hardcoding sensitive data in configuration files. Instead, consider using secure storage mechanisms like environment variables or encrypted files."
-  },
-  {
-    "filename": "yum-hourly.cron.sh",
-    "filepath": "../yum/yum-cron/yum-hourly.cron.sh",
-    "where": "/var/lock/subsys/yum-cron:3-4",
-    "what": "Potential Path Traversal Vulnerability",
-    "why": "The script checks for the presence of /var/lock/subsys/yum-cron, but does not properly validate user input. An attacker could potentially manipulate this path to gain unauthorized access or escalate privileges.",
-    "fix": "Use a more robust validation mechanism, such as using the ` realpath` function to ensure that the path is correct and within expected boundaries."
-  },
-  {
-    "filename": "yum-security.cron.sh",
-    "filepath": "../yum/yum-cron/yum-security.cron.sh",
-    "where": "/var/lock/subsys/yum-cron:2-3",
-    "what": "Insecure file path traversal",
-    "why": "The script checks if a specific file exists in /var/lock/subsys/yum-cron, but it does not properly sanitize the input. This can lead to Path Traversal attacks.",
-    "fix": "Use a whitelist approach and only allow access to expected files or directories. Use path validation mechanisms like realpath or dirname to prevent potential vulnerabilities."
-  },
-  {
     "filename": "yum-cron.py",
     "filepath": "../yum/yum-cron/yum-cron.py",
     "where": "skipped",
@@ -1249,206 +536,12 @@
     "fix": "skipped"
   },
   {
-    "filename": "TODO",
-    "filepath": "../yum/yum-cron/TODO",
-    "where": "logging: unknown",
-    "what": "Potential configuration issue",
-    "why": "The logging system may not handle failures properly due to lack of detailed error handling.",
-    "fix": "Implement robust logging mechanisms, including failure handling and detailed error messages."
-  },
-  {
-    "filename": "yum-cron.service",
-    "filepath": "../yum/yum-cron/yum-cron.service",
-    "where": "yum-update.service:1-1",
-    "what": "Insecure path traversal via /var/lock/subsys/yum-cron",
-    "why": "/var/lock/subsys/yum-cron can be accessed and manipulated by unauthorized users, potentially leading to privilege escalation or other security issues.",
-    "fix": "Update the ExecStart and ExecStop commands to use a more secure location for locking, such as /run/lock/subsys/yum-cron. Also, consider using a more robust locking mechanism."
-  },
-  {
-    "filename": "yum-daily.cron.sh",
-    "filepath": "../yum/yum-cron/yum-daily.cron.sh",
-    "where": "yum-cron:init.sh:1-4",
-    "what": "Hardcoded path traversal vulnerability",
-    "why": "An attacker could create a symbolic link to this directory, allowing them to execute arbitrary commands.",
-    "fix": "Use a more robust way to check for the presence of the flag, such as using `test -f` with the absolute path or checking the file's inode instead of its path."
-  },
-  {
-    "filename": "Makefile",
-    "filepath": "../yum/yum-cron/Makefile",
-    "where": "Makefile:2-2",
-    "what": "Potential Path Traversal Vulnerability",
-    "why": "The `*~` pattern in the `clean` target may lead to a path traversal attack if an attacker can manipulate the file name. This could allow them to delete files outside of the intended directory.",
-    "fix": "Avoid using glob patterns like `*~` and instead use specific file names or directories."
-  },
-  {
-    "filename": "README.md",
-    "filepath": "../yum/README.md",
-    "where": "yum:1-7",
-    "what": "No security vulnerabilities or issues found.",
-    "why": "",
-    "fix": ""
-  },
-  {
     "filename": "output.py",
     "filepath": "../yum/output.py",
     "where": "skipped",
     "what": "skipped",
     "why": "skipped",
     "fix": "skipped"
-  },
-  {
-    "filename": "yum-makecache.service",
-    "filepath": "../yum/etc/yum-makecache.service",
-    "where": "[filename]:1-13",
-    "what": "no SAST issues found",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "yum.conf",
-    "filepath": "../yum/etc/yum.conf",
-    "where": "[main]",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "yum.console",
-    "filepath": "../yum/etc/yum.console",
-    "where": "config.txt:1-1",
-    "what": "Hardcoded credentials (username and password)",
-    "why": "Hardcoding sensitive information such as usernames and passwords can lead to unauthorized access to systems or data.",
-    "fix": "Store sensitive information in environment variables, a secrets management system, or a configuration file with restricted permissions."
-  },
-  {
-    "filename": "yum-updatesd.init",
-    "filepath": "../yum/etc/yum-updatesd.init",
-    "where": "yum:8-10",
-    "what": "Hardcoded secret/credential (`katzj@redhat.com`)",
-    "why": "The email address of the author is hardcoded in the script, which can be a security risk if it's not intended to be publicly visible or accessible.",
-    "fix": "Consider removing or replacing this line with a more secure way to store and retrieve contact information."
-  },
-  {
-    "filename": "version-groups.conf",
-    "filepath": "../yum/etc/version-groups.conf",
-    "where": "yum:1-5",
-    "what": "Hardcoded credentials/secret data",
-    "why": "The package names listed in the `pkglist` section are hardcoded and may not be secure. They could potentially be used to inject malicious packages or expose sensitive information.",
-    "fix": "Consider using a more secure method for specifying package names, such as reading from an external configuration file or database."
-  },
-  {
-    "filename": "yum.logrotate",
-    "filepath": "../yum/etc/yum.logrotate",
-    "where": "/var/log/yum.log:1-1",
-    "what": "Insecure permissions for log file",
-    "why": "The log file `/var/log/yum.log` has insecure permissions (create mode `0600`). This allows only the owner to read and write the file, which may not be the intended behavior. Typically, log files are readable by other users or groups for auditing purposes.",
-    "fix": "Change the create mode to a more permissive value, such as `0644` to allow group and others to read the file."
-  },
-  {
-    "filename": "main",
-    "filepath": "../yum/etc/yum-updatesd.conf",
-    "codeStartLine": 6,
-    "codeEndLine": 8,
-    "where": "main:7-9",
-    "what": "Potential dbus security risk",
-    "why": "Allowing dbus notifications may expose system resources to unauthorized access.",
-    "fix": "Consider disabling dbus notifications or ensuring proper security measures are in place."
-  },
-  {
-    "filename": "yum.bash",
-    "filepath": "../yum/etc/yum.bash",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "yum.pam",
-    "filepath": "../yum/etc/yum.pam",
-    "where": "#%PAM-1.0:1-14",
-    "what": "Potential security vulnerability in pam_rootok.so",
-    "why": "pam_rootok.so allows root to bypass authentication, potentially leading to unauthorized access.",
-    "fix": "Replace pam_rootok.so with a more secure alternative, or configure it to require additional authentication mechanisms."
-  },
-  {
-    "filename": "yum-cron.conf",
-    "filepath": "../yum/etc/yum-cron.conf",
-    "where": "filename:7-8",
-    "what": "Potential for Denial of Service (DoS) attack due to excessive sleeping.",
-    "why": "If an attacker can manipulate the random_sleep value, they could potentially cause the system to wait excessively long periods of time before running updates, leading to a DoS condition.",
-    "fix": "Limit the maximum sleep time to a reasonable value or implement additional security measures to prevent tampering with this setting."
-  },
-  {
-    "filename": "yum-cron-security.conf",
-    "filepath": "../yum/etc/yum-cron-security.conf",
-    "where": "yum.conf:1-30",
-    "what": "Hardcoded credentials",
-    "why": "The 'email_from' parameter in the [email] section is hardcoded to 'root', which could be a security risk if not properly configured.",
-    "fix": "Replace 'root' with a secure email address or use environment variables to store sensitive information."
-  },
-  {
-    "filename": "Makefile",
-    "filepath": "../yum/etc/Makefile",
-    "where": "filename:8-11",
-    "what": "Hardcoded secret/credentials in install command",
-    "why": "The hardcoded path '/etc/dbus-1/system.d/' contains sensitive system configuration information. This can be a security risk if an attacker gains access to the system.",
-    "fix": "Replace hardcoded secrets with environment variables or a secure storage mechanism, such as /etc/sysconfig/<appname> or /etc/default/<appname>"
-  },
-  {
-    "filename": "yum-updatesd-dbus.conf",
-    "filepath": "../yum/etc/yum-updatesd-dbus.conf",
-    "where": "dbusconfig.dtd:1-22",
-    "what": "Hardcoded credentials/secret (username and interface name)",
-    "why": "Using hardcoded credentials/interface names can lead to security risks if the sensitive information is exposed.",
-    "fix": "Replace 'edu.duke.linux.yum' with a secure method of storing credentials, such as environment variables or secure storage mechanisms."
-  },
-  {
-    "filename": "yum-cron-hourly.conf",
-    "filepath": "../yum/etc/yum-cron-hourly.conf",
-    "where": "filename:13-13",
-    "what": "group_list set to None",
-    "why": "May lead to unexpected behavior when updating groups.",
-    "fix": "Specify an explicit value for group_list or use system defaults."
-  },
-  {
-    "filename": "yum-makecache.timer",
-    "filepath": "../yum/etc/yum-makecache.timer",
-    "where": "systemd-unit-file:1-16",
-    "what": "No SAST issues found",
-    "why": "The code appears to be a valid systemd unit file with no security vulnerabilities or SAST issues.",
-    "fix": "N/A"
-  },
-  {
-    "filename": "ChangeLog",
-    "filepath": "../yum/ChangeLog",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "Dockerfile",
-    "filepath": "../yum/Dockerfile",
-    "where": "filename:8-9",
-    "what": "Insecure Package Installation (EPEL)",
-    "why": "The `yum` package is being used to install EPEL release, which may introduce known vulnerabilities in the base CentOS image. Additionally, using `--nodeps` with `rpm -e` can lead to unexpected behavior.",
-    "fix": "Consider using a more secure method for installing packages, such as using Docker's built-in package management tools or a tool like `apt-cacher-ng`. Remove the `--nodeps` flag from the `rpm -e` command."
-  },
-  {
-    "filename": "repomd.dtd",
-    "filepath": "../yum/docs/repomd.dtd",
-    "where": "repomd.dtd:2-10",
-    "what": "Insecure URL in the DOCTYPE declaration",
-    "why": "The URL 'http:///miroslav.suchy.cz/spacewalk/repomd.dtd' contains a potential path traversal vulnerability. An attacker could manipulate the URL to access arbitrary files on the server.",
-    "fix": "Update the URL to use a secure protocol (HTTPS) and sanitize any user input that may be used in constructing URLs."
-  },
-  {
-    "filename": "yum-updatesd.conf.5",
-    "filepath": "../yum/docs/yum-updatesd.conf.5",
-    "where": "yum-updatesd.conf:1-24",
-    "what": "",
-    "why": "",
-    "fix": ""
   },
   {
     "filename": "rstgenerator.py",
@@ -1467,86 +560,6 @@
     "fix": "skipped"
   },
   {
-    "filename": "Makefile",
-    "filepath": "../yum/docs/sphinxdocs/Makefile",
-    "where": "Makefile",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "yum-updatesd.8",
-    "filepath": "../yum/docs/yum-updatesd.8",
-    "where": "yum-updatesd:1-11",
-    "what": "Potential insecure configuration file reference",
-    "why": "The yum-updatesd.conf(5) reference may lead to an attacker being able to manipulate the daemon's behavior by modifying the configuration file.",
-    "fix": "Consider using a more secure method for storing and loading configuration, such as environment variables or a secure storage mechanism."
-  },
-  {
-    "filename": "yum.conf.5",
-    "filepath": "../yum/docs/yum.conf.5",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": ".gitignore",
-    "filepath": "../yum/docs/.gitignore",
-    "where": "",
-    "what": "",
-    "why": "",
-    "fix": ""
-  },
-  {
-    "filename": "yum-cron.8",
-    "filepath": "../yum/docs/yum-cron.8",
-    "where": ".\" yum-cron - cron interface for yum",
-    "what": "No security vulnerabilities found",
-    "why": "The provided code is a manual page and does not contain any source code that could be analyzed for SAST problems.",
-    "fix": "N/A"
-  },
-  {
-    "filename": "yum-shell.8",
-    "filepath": "../yum/docs/yum-shell.8",
-    "where": "yum:10-15",
-    "what": "Hardcoded URL in documentation",
-    "why": "The URL `http://yum.baseurl.org/` is hardcoded in the documentation, which could lead to security vulnerabilities if not properly validated or sanitized.",
-    "fix": "Replace the hardcoded URL with a configurable or parameterized one, and ensure proper input validation and sanitization."
-  },
-  {
-    "filename": "yum.8",
-    "filepath": "../yum/docs/yum.8",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "Makefile",
-    "filepath": "../yum/docs/Makefile",
-    "where": "all:1-2",
-    "what": "Command injection vulnerability in 'rm' command",
-    "why": "The '*' wildcard can lead to unintended deletion of files, potentially including system files or sensitive data.",
-    "fix": "Use a more specific pattern for deleting files, such as 'rm -f *.pyc' instead of '*'."
-  },
-  {
-    "filename": "comps.rng",
-    "filepath": "../yum/docs/comps.rng",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "see http://wiki.linux.duke.edu/YumTodo",
-    "filepath": "../yum/TODO",
-    "where": "see http://wiki.linux.duke.edu/YumTodo:1-2",
-    "what": "No code found",
-    "why": "No SAST analysis possible due to lack of code",
-    "fix": "Provide actual code for analysis"
-  },
-  {
     "filename": "shell.py",
     "filepath": "../yum/shell.py",
     "where": "skipped",
@@ -1557,30 +570,6 @@
   {
     "filename": "cli.py",
     "filepath": "../yum/cli.py",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "AUTHORS",
-    "filepath": "../yum/AUTHORS",
-    "where": "AUTHORS:1-15",
-    "what": "Potential information disclosure vulnerability",
-    "why": "The AUTHORS file contains a list of contributors, which could be used by an attacker to gather sensitive information about the project or its maintainers.",
-    "fix": "Remove sensitive information from the CONTRIBUTORS file or use a more secure approach to manage contributor lists."
-  },
-  {
-    "filename": "Makefile",
-    "filepath": "../yum/Makefile",
-    "where": "skipped",
-    "what": "skipped",
-    "why": "skipped",
-    "fix": "skipped"
-  },
-  {
-    "filename": "yum.spec",
-    "filepath": "../yum/yum.spec",
     "where": "skipped",
     "what": "skipped",
     "why": "skipped",
