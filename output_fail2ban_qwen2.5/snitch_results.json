@@ -1,0 +1,651 @@
+[
+  {
+    "filename": "setup.py",
+    "filepath": "../fail2ban/setup.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "protocol.py",
+    "filepath": "../fail2ban/fail2ban/protocol.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "setup.py",
+    "filepath": "../fail2ban/fail2ban/setup.py",
+    "where": "fail2ban.py:35-48",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains hardcoded paths and variables that are specific to the environment in which it is run. While not inherently a security vulnerability, this could lead to issues if the paths or variables need to be changed.",
+    "fix": "Replace hardcoding with dynamic configuration loading from a file or environmental variable."
+  },
+  {
+    "filename": "csocket.py",
+    "filepath": "../fail2ban/fail2ban/client/csocket.py",
+    "where": "CSocket.py:40-59",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains a hardcoded path to a Unix socket file '/var/run/fail2ban/fail2ban.sock'. This can be a potential security risk as the path might not be appropriate in all environments and could expose sensitive data.",
+    "fix": "Replace the hardcoded path with a configuration option or environment variable. For example, use `socket_path = os.environ.get('FAIL2BAN_SOCKET_PATH', '/var/run/fail2ban/fail2ban.sock')`."
+  },
+  {
+    "filename": "fail2bancmdline.py",
+    "filepath": "../fail2ban/fail2ban/client/fail2bancmdline.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "configparserinc.py",
+    "filepath": "../fail2ban/fail2ban/client/configparserinc.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "jailreader.py",
+    "filepath": "../fail2ban/fail2ban/client/jailreader.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "configreader.py",
+    "filepath": "../fail2ban/fail2ban/client/configreader.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "actionreader.py",
+    "filepath": "../fail2ban/fail2ban/client/actionreader.py",
+    "where": "ActionReader.py:28-47",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The file contains sensitive information such as configuration options and action commands that could potentially be hardcoded. These should not contain any secrets or credentials.",
+    "fix": "Replace the hard-coded strings with environment variables, config files, or other secure methods of storing sensitive information."
+  },
+  {
+    "filename": "filterreader.py",
+    "filepath": "../fail2ban/fail2ban/client/filterreader.py",
+    "where": "filterreader.py:26-31",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The file contains hard-coded strings which might include sensitive information. Although in this case, it appears to be configuration options rather than credentials, the practice is still discouraged as it could potentially expose sensitive data if the codebase is compromised.",
+    "fix": "Use environment variables or a secure configuration management tool to store and retrieve sensitive values such as log types or paths."
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../fail2ban/fail2ban/client/__init__.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "jailsreader.py",
+    "filepath": "../fail2ban/fail2ban/client/jailsreader.py",
+    "where": "filename:49-73",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The file contains hard-coded strings that could potentially contain sensitive information such as passwords or API keys.",
+    "fix": "Remove any hard-coded credentials and use environment variables, configuration files, or secure vaults to store sensitive data."
+  },
+  {
+    "filename": "configurator.py",
+    "filepath": "../fail2ban/fail2ban/client/configurator.py",
+    "where": "Configurator.py:6-12",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The file contains sensitive information such as the author, copyright, and license details. While not directly a security vulnerability, it's important to ensure that any sensitive data is removed or obfuscated.",
+    "fix": "Remove or replace sensitive data with placeholders or use environment variables."
+  },
+  {
+    "filename": "fail2banregex.py",
+    "filepath": "../fail2ban/fail2ban/client/fail2banregex.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fail2banserver.py",
+    "filepath": "../fail2ban/fail2ban/client/fail2banserver.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fail2banclient.py",
+    "filepath": "../fail2ban/fail2ban/client/fail2banclient.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fail2banreader.py",
+    "filepath": "../fail2ban/fail2ban/client/fail2banreader.py",
+    "where": "filename:36-45",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The file contains hardcoded paths and filenames which could be a potential security risk if the code is exposed or misused.",
+    "fix": "Use environment variables or configuration files to store sensitive information such as log paths, socket locations, and database files. For example, use `os.environ['LOG_TARGET']` instead of hardcoding the path."
+  },
+  {
+    "filename": "beautifier.py",
+    "filepath": "../fail2ban/fail2ban/client/beautifier.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "asyncore.py",
+    "filepath": "../fail2ban/fail2ban/compat/asyncore.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "asynchat.py",
+    "filepath": "../fail2ban/fail2ban/compat/asynchat.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../fail2ban/fail2ban/__init__.py",
+    "where": "logging.py:13-46",
+    "what": "Hardcoded Secret/Credential",
+    "why": "The code contains hardcoded values for the logging levels, which could potentially be sensitive information if the source code is exposed.",
+    "fix": "It's recommended to use constants or configuration files instead of hardcoding these values. For example, you can define them as environment variables or in a config file that is sourced by the application."
+  },
+  {
+    "filename": "observer.py",
+    "filepath": "../fail2ban/fail2ban/server/observer.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "mytime.py",
+    "filepath": "../fail2ban/fail2ban/server/mytime.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "failmanager.py",
+    "filepath": "../fail2ban/fail2ban/server/failmanager.py",
+    "where": "FailManager.py:32-56",
+    "what": "Hardcoded secrets/credentials",
+    "why": "__author__ and __copyright__ are hardcoded in the source code, which could potentially expose sensitive information. Although this is not a direct security vulnerability, it may indicate poor coding practices that could lead to other issues.",
+    "fix": "Remove or replace the hard-coded author and copyright information with placeholders or environment variables if necessary."
+  },
+  {
+    "filename": "strptime.py",
+    "filepath": "../fail2ban/fail2ban/server/strptime.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "utils.py",
+    "filepath": "../fail2ban/fail2ban/server/utils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "jailthread.py",
+    "filepath": "../fail2ban/fail2ban/server/jailthread.py",
+    "where": "__init__.py:1-2",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains hard-coded secrets or credentials, which can pose a security risk if the source code is compromised.",
+    "fix": "Remove any hard-coded secrets or credentials and use environment variables or secure vaults to manage sensitive information."
+  },
+  {
+    "filename": "database.py",
+    "filepath": "../fail2ban/fail2ban/server/database.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "action.py",
+    "filepath": "../fail2ban/fail2ban/server/action.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "jails.py",
+    "filepath": "../fail2ban/fail2ban/server/jails.py",
+    "where": "Jails.py:27-51",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code includes sensitive information such as the backend and db parameters, which are hardcoded in the add method. This could lead to security risks if this file or its content is exposed.",
+    "fix": "Remove hardcoding of credentials and use environment variables or configuration files to securely manage them."
+  },
+  {
+    "filename": "jail.py",
+    "filepath": "../fail2ban/fail2ban/server/jail.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "banmanager.py",
+    "filepath": "../fail2ban/fail2ban/server/banmanager.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "filterpoll.py",
+    "filepath": "../fail2ban/fail2ban/server/filterpoll.py",
+    "where": "Fail2Ban/filter.py:38-41",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The file contains hardcoded logging levels and paths which could potentially expose sensitive information if the source code is accessed by unauthorized parties.",
+    "fix": "Use environment variables or configuration files to store logging levels. Ensure that any sensitive information such as log paths are not hardcoded in the source code."
+  },
+  {
+    "filename": "filterpyinotify.py",
+    "filepath": "../fail2ban/fail2ban/server/filterpyinotify.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "datetemplate.py",
+    "filepath": "../fail2ban/fail2ban/server/datetemplate.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "filter.py",
+    "filepath": "../fail2ban/fail2ban/server/filter.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "failregex.py",
+    "filepath": "../fail2ban/fail2ban/server/failregex.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "actions.py",
+    "filepath": "../fail2ban/fail2ban/server/actions.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "transmitter.py",
+    "filepath": "../fail2ban/fail2ban/server/transmitter.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../fail2ban/fail2ban/server/__init__.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "asyncserver.py",
+    "filepath": "../fail2ban/fail2ban/server/asyncserver.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "server.py",
+    "filepath": "../fail2ban/fail2ban/server/server.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "ipdns.py",
+    "filepath": "../fail2ban/fail2ban/server/ipdns.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "ticket.py",
+    "filepath": "../fail2ban/fail2ban/server/ticket.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "filtersystemd.py",
+    "filepath": "../fail2ban/fail2ban/server/filtersystemd.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "datedetector.py",
+    "filepath": "../fail2ban/fail2ban/server/datedetector.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "exceptions.py",
+    "filepath": "../fail2ban/fail2ban/exceptions.py",
+    "where": "exceptions.py:47-50",
+    "what": "Hardcoded exception names and classes",
+    "why": "Using hardcoded exception class names can make the code less flexible. If a different exception needs to be used, it would require changing the source code.",
+    "fix": "Consider using exceptions from the standard library or define custom exception classes dynamically if needed."
+  },
+  {
+    "filename": "helpers.py",
+    "filepath": "../fail2ban/fail2ban/helpers.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "version.py",
+    "filepath": "../fail2ban/fail2ban/version.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "samplestestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/samplestestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "utils.py",
+    "filepath": "../fail2ban/fail2ban/tests/utils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "observertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/observertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fail2banregextestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/fail2banregextestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "clientbeautifiertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/clientbeautifiertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "test_smtp.py",
+    "filepath": "../fail2ban/fail2ban/tests/action_d/test_smtp.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../fail2ban/fail2ban/tests/action_d/__init__.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "actiontestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/actiontestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "tickettestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/tickettestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "misctestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/misctestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "action_nomethod.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action_nomethod.py",
+    "where": "TestAction.py:1-3",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The class `TestAction` is defined with hardcoded values for its attributes. Although in this case, no credentials are directly used within the class, it's a pattern that could potentially be misused.",
+    "fix": "Ensure that any sensitive information such as credentials is not hard-coded into classes or files. Use environment variables or configuration files to manage such data securely."
+  },
+  {
+    "filename": "action_checkainfo.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action_checkainfo.py",
+    "where": "fail2ban/server/action.py:5-13",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code uses `_logSys` which is likely a logger configured with sensitive information such as log file paths, rotation policies, or other credentials. Hardcoding logging configurations can expose sensitive information and compromise security.",
+    "fix": "Use environment variables or configuration files to manage logging settings instead of hardcoding them in the source code. Ensure that any logging configuration is stored securely and not included in version control systems."
+  },
+  {
+    "filename": "action.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action.py",
+    "where": "fail2ban/server/action.py:5-7",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The variable `_opt3` is hardcoded with the value 'Hello', which could potentially contain sensitive information if used in a different context. Hardcoding such values can lead to security risks if the codebase or environment is compromised.",
+    "fix": "Replace the hardcoded string with a configuration option or parameter that can be set externally, ensuring that any sensitive data does not appear directly in the source code."
+  },
+  {
+    "filename": "action_modifyainfo.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action_modifyainfo.py",
+    "where": "fail2ban/server/action.py:14-18",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The hardcoded string 'intended error' is a potential security risk. It could be used to reveal sensitive information or lead to unexpected behavior.",
+    "fix": "Replace the hardcoded string with a constant or configuration setting that can be managed externally."
+  },
+  {
+    "filename": "action_noAction.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action_noAction.py",
+    "where": "fail2ban/server/action.py:1-4",
+    "what": "Inheritance from a base class without implementation",
+    "why": "Inheriting from a base class like `ActionBase` without implementing its methods can lead to incomplete or broken functionality. This may result in fail2ban not functioning as intended, potentially leaving the system vulnerable to attacks.",
+    "fix": "Implement the required methods from `ActionBase` in the `TestAction` class to ensure that it fulfills the intended purpose and integrates correctly with the fail2ban framework."
+  },
+  {
+    "filename": "action_errors.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action_errors.py",
+    "where": "test_action.py:2-14",
+    "what": "Insecure exception handling and unhandled exceptions",
+    "why": "Raising an exception without proper error handling can lead to security vulnerabilities, as it may provide unexpected information about the system or application. Additionally, unhandled exceptions can cause crashes or other issues that could be exploited by attackers.",
+    "fix": "Handle exceptions appropriately in methods like start(), stop(), ban(), and unban(). For example, you can log the exception details and raise a custom exception if needed."
+  },
+  {
+    "filename": "ignorecommand.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/ignorecommand.py",
+    "where": "#!/usr/bin/env fail2ban-python:3-6",
+    "what": "Insecure Command Execution",
+    "why": "The script accepts user-provided input (`sys.argv[1]`) and directly uses it in a condition. This can lead to injection vulnerabilities where an attacker could manipulate the input to bypass intended logic or execute arbitrary code.",
+    "fix": "Validate and sanitize the input before using it. Use white-listing for IP addresses if necessary, and ensure that only valid inputs are accepted."
+  },
+  {
+    "filename": "digest.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/config/apache-auth/digest.py",
+    "where": "digest.py:15-23",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains hardcoded plaintext passwords and a hardcoded secret for Apache Digest authentication.",
+    "fix": "Use secure methods to handle sensitive information, such as environment variables or configuration files.",
+    "example": "import os\npassword = os.getenv('DIGEST_PASSWORD')"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../fail2ban/fail2ban/tests/__init__.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fail2banclienttestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/fail2banclienttestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "failmanagertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/failmanagertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "dummyjail.py",
+    "filepath": "../fail2ban/fail2ban/tests/dummyjail.py",
+    "where": "dummy_jail.py:19-26",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains a hardcoded boolean value for `__checkBan` method, which is used internally and may indicate that sensitive information or hardcoded credentials are present. This can be a security risk if the source code is exposed.",
+    "fix": "Ensure that any internal methods or properties do not contain hardcode values that could be sensitive. If necessary, refactor these to use configuration parameters or environmental variables."
+  },
+  {
+    "filename": "clientreadertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/clientreadertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "servertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/servertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "datedetectortestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/datedetectortestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "databasetestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/databasetestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "filtertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/filtertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "banmanagertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/banmanagertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "sockettestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/sockettestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "actionstestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/actionstestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "conf.py",
+    "filepath": "../fail2ban/doc/conf.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "smtp.py",
+    "filepath": "../fail2ban/config/action.d/smtp.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  }
+]
