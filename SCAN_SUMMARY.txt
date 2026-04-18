@@ -1,0 +1,19 @@
+SNITCH EXPERIMENT - SCAN RESULTS SUMMARY
+Florida Institute of Technology
+Date: April 16, 2026
+
+BANDIT BASELINE
+yum: HIGH=0, MEDIUM=0, LOW=6, TOTAL=6
+beaverhabits: HIGH=2, MEDIUM=2, LOW=142, TOTAL=146
+fail2ban: HIGH=5, MEDIUM=32, LOW=21, TOTAL=58
+
+SNITCH LLM RESULTS
+beaverhabits llama3.1: total=71, findings=56
+beaverhabits gemma3: total=71, findings=56
+beaverhabits qwen2.5: total=71, findings=54
+yum llama3.1: total=72, findings=17
+yum gemma3: total=72, findings=18
+yum qwen2.5: total=72, findings=20
+fail2ban llama3.1: total=81, findings=25
+fail2ban gemma3: total=81, findings=25
+fail2ban qwen2.5: total=81, findings=22

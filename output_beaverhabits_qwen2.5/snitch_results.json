@@ -1,0 +1,570 @@
+[
+  {
+    "filename": "healthcheck.py",
+    "filepath": "../beaverhabits/healthcheck.py",
+    "where": "service_check.py:4-9",
+    "what": "Insecure HTTP Request",
+    "why": "Using plain HTTP for health checks can expose sensitive data and is not secure. HTTPS should be used instead to encrypt the communication.",
+    "fix": "Replace 'http' with 'https' in the URL of the GET request."
+  },
+  {
+    "filename": "scheduler.py",
+    "filepath": "../beaverhabits/beaverhabits/scheduler.py",
+    "where": "beaverhabits/tasks.py:13-20",
+    "what": "Hardcoded exception handling",
+    "why": "Hardcoding exception handling can make it difficult to identify and address specific issues, leading to potential security vulnerabilities. It also hides the actual error details from being logged or reported.",
+    "fix": "Refactor the code to log more detailed information about the error and consider raising a custom exception that can be handled more gracefully."
+  },
+  {
+    "filename": "note.py",
+    "filepath": "../beaverhabits/beaverhabits/core/note.py",
+    "where": "beaverhabits/streak_style_parser.py:49-71",
+    "what": "Insecure path traversal",
+    "why": "The `parse_label` function uses `urllib.parse.quote` to escape special characters in the label, but does not fully validate or sanitize the input. This can lead to potential injection of malicious content.",
+    "fix": "Implement strict validation and sanitization for the `tag` parameter before using it. Use a whitelist approach to allow only allowed characters."
+  },
+  {
+    "filename": "completions.py",
+    "filepath": "../beaverhabits/beaverhabits/core/completions.py",
+    "where": "period:49-57",
+    "what": "Potential Injection Flaw (Date Manipulation)",
+    "why": "The function `date_move` and the way dates are manipulated could be vulnerable to injection if the inputs are not properly validated. This can lead to unexpected behavior or security issues.",
+    "fix": "Validate and sanitize all date inputs before passing them to `date_move` and ensure that the date range calculations are safe."
+  },
+  {
+    "filename": "backup.py",
+    "filepath": "../beaverhabits/beaverhabits/core/backup.py",
+    "where": "beaverhabits/storage/util.py:24-37",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The function `send_json_file` and the `backup_to_telegram` function use hardcoded values for the Telegram bot token in the URL construction. This can lead to security risks as sensitive information may be exposed or misused.",
+    "fix": "Use environment variables or a configuration file to store sensitive information such as the bot token, instead of hardcoding it directly into the source code."
+  },
+  {
+    "filename": "crud.py",
+    "filepath": "../beaverhabits/beaverhabits/app/crud.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "auth.py",
+    "filepath": "../beaverhabits/beaverhabits/app/auth.py",
+    "where": "beaverhabits/app/auth.py:14-23",
+    "what": "Hardcoded Secret/credentials",
+    "why": "The code contains a hardcoded JWT secret, which poses a significant security risk if the secret is exposed or compromised.",
+    "fix": "Use environment variables to store sensitive information such as JWT secrets and ensure they are not included in source control."
+  },
+  {
+    "filename": "schemas.py",
+    "filepath": "../beaverhabits/beaverhabits/app/schemas.py",
+    "where": "HabitCreate:15-17",
+    "what": "Insecure framework/API misuse - User input not validated",
+    "why": "The `name` field in the `HabitCreate` model is directly assigned without any validation. This can lead to injection attacks or other security issues.",
+    "fix": "Add data validation for the `name` field using Pydantic's validators or constraints."
+  },
+  {
+    "filename": "users.py",
+    "filepath": "../beaverhabits/beaverhabits/app/users.py",
+    "where": "beaverhabits/users.py:29-35",
+    "what": "Hardcoded secret/credentials",
+    "why": "Using hardcoded secrets for JWT tokens can lead to security vulnerabilities. If an attacker gains access to the source code, they can easily obtain the secret key.",
+    "fix": "Use a secure method to manage and retrieve the JWT secret from environment variables or a secrets management service."
+  },
+  {
+    "filename": "dependencies.py",
+    "filepath": "../beaverhabits/beaverhabits/app/dependencies.py",
+    "where": "get_trusted_header_email:39-42",
+    "what": "Insecure header usage",
+    "why": "Using a header to store sensitive information like an email can lead to exposure and misuse. Headers are not secure storage for sensitive data.",
+    "fix": "Avoid using headers to store sensitive information. Consider passing the trusted email through a query parameter or a request body."
+  },
+  {
+    "filename": "db.py",
+    "filepath": "../beaverhabits/beaverhabits/app/db.py",
+    "where": "user_identity_model.py:124-138",
+    "what": "Insecure use of a potentially unvalidated user input in the `__str__` method.",
+    "why": "The `__str__` method is used to represent an object as a string, and if it includes unvalidated user input (like `email`, `customer_id`, or `provider`), it can lead to injection vulnerabilities. An attacker could manipulate these values to execute arbitrary code or perform unauthorized actions.",
+    "fix": "Ensure that all user inputs are properly validated before being included in the `__str__` method. Consider using secure string representation methods and avoid concatenating untrusted input."
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../beaverhabits/beaverhabits/app/__init__.py",
+    "where": "code.txt",
+    "what": "skipped",
+    "why": "No code provided for analysis.",
+    "fix": "N/A"
+  },
+  {
+    "filename": "middelwares.py",
+    "filepath": "../beaverhabits/beaverhabits/app/middelwares.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "app.py",
+    "filepath": "../beaverhabits/beaverhabits/app/app.py",
+    "where": ".py:21-27",
+    "what": "Insecure framework/API misuse (FastAPI dependencies)",
+    "why": "The inclusion of `current_admin_user` as a dependency in the registration route could be a potential security risk. If an attacker can bypass this check, they might register themselves as an admin without proper authorization.",
+    "fix": "Ensure that the `current_admin_user` is only required when necessary and consider implementing additional authentication mechanisms or rate limiting to prevent unauthorized access."
+  },
+  {
+    "filename": "components.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/components.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "stats_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/stats_page.py",
+    "where": "beaverhabits/frontend/stats_page.py:34-50",
+    "what": "Potential Insecure Path Traversal",
+    "why": "The `get_stats_date_range()` function may return a date range that could be used to manipulate file paths, leading to potential security risks such as reading or writing to unauthorized files.",
+    "fix": "Ensure that the `get_stats_date_range()` function returns safe and validated date ranges. Implement proper input validation and sanitization to prevent path traversal attacks."
+  },
+  {
+    "filename": "add_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/add_page.py",
+    "where": "beaverhabits/fronted/components.py:36-45",
+    "what": "Potential Cross-Site Scripting (XSS) via unescaped user input",
+    "why": "The `HabitNameInput` component may include untrusted user input directly in the HTML, which could lead to XSS if an attacker injects malicious JavaScript.",
+    "fix": "Ensure that all user inputs are properly sanitized and escaped before rendering them in the UI. Consider using a framework or library that provides safe string interpolation methods."
+  },
+  {
+    "filename": "admin.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/admin.py",
+    "where": "beaverhabits/app/views.py:17-29",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The function `promote_user_to_pro` is called with hardcoded values, which can lead to security issues if the credentials are stored in plain text or easily accessible.",
+    "fix": "Refactor the `views.promote_user_to_pro` function to accept a proper parameter for promoting or demoting users. Store sensitive information securely and use environment variables or a secure secrets management solution."
+  },
+  {
+    "filename": "icons.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/icons.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "index_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/index_page.py",
+    "where": "index_page_ui:45-63",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains hardcoded secrets or credentials within the input and textarea components. This is a security risk as hardcoding sensitive information in source code can lead to breaches if the source code is exposed.",
+    "fix": "Remove any hardcoded secrets from the source code. Consider using environment variables or a secure vault service for storing and accessing sensitive information."
+  },
+  {
+    "filename": "order_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/order_page.py",
+    "where": "order_page_ui:108-126",
+    "what": "Hardcoded secret/credential",
+    "why": "The script uses an external library (sortable.min.js) which is hardcoded in the HTML. This can be a potential risk if the library contains any vulnerabilities or if it has been tampered with.",
+    "fix": "Use a secure method to load the JavaScript library, such as loading it via a CDN or downloading and storing it securely within your project directory."
+  },
+  {
+    "filename": "javascript.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/javascript.py",
+    "where": "beaverhabits/applications/scripts/utils.py:12-15",
+    "what": "Hardcoded secrets/credentials",
+    "why": "Hardcoding sensitive information like API tokens or keys directly into the source code can expose them to potential attackers. If the source code is leaked, these credentials could be compromised.",
+    "fix": "Use environment variables or a secure vault service to store and retrieve sensitive information at runtime."
+  },
+  {
+    "filename": "intersection_observer.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/intersection_observer.py",
+    "where": "intersection_observer.py:13-17",
+    "what": "Insecure framework/API misuse",
+    "why": "The `handle_event` function is used with the `on_intersection` callback, which could be a user-defined function. If this function contains any security vulnerabilities or risky operations, they might be executed in an unexpected context.",
+    "fix": "Ensure that the `on_intersection` callback is safe and does not contain any user-provided input unless properly sanitized or validated. Consider using a safer event handling mechanism or validating inputs before passing them to the callback."
+  },
+  {
+    "filename": "css.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/css.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "pricing_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/pricing_page.py",
+    "where": "beaverhabits/front_end.py:24-59",
+    "what": "Hardcoded Secrets/Credentials",
+    "why": "The code contains hardcoded API tokens and credentials which can be exposed if the source code is compromised.",
+    "fix": "Use environment variables or a secrets management service to store sensitive information. Example usage of an environment variable: `os.getenv('API_TOKEN')`."
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/__init__.py",
+    "where": "code_empty",
+    "what": "skipped",
+    "why": "No code to analyze.",
+    "fix": "N/A"
+  },
+  {
+    "filename": "import_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/import_page.py",
+    "where": "beaverhabits/front_end/views/import_ui_page.py:42-59",
+    "what": "Hardcoded secrets/credentials",
+    "why": "Hardcoding secrets or credentials directly in the source code can lead to security vulnerabilities. These secrets, if exposed, can be exploited by malicious actors.",
+    "fix": "Use environment variables or a secure secret management solution to store and retrieve sensitive information."
+  },
+  {
+    "filename": "export_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/export_page.py",
+    "where": "beaverhabits/app/frontend/pages/export.py:34-56",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code uses `user.email` which could potentially contain sensitive information such as email addresses or other personal data. This should be handled with care to avoid exposing sensitive user information.",
+    "fix": "Use a placeholder or a secure way to handle and display the user's email address, ensuring that no sensitive data is exposed in the UI. Consider using a more descriptive label instead of displaying `user.email` directly."
+  },
+  {
+    "filename": "habit_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/habit_page.py",
+    "where": "beaverhabits/front_end/components.py:59-72",
+    "what": "Hardcoded Secrets/Credentials",
+    "why": "The `settings.HABIT_SHOW_EVERY_DAY_STREAKS` is a hardcoded value that could potentially expose sensitive information if the configuration file is accessible.",
+    "fix": "Move this setting to an environment variable or a separate configuration file that is not committed to the source code repository. Example: `os.environ.get('HABIT_SHOW_EVERY_DAY_STREAKS', False)`. Ensure proper access controls and encryption of secrets."
+  },
+  {
+    "filename": "textarea.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/textarea.py",
+    "where": "niceui.py:1-2",
+    "what": "Insecure framework/API misuse",
+    "why": "The code uses a custom class derived from `ui.textarea`, which could potentially introduce security issues if the underlying JavaScript component (`textarea.js`) has known vulnerabilities or if there are misconfigurations in how it is used.",
+    "fix": "Review and ensure that the `textarea.js` component does not have any known vulnerabilities. Consider using built-in components where possible to avoid custom implementations. If custom implementation is necessary, conduct thorough security testing on the component."
+  },
+  {
+    "filename": "menu.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/menu.py",
+    "where": "beaverhabits/frontent/components/stats_date_pick_menu.py:150-243",
+    "what": "Insecure path traversal",
+    "why": "The code allows the user to input a custom date range, which is then used to reload the page without proper validation or sanitization. If an attacker can manipulate this input, they might be able to access sensitive data or paths.",
+    "fix": "Implement proper validation and sanitization of user inputs before using them in navigation URLs. Consider using a whitelist approach for allowed date ranges."
+  },
+  {
+    "filename": "layout.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/layout.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "streaks.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/streaks.py",
+    "where": "streaks:23-45",
+    "what": "Insecure Path Traversal",
+    "why": "The `today` and `habit` parameters are directly used in file paths without proper validation or sanitization, which could allow an attacker to traverse directories and access sensitive files.",
+    "fix": "Implement path validation or use secure methods for handling file paths. Ensure that `today` and `habit` inputs cannot be manipulated to access unintended resources."
+  },
+  {
+    "filename": "paddle_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/paddle_page.py",
+    "where": "filename.py:43-49",
+    "what": "Hardcoded secret/credentials",
+    "why": "The email address 'daya0576@gmail.com' is hardcoded in the code, which can pose a security risk if this file is exposed.",
+    "fix": "Replace the hardcoded email with an environment variable or configuration file that securely stores sensitive information."
+  },
+  {
+    "filename": "chip_sets_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/chip_sets_page.py",
+    "where": "beaverhabits/front_end/views.py:41-62",
+    "what": "Hardcoded Secrets/Credentials",
+    "why": "The code hardcodes secrets or credentials in the form of tags (e.g., '#amber', '#skip') which could be used to identify user roles or behaviors.",
+    "fix": "Remove hardcoded tags and use a secure configuration management system. Ensure that any sensitive information is stored securely and not exposed in source code."
+  },
+  {
+    "filename": "tokens_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/tokens_page.py",
+    "where": "tokens_page.py:24-67",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains a hardcoded API token which poses a significant security risk. If the source code is compromised, an attacker could obtain this token and use it to authenticate with the Beaver Habits API.",
+    "fix": "Do not hardcode sensitive information like API tokens in your application's source code. Instead, generate and store these tokens securely within the database or another secure storage mechanism. Additionally, ensure that the environment where the application runs is protected."
+  },
+  {
+    "filename": "settings_page.py",
+    "filepath": "../beaverhabits/beaverhabits/frontend/settings_page.py",
+    "where": "beaverhabits/fronted/layout.py:124-138",
+    "what": "Hardcoded Secret/Credential",
+    "why": "The `EDIT_ME` string contains a hardcoded CSS template, which might contain sensitive or insecure information. While in this case it's just a placeholder for customization, if replaced with actual user input without proper validation and sanitization, it could lead to potential security issues.",
+    "fix": "Replace the `EDIT_ME` constant with a dynamic method that fetches the default CSS template from a secure source. Ensure any user inputs are properly sanitized before rendering them."
+  },
+  {
+    "filename": "const.py",
+    "filepath": "../beaverhabits/beaverhabits/const.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "utils.py",
+    "filepath": "../beaverhabits/beaverhabits/utils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "configs.py",
+    "filepath": "../beaverhabits/beaverhabits/configs.py",
+    "where": "filename:13-26",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains hardcoded sensitive information such as SMTP email credentials and JWT secret key, which should be kept secure. Hardcoding these values in the source code can expose them to potential security risks.",
+    "fix": "These secrets should be stored securely using environment variables or a configuration management tool like .env files with proper handling during runtime."
+  },
+  {
+    "filename": "paddle.py",
+    "filepath": "../beaverhabits/beaverhabits/plan/paddle.py",
+    "where": "beaverhabits/app/callback.py:6-27",
+    "what": "Hardcoded secret/credentials",
+    "why": "The code contains a hardcoded secret for Paddle's callback key in the `settings` module. This can expose sensitive information and allows potential attackers to manipulate the system by sending unauthorized requests.",
+    "fix": "Use environment variables or a secure secrets management solution to store the secret, and ensure it is not hard-coded in the source code."
+  },
+  {
+    "filename": "plan.py",
+    "filepath": "../beaverhabits/beaverhabits/plan/plan.py",
+    "where": "beaverhabits/app.py:15-24",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code directly includes sensitive information such as email addresses and tokens. This can expose user data if the source code is leaked.",
+    "fix": "Do not log or hardcode sensitive information like user emails or tokens in logs or directly in the code. Instead, handle logging and display messages carefully to avoid exposing sensitive details."
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../beaverhabits/beaverhabits/__init__.py",
+    "where": "# your_package/__init__.py:3-5",
+    "what": "Hardcoded version string with fallback logic",
+    "why": "The hardcoded version string and the fallback mechanism can potentially expose sensitive information or make it harder to manage versions in a production environment. Hardcoding the version directly in the source code may also prevent updates from being correctly reflected.",
+    "fix": "Use a versioning system like setuptools' `__version__` attribute which is automatically populated during installation. This avoids hardcoding and simplifies version management."
+  },
+  {
+    "filename": "views.py",
+    "filepath": "../beaverhabits/beaverhabits/views.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "user_db.py",
+    "filepath": "../beaverhabits/beaverhabits/storage/user_db.py",
+    "where": "beaverhabits/storage/database_persistent_dict.py:14-25",
+    "what": "Potential logging of sensitive information",
+    "why": "The logger is used to log exceptions, which may include sensitive information such as error messages or stack traces. This can expose internal details that could be exploited by attackers.",
+    "fix": "Use a more controlled and sanitized method for logging, ensuring no sensitive data (like error details) are logged in production. Consider implementing a custom exception handler that filters out sensitive information."
+  },
+  {
+    "filename": "dict.py",
+    "filepath": "../beaverhabits/beaverhabits/storage/dict.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "session_file.py",
+    "filepath": "../beaverhabits/beaverhabits/storage/session_file.py",
+    "where": "./storage.py:14-20",
+    "what": "Hardcoded secrets/credentials",
+    "why": "Using hardcoded values for storage keys can expose sensitive data and make the application vulnerable to configuration errors or misconfigurations.",
+    "fix": "It is recommended to use environment variables or a secure secrets management system to store such keys. For example, you could define `KEY_NAME` as an environment variable in your deployment setup."
+  },
+  {
+    "filename": "meta.py",
+    "filepath": "../beaverhabits/beaverhabits/storage/meta.py",
+    "where": "index.py:3-4",
+    "what": "Insecure path traversal",
+    "why": "The `DEMO_ROOT_PATH` and `GUI_ROOT_PATH` variables are hard-coded, which could allow an attacker to navigate through the filesystem and access files or directories that should be restricted. Additionally, checking if a path starts with a hardcoded prefix might not be sufficient protection.",
+    "fix": "Use a more secure method for determining the root path based on the current context or environment variable. Consider using a library like `pathlib` to handle path manipulations and ensure that user input is properly validated."
+  },
+  {
+    "filename": "storage.py",
+    "filepath": "../beaverhabits/beaverhabits/storage/storage.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "images.py",
+    "filepath": "../beaverhabits/beaverhabits/storage/images.py",
+    "where": "beaverhabits/storage/storage.py:38-49",
+    "what": "Hardcoded secrets/credentials",
+    "why": "Hardcoding secrets or credentials directly in the code can expose sensitive information if the source code is leaked. This increases the risk of unauthorized access and data breaches.",
+    "fix": "Use environment variables to store sensitive information like database credentials or secret keys. Never hardcode such information into your application."
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../beaverhabits/beaverhabits/storage/__init__.py",
+    "where": "beaverhabits/storage/__init__.py:14-23",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code includes a call to `settings.HABITS_STORAGE`, which likely contains hardcoded values for the storage type. This can expose sensitive information such as database credentials or file paths.",
+    "fix": "Move the hardcoded value into an environment variable or a configuration file that is not committed to version control. Use secure methods like secrets management tools."
+  },
+  {
+    "filename": "user_file.py",
+    "filepath": "../beaverhabits/beaverhabits/storage/user_file.py",
+    "where": "beaverhabits/storage/disk_storage.py:29-47",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code uses a hardcoded path structure for user data storage, which could expose sensitive information such as file paths. Hardcoding file paths can also make the application less flexible and harder to maintain.",
+    "fix": "Use environment variables or configuration files to store the USER_DATA_FOLDER path. This will allow you to change the storage location without modifying the source code."
+  },
+  {
+    "filename": "session_memory.py",
+    "filepath": "../beaverhabits/beaverhabits/storage/session_memory.py",
+    "where": "./storage/session_dict_storage.py:12-17",
+    "what": "Potential hardcoded secrets/credentials",
+    "why": "If the `TTLCache` maxsize and ttl values are hardcoded, they might not be flexible enough to adapt to different scenarios. Hardcoding these values could also make it harder to change them without recompiling or modifying the code.",
+    "fix": "Consider using environment variables or configuration files to store these values so that they can be easily modified without changing the source code."
+  },
+  {
+    "filename": "routes.py",
+    "filepath": "../beaverhabits/beaverhabits/routes/routes.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "metrics.py",
+    "filepath": "../beaverhabits/beaverhabits/routes/metrics.py",
+    "where": "metrics.py:12-15",
+    "what": "Insecure secret handling (hardcoded secrets/credentials)",
+    "why": "Hardcoding sensitive information such as API keys or other credentials directly into the source code can expose them to potential security risks if the source code is compromised.",
+    "fix": "Use environment variables or a secure configuration management tool to store sensitive information and access it within your application."
+  },
+  {
+    "filename": "google_one_tap.py",
+    "filepath": "../beaverhabits/beaverhabits/routes/google_one_tap.py",
+    "where": "beaverhabits/app.py:34-52",
+    "what": "Hardcoded Secrets/Credentials",
+    "why": "The code contains hardcoded sensitive information such as the `GOOGLE_ONE_TAP_CLIENT_ID` and `GOOGLE_ONE_TAP_CALLBACK_URL`. This poses a risk of credentials being exposed in the source code, which could be accessed by unauthorized parties.",
+    "fix": "Use environment variables or secure vaults to store sensitive information. Replace hardcoding with fetching values from environment variables or a secure secrets manager."
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../beaverhabits/beaverhabits/routes/__init__.py",
+    "where": "example.py:4-5",
+    "what": "Hardcoded Secrets/Credentials",
+    "why": "Hardcoding secrets in source code can lead to security risks if the code is compromised or accidentally shared.",
+    "fix": "Use a secure vault to store secrets and read them at runtime."
+  },
+  {
+    "filename": "astro.py",
+    "filepath": "../beaverhabits/beaverhabits/routes/astro.py",
+    "where": "beaverhabits/app/main.py:14-28",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The privacy and terms content are hardcoded into the application. This can pose a security risk if the code is exposed or if the secrets are accidentally committed to a public repository.",
+    "fix": "Store the privacy and terms content in an environment variable or a secure configuration file that is not committed to version control."
+  },
+  {
+    "filename": "api.py",
+    "filepath": "../beaverhabits/beaverhabits/routes/api.py",
+    "where": "beaverhabits/app/routers/habits.py:46-53",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The function `format_json_response` includes sensitive information such as habit records, which should not be exposed in a public API.",
+    "fix": "Remove or obfuscate the `records` field from the returned JSON response. Ensure that only necessary and safe fields are included."
+  },
+  {
+    "filename": "accessibility.py",
+    "filepath": "../beaverhabits/beaverhabits/accessibility.py",
+    "where": "index_total_badge_alternative_text:32-49",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code uses `ui.html(text, sanitize=False)`, which could potentially lead to Cross-Site Scripting (XSS) attacks if the input text is not properly sanitized. This can allow an attacker to inject malicious scripts into the application.",
+    "fix": "Sanitize or escape the input before using it in HTML content. Use `ui.html(text, sanitize=True)` instead of `sanitize=False`."
+  },
+  {
+    "filename": "logger.py",
+    "filepath": "../beaverhabits/beaverhabits/logger.py",
+    "where": ".py:3-6",
+    "what": "Insecure Logging Level Configuration",
+    "why": "The logging level is set to 'INFO' in the production environment. This may expose sensitive information or reduce the effectiveness of logging, which could make it harder to detect issues and secure the application.",
+    "fix": "Ensure that the logging level is correctly configured based on the environment. In a production environment, consider using a more restrictive logging level such as 'WARNING' or 'ERROR'. Additionally, review the logging configuration to ensure no sensitive information is logged."
+  },
+  {
+    "filename": "version.py",
+    "filepath": "../beaverhabits/beaverhabits/version.py",
+    "where": "identity.py:6-7",
+    "what": "Hardcoded secrets/credentials",
+    "why": "This file contains sensitive information such as the identity string, which is hardcoded and could be exposed if the codebase is compromised. Hardcoding credentials makes it difficult to rotate or change these values without redeploying the application.",
+    "fix": "Use environment variables or a configuration management system to store the version and identity information. This way, you can update the value at runtime without changing the source code."
+  },
+  {
+    "filename": "main.py",
+    "filepath": "../beaverhabits/beaverhabits/main.py",
+    "where": "app:47-56",
+    "what": "Hardcoded Secrets/Credentials",
+    "why": "The `settings.SENTRY_DSN` is hardcoded within the code, which could pose a security risk if this file is exposed or compromised.",
+    "fix": "Move sensitive information like SENTRY_DSN to environment variables. Update the settings module to load these values from an environment variable using `os.getenv`."
+  },
+  {
+    "filename": "test_gui.py",
+    "filepath": "../beaverhabits/tests/test_gui.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "test_apis.py",
+    "filepath": "../beaverhabits/tests/test_apis.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "test_storage.py",
+    "filepath": "../beaverhabits/tests/test_storage.py",
+    "where": "test_user_session:5-17",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains hardcoded email and password values which could be a security risk if the source code is exposed.",
+    "fix": "Use environment variables or a secrets management system to store sensitive information."
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../beaverhabits/tests/__init__.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "test_utils.py",
+    "filepath": "../beaverhabits/tests/test_utils.py",
+    "where": "date_format_test.py:4-6",
+    "what": "Insecure date string formatting",
+    "why": "Using the `%Y-%m-%d` format for date strings is generally safe, but it's important to ensure that all date strings follow this format. If an attacker can inject a non-compliant date string, it could cause issues such as incorrect date calculations or potential security vulnerabilities.",
+    "fix": "Ensure that all input date strings are validated and conform to the expected format before using `strptime`. Additionally, consider implementing input validation to reject invalid date strings."
+  },
+  {
+    "filename": "conftest.py",
+    "filepath": "../beaverhabits/tests/conftest.py",
+    "where": "pytest-plugins:1-1",
+    "what": "Hardcoded Secrets/Credentials",
+    "why": "Hardcoding secrets or credentials, even in configuration files, can expose sensitive information such as API keys or tokens. This can lead to unauthorized access and data breaches.",
+    "fix": "Remove hardcoded secrets from the source code and use environment variables or a secure secret management service instead."
+  },
+  {
+    "filename": "test_api_tokens.py",
+    "filepath": "../beaverhabits/tests/test_api_tokens.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "main.py",
+    "filepath": "../beaverhabits/tests/main.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  }
+]
