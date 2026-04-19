@@ -1,0 +1,65 @@
+{
+  "repos": [
+    "beaverhabits",
+    "fail2ban",
+    "yum"
+  ],
+  "models": [
+    "gemma3",
+    "llama3.1",
+    "qwen2.5"
+  ],
+  "scores": {
+    "beaverhabits": {
+      "gemma3": {
+        "recall": 0.25,
+        "fp_rate": 0.875,
+        "composite": -0.625
+      },
+      "llama3.1": {
+        "recall": 0.25,
+        "fp_rate": 0.464,
+        "composite": -0.214
+      },
+      "qwen2.5": {
+        "recall": 0.25,
+        "fp_rate": 0.278,
+        "composite": -0.028
+      }
+    },
+    "fail2ban": {
+      "gemma3": {
+        "recall": 0.0,
+        "fp_rate": 0.8,
+        "composite": -0.8
+      },
+      "llama3.1": {
+        "recall": 0.027,
+        "fp_rate": 0.4,
+        "composite": -0.373
+      },
+      "qwen2.5": {
+        "recall": 0.014,
+        "fp_rate": 0.136,
+        "composite": -0.123
+      }
+    },
+    "yum": {
+      "gemma3": {
+        "recall": 0.0,
+        "fp_rate": 0.889,
+        "composite": -0.889
+      },
+      "llama3.1": {
+        "recall": 0.0,
+        "fp_rate": 0.588,
+        "composite": -0.588
+      },
+      "qwen2.5": {
+        "recall": 0.0,
+        "fp_rate": 0.4,
+        "composite": -0.4
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+Bandit MEDIUM/HIGH vs Snitch — beaverhabits
+========================================================================
+
+[0] B701 | HIGH | javascript.py:71
+    By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities.
+
+  [gemma3]
+    where: PREVENT_CONTEXT_MENU:1-15
+    what:  Prevent Context Menu
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    where: beaverhabits/applications/scripts/utils.py:12-15
+    what:  Hardcoded secrets/credentials
+
+------------------------------------------------------------------------
+
+[1] B104 | MEDIUM | main.py:87
+    Possible binding to all interfaces.
+
+  [gemma3]
+    where: beaverhabits/app/app.py:1-12
+    what:  RuntimeError: ADMIN_EMAIL must be set when REQUIRE_ADMIN_FOR_REGISTRATION is enabled
+    where: filename:1-1
+    what:  Hardcoded Secret/Credential
+
+  [llama3.1]
+    where: lifespan.py:7-13
+    what:  Hardcoded secret: ADMIN_EMAIL
+    where: filename:1-4
+    what:  Hardcoded Secret/ Credential
+
+  [qwen2.5]
+    where: app:47-56
+    what:  Hardcoded Secrets/Credentials
+
+------------------------------------------------------------------------
+
+[2] B324 | HIGH | utils.py:161
+    Use of weak SHA1 hash for security. Consider usedforsecurity=False
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[3] B113 | MEDIUM | healthcheck.py:7
+    Call to requests without timeout
+
+  [gemma3]
+    where: filename:0-18
+    what:  Hardcoded URL 'http://localhost:8080/health'
+
+  [llama3.1]
+    where: main.py:6-10
+    what:  Insecure Use of requests.get() Method with Unvalidated User Input
+
+  [qwen2.5]
+    where: service_check.py:4-9
+    what:  Insecure HTTP Request
+
+------------------------------------------------------------------------

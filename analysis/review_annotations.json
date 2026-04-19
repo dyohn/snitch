@@ -1,0 +1,581 @@
+{
+  "beaverhabits": [
+    {
+      "bandit_id": 0,
+      "test_id": "B701",
+      "test_name": "jinja2_autoescape_false",
+      "filename": "javascript.py",
+      "line_number": 71,
+      "severity": "HIGH",
+      "issue_text": "By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 1,
+      "test_id": "B104",
+      "test_name": "hardcoded_bind_all_interfaces",
+      "filename": "main.py",
+      "line_number": 87,
+      "severity": "MEDIUM",
+      "issue_text": "Possible binding to all interfaces.",
+      "found_by": {
+        "gemma3": "partial",
+        "llama3.1": "partial",
+        "qwen2.5": "partial"
+      }
+    },
+    {
+      "bandit_id": 2,
+      "test_id": "B324",
+      "test_name": "hashlib",
+      "filename": "utils.py",
+      "line_number": 161,
+      "severity": "HIGH",
+      "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 3,
+      "test_id": "B113",
+      "test_name": "request_without_timeout",
+      "filename": "healthcheck.py",
+      "line_number": 7,
+      "severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "found_by": {
+        "gemma3": "partial",
+        "llama3.1": "partial",
+        "qwen2.5": "partial"
+      }
+    }
+  ],
+  "fail2ban": [
+    {
+      "bandit_id": 0,
+      "test_id": "B301",
+      "test_name": "blacklist",
+      "filename": "csocket.py",
+      "line_number": 93,
+      "severity": "MEDIUM",
+      "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": true,
+        "qwen2.5": "partial"
+      }
+    },
+    {
+      "bandit_id": 1,
+      "test_id": "B604",
+      "test_name": "any_other_function_with_shell_equals_true",
+      "filename": "action.py",
+      "line_number": 1042,
+      "severity": "MEDIUM",
+      "issue_text": "Function call with shell=True parameter identified, possible security issue.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 2,
+      "test_id": "B301",
+      "test_name": "blacklist",
+      "filename": "asyncserver.py",
+      "line_number": 106,
+      "severity": "MEDIUM",
+      "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 3,
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions",
+      "filename": "database.py",
+      "line_number": 358,
+      "severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 4,
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions",
+      "filename": "database.py",
+      "line_number": 369,
+      "severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 5,
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions",
+      "filename": "database.py",
+      "line_number": 377,
+      "severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 6,
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions",
+      "filename": "database.py",
+      "line_number": 446,
+      "severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 7,
+      "test_id": "B604",
+      "test_name": "any_other_function_with_shell_equals_true",
+      "filename": "filtersystemd.py",
+      "line_number": 46,
+      "severity": "MEDIUM",
+      "issue_text": "Function call with shell=True parameter identified, possible security issue.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 8,
+      "test_id": "B307",
+      "test_name": "blacklist",
+      "filename": "jail.py",
+      "line_number": 249,
+      "severity": "MEDIUM",
+      "issue_text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 9,
+      "test_id": "B307",
+      "test_name": "blacklist",
+      "filename": "jail.py",
+      "line_number": 257,
+      "severity": "MEDIUM",
+      "issue_text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 10,
+      "test_id": "B307",
+      "test_name": "blacklist",
+      "filename": "mytime.py",
+      "line_number": 176,
+      "severity": "MEDIUM",
+      "issue_text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 11,
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true",
+      "filename": "utils.py",
+      "line_number": 193,
+      "severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 12,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "test_smtp.py",
+      "line_number": 230,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 13,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "test_smtp.py",
+      "line_number": 230,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 14,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "actiontestcase.py",
+      "line_number": 529,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 15,
+      "test_id": "B104",
+      "test_name": "hardcoded_bind_all_interfaces",
+      "filename": "banmanagertestcase.py",
+      "line_number": 234,
+      "severity": "MEDIUM",
+      "issue_text": "Possible binding to all interfaces.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 16,
+      "test_id": "B108",
+      "test_name": "hardcoded_tmp_directory",
+      "filename": "clientreadertestcase.py",
+      "line_number": 1004,
+      "severity": "MEDIUM",
+      "issue_text": "Probable insecure usage of temp file/directory.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 17,
+      "test_id": "B108",
+      "test_name": "hardcoded_tmp_directory",
+      "filename": "clientreadertestcase.py",
+      "line_number": 1005,
+      "severity": "MEDIUM",
+      "issue_text": "Probable insecure usage of temp file/directory.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 18,
+      "test_id": "B108",
+      "test_name": "hardcoded_tmp_directory",
+      "filename": "databasetestcase.py",
+      "line_number": 166,
+      "severity": "MEDIUM",
+      "issue_text": "Probable insecure usage of temp file/directory.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 19,
+      "test_id": "B108",
+      "test_name": "hardcoded_tmp_directory",
+      "filename": "databasetestcase.py",
+      "line_number": 187,
+      "severity": "MEDIUM",
+      "issue_text": "Probable insecure usage of temp file/directory.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 20,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "fail2banregextestcase.py",
+      "line_number": 633,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 21,
+      "test_id": "B113",
+      "test_name": "request_without_timeout",
+      "filename": "digest.py",
+      "line_number": 50,
+      "severity": "MEDIUM",
+      "issue_text": "Call to requests without timeout",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 22,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "filtertestcase.py",
+      "line_number": 795,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 23,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "filtertestcase.py",
+      "line_number": 881,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 24,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "filtertestcase.py",
+      "line_number": 1150,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 25,
+      "test_id": "B604",
+      "test_name": "any_other_function_with_shell_equals_true",
+      "filename": "filtertestcase.py",
+      "line_number": 1498,
+      "severity": "MEDIUM",
+      "issue_text": "Function call with shell=True parameter identified, possible security issue.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 26,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "filtertestcase.py",
+      "line_number": 1850,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 27,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "filtertestcase.py",
+      "line_number": 1865,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 28,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "filtertestcase.py",
+      "line_number": 1967,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 29,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "filtertestcase.py",
+      "line_number": 2550,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 30,
+      "test_id": "B602",
+      "test_name": "subprocess_popen_with_shell_equals_true",
+      "filename": "misctestcase.py",
+      "line_number": 84,
+      "severity": "HIGH",
+      "issue_text": "subprocess call with shell=True identified, security issue.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 31,
+      "test_id": "B605",
+      "test_name": "start_process_with_a_shell",
+      "filename": "misctestcase.py",
+      "line_number": 117,
+      "severity": "HIGH",
+      "issue_text": "Starting a process with a shell, possible injection detected, security issue.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 32,
+      "test_id": "B605",
+      "test_name": "start_process_with_a_shell",
+      "filename": "misctestcase.py",
+      "line_number": 133,
+      "severity": "HIGH",
+      "issue_text": "Starting a process with a shell, possible injection detected, security issue.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 33,
+      "test_id": "B605",
+      "test_name": "start_process_with_a_shell",
+      "filename": "misctestcase.py",
+      "line_number": 185,
+      "severity": "HIGH",
+      "issue_text": "Starting a process with a shell, possible injection detected, security issue.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 34,
+      "test_id": "B307",
+      "test_name": "blacklist",
+      "filename": "samplestestcase.py",
+      "line_number": 190,
+      "severity": "MEDIUM",
+      "issue_text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 35,
+      "test_id": "B307",
+      "test_name": "blacklist",
+      "filename": "samplestestcase.py",
+      "line_number": 227,
+      "severity": "MEDIUM",
+      "issue_text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    },
+    {
+      "bandit_id": 36,
+      "test_id": "B306",
+      "test_name": "blacklist",
+      "filename": "servertestcase.py",
+      "line_number": 524,
+      "severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "found_by": {
+        "gemma3": false,
+        "llama3.1": false,
+        "qwen2.5": false
+      }
+    }
+  ],
+  "yum": []
+}

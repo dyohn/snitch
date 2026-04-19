@@ -1,0 +1,46 @@
+{
+  "repo": "fail2ban",
+  "categories": [
+    "injection",
+    "authentication",
+    "cryptography",
+    "subprocess/OS",
+    "path traversal",
+    "info disclosure",
+    "other"
+  ],
+  "models": [
+    "gemma3",
+    "llama3.1",
+    "qwen2.5"
+  ],
+  "counts": {
+    "gemma3": [
+      0,
+      7,
+      0,
+      0,
+      0,
+      0,
+      6
+    ],
+    "llama3.1": [
+      4,
+      7,
+      1,
+      0,
+      2,
+      1,
+      7
+    ],
+    "qwen2.5": [
+      0,
+      19,
+      0,
+      0,
+      0,
+      0,
+      2
+    ]
+  }
+}

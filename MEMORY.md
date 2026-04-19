@@ -28,6 +28,10 @@ Returning the full `Path` object instead of just `entry.name` means callers alwa
 
 Three formatters (`write_json`, `write_csv`, `write_text`) plus a `write_output()` dispatcher. All accept a materialized `list[SastResult]`. CSV uses `QUOTE_ALL` to handle embedded newlines/commas in LLM-generated text. Text report includes a UTC timestamp header and numbered entries.
 
+## `analyze_results.py` — two-pass experiment results analyser
+
+Standalone script at repo root. `--pass 1` loads all 9 Snitch and 3 Bandit JSONs, produces LaTeX tables (severity counts, M/H categories, findings counts, FP rates), PDF figures (stacked/grouped bar charts), flagged FP text files, and the side-by-side `review_annotations.json` template for manual Bandit↔Snitch matching. `--pass 2` reads the completed annotation file and computes recall, FP rate, and composite score per (repo, model), outputs LaTeX tables and a composite-scores PDF, and lists Bandit M/H issues missed by all LLMs. `--replot <name>` regenerates any single figure PDF from its companion `_data.json` without re-running the full analysis. All figures saved as PDF (LaTeX-ready); matplotlib backend set to `"pdf"`. `matplotlib>=3.8` added to pyproject.toml dev deps.
+
 ## `run_snitch.py` — CLI driver at repo root
 
 `argparse`-based script with positional `target_dir` / `output_dir` and optional `--format` (nargs="+"), `--model`, `--ollama-url`, `--verbose`. `--format` accepts multiple values in one invocation. Connection errors from Ollama produce a clear message and exit 1. Run with venv active: `python run_snitch.py <target_dir> <output_dir>`.

@@ -10,6 +10,7 @@ dependencies = ["requests"]
 [project.optional-dependencies]
 dev = [
     "hatchling>=1.27",
+    "matplotlib>=3.8",
     "pipdeptree",
     "pytest>=8.4.2",
     "ruff"

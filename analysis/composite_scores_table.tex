@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrrrrrrrr}
+\hline
+Repository & gemma3/recall & gemma3/FP rate & gemma3/composite & llama3.1/recall & llama3.1/FP rate & llama3.1/composite & qwen2.5/recall & qwen2.5/FP rate & qwen2.5/composite \\
+\hline
+Beaverhabits & 0.25 & 0.88 & -0.62 & 0.25 & 0.46 & -0.21 & 0.25 & 0.28 & \textbf{-0.03} \\
+Fail2ban & 0.00 & 0.80 & -0.80 & 0.03 & 0.40 & -0.37 & 0.01 & 0.14 & \textbf{-0.12} \\
+Yum & 0.00 & 0.89 & -0.89 & 0.00 & 0.59 & -0.59 & 0.00 & 0.40 & \textbf{-0.40} \\
+\hline
+\end{tabular}
+\caption{Composite scores per repository and LLM (recall $-$ FP rate; best per repo in bold)}
+\label{tab:composite_scores}
+\end{table}

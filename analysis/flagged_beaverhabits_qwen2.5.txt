@@ -1,0 +1,63 @@
+Flagged FP/Hallucinations: beaverhabits / qwen2.5
+============================================================
+
+--- MINOR ---
+  where: period:49-57
+  what:  Potential Injection Flaw (Date Manipulation)
+  why:   The function `date_move` and the way dates are manipulated could be vulnerable to injection if the inputs are not properly validated. This can lead to unexpected behavior or security issues.
+
+  where: HabitCreate:15-17
+  what:  Insecure framework/API misuse - User input not validated
+  why:   The `name` field in the `HabitCreate` model is directly assigned without any validation. This can lead to injection attacks or other security issues.
+
+  where: get_trusted_header_email:39-42
+  what:  Insecure header usage
+  why:   Using a header to store sensitive information like an email can lead to exposure and misuse. Headers are not secure storage for sensitive data.
+
+  where: code.txt
+  what:  skipped
+  why:   No code provided for analysis.
+
+  where: .py:21-27
+  what:  Insecure framework/API misuse (FastAPI dependencies)
+  why:   The inclusion of `current_admin_user` as a dependency in the registration route could be a potential security risk. If an attacker can bypass this check, they might register themselves as an admin without proper authorization.
+
+  where: index_page_ui:45-63
+  what:  Hardcoded secrets/credentials
+  why:   The code contains hardcoded secrets or credentials within the input and textarea components. This is a security risk as hardcoding sensitive information in source code can lead to breaches if the source code is exposed.
+
+  where: order_page_ui:108-126
+  what:  Hardcoded secret/credential
+  why:   The script uses an external library (sortable.min.js) which is hardcoded in the HTML. This can be a potential risk if the library contains any vulnerabilities or if it has been tampered with.
+
+  where: code_empty
+  what:  skipped
+  why:   No code to analyze.
+
+  where: streaks:23-45
+  what:  Insecure Path Traversal
+  why:   The `today` and `habit` parameters are directly used in file paths without proper validation or sanitization, which could allow an attacker to traverse directories and access sensitive files.
+
+  where: filename:13-26
+  what:  Hardcoded secrets/credentials
+  why:   The code contains hardcoded sensitive information such as SMTP email credentials and JWT secret key, which should be kept secure. Hardcoding these values in the source code can expose them to potential security risks.
+
+  where: index_total_badge_alternative_text:32-49
+  what:  Hardcoded secrets/credentials
+  why:   The code uses `ui.html(text, sanitize=False)`, which could potentially lead to Cross-Site Scripting (XSS) attacks if the input text is not properly sanitized. This can allow an attacker to inject malicious scripts into the application.
+
+  where: .py:3-6
+  what:  Insecure Logging Level Configuration
+  why:   The logging level is set to 'INFO' in the production environment. This may expose sensitive information or reduce the effectiveness of logging, which could make it harder to detect issues and secure the application.
+
+  where: app:47-56
+  what:  Hardcoded Secrets/Credentials
+  why:   The `settings.SENTRY_DSN` is hardcoded within the code, which could pose a security risk if this file is exposed or compromised.
+
+  where: test_user_session:5-17
+  what:  Hardcoded secrets/credentials
+  why:   The code contains hardcoded email and password values which could be a security risk if the source code is exposed.
+
+  where: pytest-plugins:1-1
+  what:  Hardcoded Secrets/Credentials
+  why:   Hardcoding secrets or credentials, even in configuration files, can expose sensitive information such as API keys or tokens. This can lead to unauthorized access and data breaches.
