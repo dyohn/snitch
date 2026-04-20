@@ -191,6 +191,60 @@ def latex_tabular(
     return "\n".join(lines)
 
 
+def latex_grouped_tabular(
+    row_header: str,
+    groups: list[str],
+    metrics: list[str],
+    rows: list[list],
+) -> str:
+    """Tabular with a two-row grouped header using booktabs.
+
+    groups  — column-group labels (e.g. model names)
+    metrics — sub-column labels repeated under each group
+    rows    — data rows; first cell is the row label
+    """
+    n_metrics = len(metrics)
+    n_groups = len(groups)
+    col_spec = "l" + (" " + "r" * n_metrics) * n_groups
+
+    # \cmidrule ranges: group i spans cols 2+i*n to 1+(i+1)*n
+    cmidrules = "".join(
+        rf"\cmidrule(lr){{{2 + i * n_metrics}"
+        rf"-{1 + (i + 1) * n_metrics}}}"
+        for i in range(n_groups)
+    )
+
+    group_row = (
+        " & "
+        + " & ".join(
+            rf"\multicolumn{{{n_metrics}}}{{c}}{{{g}}}"
+            for g in groups
+        )
+        + r" \\"
+    )
+    metric_row = (
+        row_header
+        + " & "
+        + " & ".join(metrics * n_groups)
+        + r" \\"
+    )
+
+    lines = [
+        rf"\begin{{tabular}}{{{col_spec}}}",
+        r"\toprule",
+        group_row,
+        cmidrules,
+        metric_row,
+        r"\midrule",
+    ]
+    for row in rows:
+        lines.append(
+            " & ".join(str(c) for c in row) + r" \\"
+        )
+    lines += [r"\bottomrule", r"\end{tabular}"]
+    return "\n".join(lines)
+
+
 def write_tex(
     path: Path,
     tabular: str,
@@ -748,14 +802,14 @@ def run_pass2(annotations_path: Path) -> None:
         row[col] = rf"\textbf{{{row[col]}}}"
         bold_rows.append(row)
 
-    model_hdrs = [
-        f"{m}/{lbl}"
-        for m in MODELS
-        for lbl in ("recall", "FP rate", "composite")
-    ]
     write_tex(
         ANALYSIS_DIR / "composite_scores_table.tex",
-        latex_tabular(["Repository"] + model_hdrs, bold_rows),
+        latex_grouped_tabular(
+            row_header="Repository",
+            groups=MODELS,
+            metrics=["Recall", "FP Rate", "Composite"],
+            rows=bold_rows,
+        ),
         caption=(
             r"Composite scores per repository and LLM "
             r"(recall $-$ FP rate; best per repo in bold)"
