@@ -2,7 +2,7 @@
 name = "snitch"
 version = "1.0.0"
 description = "Agentic LLM interface for SAST scanning"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 readme = "README.md"
 license = "MIT"
 dependencies = ["requests"]
@@ -10,6 +10,7 @@ dependencies = ["requests"]
 [project.optional-dependencies]
 dev = [
     "hatchling>=1.27",
+    "matplotlib>=3.8",
     "pipdeptree",
     "pytest>=8.4.2",
     "ruff"

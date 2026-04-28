@@ -1,0 +1,155 @@
+Flagged FP/Hallucinations: yum / gemma3
+============================================================
+
+--- EGREGIOUS ---
+  where: #!/usr/bin/python -tt
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Library General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+  what:  Shebang and license information. This is a comment block including license details.
+  why:   This block provides legal information about the software and should not be executed as code.
+
+  where: from testbase import *
+class SimpleRemoveTests(
+    OperationsTests):
+
+  what:  Hardcoded import statement without context. This can lead to difficulties in understanding the dependency graph, especially when the project grows. It's best to include a brief comment explaining the import and its purpose.
+  why:   Hardcoded import statements make it difficult to understand the dependencies of the code.  If the `testbase` module changes, this code will break without immediate notification.  This makes maintenance and debugging more difficult.
+
+--- MINOR ---
+  where: Yum constants. Usually dealing with rpm magic numbers. # This program is free software; you can redistribute it and/or modify# it under the terms of the GNU General Public License as published by# the Free Software Foundation; either version 2 of the License, or# (at your option) any later version.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the# GNU Library General Public License for more details.
+# You should have received a copy of the GNU General Public License# along with this program; if not, write to the Free Software# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+  what:  Hardcoded path '/var/run/yum.pid' in Yum constants. This is a security risk as it creates a persistent, potentially accessible file that can be targeted by attackers.  It's a path traversal vulnerability in disguise.
+  why:   Hardcoded paths expose sensitive information (the location of the Yum PID file) and create potential attack vectors. An attacker could potentially use this information for privilege escalation or other malicious activities.
+
+  where: baseFailOverMethod:10-12
+  what:  Hardcoded secret/credential: The use of 'random.seed()' in the `roundRobin` class's `__init__` method is a potential security risk. Seeding the random number generator with a fixed value makes the failover behavior predictable and potentially exploitable.  This should never be done.
+  why:   Using a fixed seed in the random number generator makes the failover behavior predictable and repeatable. An attacker could potentially analyze the behavior and identify patterns, leading to an exploit.
+
+  where: codeStartLine:codeEndLine
+  what:  YumBaseError.__init__(self, msg)
+  why:   The `YumBaseError.__init__` method takes a `msg` argument, which could potentially be user-controlled. If this `msg` is not sanitized, it may be possible to inject malicious code through it. Although, in this case, the error message is used for `__str__` and `__unicode__` methods, this is still a potential vulnerability.
+
+  where: PackageTagDB.__init__(self, repoid, sqlite_file): #PackageTagDB.__init__(self, repoid, sqlite_file):
+  what:  Potential SQL injection vulnerability if `repoid` or `sqlite_file` are not properly sanitized or validated.  This is because these values are directly used in constructing the SQL query for establishing the database connection.
+  why:   Unvalidated input can lead to SQL injection attacks, allowing an attacker to execute arbitrary SQL code, potentially compromising the database or system.
+
+  where: filename:1-14
+  what:  Hardcoded path '/usr/share/yum-cli'
+  why:   Hardcoded paths like this are a major security risk. They make the application vulnerable to attacks where an attacker can modify the application to point to a malicious location. This allows for arbitrary code execution and control over the system.
+
+  where: codeStartLine:7-7
+  what:  Hardcoded Path: The script uses a hardcoded path `/proc/%d/status` which could be vulnerable if the PID changes or if the script is executed by a different user without proper permissions.
+  why:   Hardcoded paths can lead to security vulnerabilities if not carefully managed.  If the PID changes, the script might try to access a process that no longer exists, leading to errors or, more seriously, a potential attack vector if an attacker could influence the PID.
+
+  where: PubringTests:1-38
+  what:  Hardcoded Secret/Credential - KEYID
+  why:   The value of KEYID (38BB1B5ED5865417) is hardcoded within the source code. This represents a cryptographic key identifier and should not be directly embedded in the code.  This creates a security risk if the source code is leaked or if the key itself is compromised.
+
+  where: from testbase import *
+class RevdepUpdateTests(OperationsTests):
+    @staticmethod
+def buildPkgs(pkgs, *args):
+        """ This test checks that remove_old_deps handles reverse
+        dependencies properly during yum update. Specifically,
+        remove_old_deps should remove precisely the packages which are not
+        required by any package currently installed or pending
+        installation. Two cases:
+
+        For packages A, B, we write A -> B if B requires A. Packages
+        with a dep prefix are dep-installed.
+
+        1) Installed: dep1 -> dep2 -> pkg1 <- dep3 and dep3 -> dep2
+           Update: pkg1, which requires dep2 but no longer requires dep3.
+           Correct outcome: dep1, dep2, dep3, pkg1, since dep2 still
+           needs dep3.
+
+        2) Installed: dep1 -> dep2 -> pkg1 <- dep3 and dep3 -> dep2
+           Update: pkg1, which now requires only dep1
+           Correct outcome: dep1, pkg1, since dep2 and dep3 are
+           no longer needed.
+
+        """
+
+        pkgs.installed_1 = FakePackage('dep1', '1', '0', '0', 'noarch')
+        pkgs.installed_1.yumdb_info.reason = 'dep'
+
+        pkgs.installed_2 = FakePackage('dep2', '1', '0', '0', 'noarch')
+        pkgs.installed_2.yumdb_info.reason = 'dep'
+
+        pkgs.installed_3 = FakePackage('pkg1', '1', '0', '0', 'noarch')
+        pkgs.installed_3.yumdb_info.reason = 'user'
+
+        pkgs.installed_4 = FakePackage('dep3', '1', '0', '0', 'noarch')
+        pkgs.installed_4.yumdb_info.reason = 'dep'
+
+        pkgs.installed_1.addRequiringPkg(pkgs.installed_2)
+        pkgs.installed_2.addRequiringPkg(pkgs.installed_3)
+        pkgs.installed_4.addRequiringPkg(pkgs.installed_2)
+
+        pkgs.installed_2.addRequiresPkg(pkgs.installed_1)
+        pkgs.installed_2.addRequiresPkg(pkgs.installed_4)
+        pkgs.installed_3.addRequiresPkg(pkgs.installed_4)
+        pkgs.installed_3.addRequiresPkg(pkgs.installed_2)
+
+        pkgs.update_2 = FakePackage('dep2', '2', '0', '0', 'noarch')
+        pkgs.update_2.addRequires('dep1', 'EQ', ('0', '1', '0'))
+
+        pkgs.update_3 = FakePackage('pkg1', '2', '0', '0', 'noarch')
+        pkgs.update_3.addRequires('dep2', 'EQ', ('0', '1', '0'))
+
+        pkgs.update_4 = FakePackage('pkg1', '2', '0', '0', 'noarch')
+        pkgs.update_4.addRequires('dep1', 'EQ', ('0', '1', '0'))
+
+    def testUpdate(self):
+        p = self.pkgs
+        res, msg = self.runOperation(['update'], [p.installed_1, p.installed_2, p.installed_3, p.installed_4], [p.update_3])
+        self.assert_(res=='ok', msg)
+        self.assertResult( (p.installed_1, p.installed_2, p.update_3, p.installed_4) )
+
+    def testUpdate2(self):
+        p = self.pkgs
+        res, msg = self.runOperation(['update'], [p.installed_1, p.installed_2, p.installed_3, p.installed_4], [p.update_4])
+        self.assert_(res=='ok', msg)
+        self.assertResult( (p.installed_1, p.update_4) )
+
+  what:  
+  why:   
+
+  where: ComplexRemoveTests.buildPkgs:12-18
+  what:  Hardcoded secrets/credentials - 'foo' used as package name without proper validation.
+  why:   Hardcoding package names directly into code is a significant security risk. It allows for potential misuse if the package name is compromised or if an attacker can inject malicious package names.  This could lead to unauthorized package installations or execution.
+
+  where: po/LC_MESSAGES_pl.po:1-7
+  what:  ERROR: yes/y translations don't match in: po/LC_MESSAGES_pl.po
+yes        %5s: yes
+y          %5s: y
+  why:   The code compares the 'yes' and 'y' translations but does not handle possible unicode issues.  If the translations are not encoded consistently, this comparison could fail.
+
+  where: Filename:script.py,line:1-3
+  what:  Hardcoded secrets/credentials - No configuration files are specified, so a configuration file is needed to identify secrets.
+  why:   The script uses the yum library without any configuration files being provided. This means that the yum library is implicitly using default values which could expose sensitive information like passwords or API keys to a compromised system or user.
+
+  where: filename:1-8
+  what:  Unnecessary Exception Inheritance
+  why:   Inheriting from `Exception` is generally not necessary for custom exceptions unless the exception truly represents a fundamental error condition.  RpmUtilsError appears to be a specific error type within the `rpmUtils` module, and inheriting from `Exception` adds an unnecessary level of indirection and complexity. This can also obscure the specific nature of the errors and complicate debugging.
+
+  where: Client code for Update Agent:14-16
+  what:  Potential memory leak in TransactionWrapper.__del__
+  why:   The `TransactionWrapper.__del__` method closes the `rpm.TransactionSet` but doesn't properly release the underlying database connection. Without proper cleanup, this can lead to resource leaks, especially in long-running applications.
+
+  where: filename:codeStartLine-codeEndLine
+  what:  No issues found
+  why:   The code appears to be a straightforward Python script using the rpmUtils library. No obvious vulnerabilities or misconfigurations were detected during static analysis.

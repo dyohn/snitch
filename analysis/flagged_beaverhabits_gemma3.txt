@@ -1,0 +1,200 @@
+Flagged FP/Hallucinations: beaverhabits / gemma3
+============================================================
+
+--- EGREGIOUS ---
+  where: file:stats_page.py:7-16
+  what:  Hardcoded Secret/Credential - `calendar.MONDAY`
+  why:   Using a hardcoded constant like `calendar.MONDAY` for the calendar week start day introduces a potential security risk. This value should never be directly hardcoded. If the application's requirements change (e.g., a different week start day), it needs to be updated manually in multiple locations, increasing the risk of errors and inconsistencies.
+
+  where: beaverhabits/frontend/components/CalendarHeatmap.py:6-10
+  what:  Hardcoded Secret/Credential - Calendar CSS
+  why:   The `CUSTOM_CSS` variable contains a list of CSS classes which includes 'CALENDAR_CSS'. The definition of `CALENDAR_CSS` is not immediately obvious and could contain malicious CSS that could compromise the application by injecting script or affecting styling.
+
+--- MINOR ---
+  where: filename:0-18
+  what:  Hardcoded URL 'http://localhost:8080/health'
+  why:   Hardcoding URLs, especially those referencing internal services like localhost, introduces significant security risks. This allows attackers to easily target the service, potentially bypassing security controls and gaining unauthorized access. It also makes deployments brittle, as the URL must be updated manually in any environment that is different from localhost.
+
+  where: filename:0-19
+  what:  Potential for insecure interval usage in backup task.
+  why:   The `settings.DAILY_BACKUP_INTERVAL` is used directly to calculate `wait_time`. If this interval is influenced by an external source (e.g., user input, another system), it could be used to craft a schedule that allows an attacker to trigger the backup at specific times, potentially exfiltrating data during these times.  A compromised interval value could lead to scheduled attacks.
+
+  where: code:10-16
+  what:  Hardcoded secret/credential: `EVERY_DAY`
+  why:   The constant `EVERY_DAY` represents a fixed period that could be vulnerable if exposed or if the definition of 'every day' is subject to change without proper controls.  This is considered a secret and should be managed more securely.
+
+  where: filename:10-16
+  what:  Insecure framework/API misuse: Use of `requests.post` without proper error handling and input validation.
+  why:   The code directly uses `requests.post` with a timeout but lacks robust error handling. If the Telegram API is unavailable or returns an error, the application will crash without a graceful recovery.  It also doesn't validate any data sent to the API, potentially leading to vulnerabilities if the API expects specific formats or values.  The `raise_for_status()` call only catches HTTP errors, not potential issues with the Telegram API itself.
+
+  where: filename:codeStartLine-codeEndLine
+  what:  Hardcoded secrets/credentials
+  why:   The code contains references to external dependencies and libraries (fastapi_users, pydantic) without proper configuration or handling of secrets. This can lead to vulnerabilities if these dependencies are compromised or if sensitive information is accidentally exposed.
+
+  where: filename:source_code
+  what:  Hardcoded JWT Secret
+  why:   Storing the JWT secret directly in the code is a critical security vulnerability. If the source code is compromised, the attacker gains immediate access to the JWT secret, allowing them to forge JWTs and impersonate users.
+
+  where: beaverhabits.app.auth:current_active_user,line 32-42
+  what:  Hardcoded secret/credential in HTTP authentication headers.
+  why:   The application uses the 'Authorization' header, which is a standard mechanism for authentication. However, it's relying on the application code to parse and validate the scheme. If the 'Authorization' header is manipulated or compromised, an attacker could inject a malicious scheme or parameter, potentially bypassing authentication.
+
+  where: UserApiTokenModel:__tablename__ = "user_api_tokens"
+  what:  Hardcoded SSL mode configuration in engine connection arguments. The `settings.DATABASE_URL` is checked for 'postgresql' and the `connect_args` dictionary includes `ssl`: "allow". This could be a security risk if the database server does not support SSL, as it might expose the connection to an unencrypted channel.
+  why:   Hardcoded SSL settings can be problematic if the database server doesn't support SSL or if the configuration is incorrect.  This could lead to insecure connections. Relying on this configuration instead of proper certificate verification is a security risk.
+
+  where: filename:skipped
+  what:  skipped
+  why:   skipped
+
+  where: filename:skipped
+  what:  skipped
+  why:   skipped
+
+  where: filename:0-146
+  what:  Hardcoded Secrets/Credentials - Potentially insecure configuration of authentication backend.
+  why:   The `fastapi_users` library is designed to handle authentication. However, the code doesn't explicitly configure the authentication backend. This could expose the system to vulnerabilities if the default configuration is not secure or if the backend itself has vulnerabilities.  It's crucial to always use a properly configured and audited authentication backend.
+
+  where: file:add_page_ui,codeStartLine:13-codeEndLine:19
+  what:  Potential XSS vulnerability via `ui.refresh` in `add_page_ui`
+  why:   The `ui.refresh` function in `add_page_ui` can lead to XSS vulnerabilities if the `add_ui` function doesn't properly sanitize or escape any user-provided input before rendering it within the UI.  If the `add_ui` function uses data from the `item` (likely a habit name) without escaping it, a malicious user could inject JavaScript code, which will be executed when the UI refreshes.
+
+  where: filename:codeStartLine-codeEndLine
+  what:  Hardcoded User Email in Background Task
+  why:   The `promote_user_to_pro` background task directly uses the value of the `user_email` input field without any sanitization or validation. This introduces a significant security risk. An attacker could potentially inject malicious code or values into the input field, which would then be executed as part of the background task. This is a classic injection vulnerability.
+
+  where: codeStartLine-codeEndLine:habit_row(habit, tag, days)
+  what:  Hardcoded Secret/Credential: Habit's name (habit.name) used in `aria-label` attribute.
+  why:   The `habit.name` value, which likely represents a user-defined habit name, is directly exposed within the `aria-label` attribute.  This creates a potential security risk if an attacker can influence the habit name, potentially leading to misinterpretation or exploitation.
+
+  where: PREVENT_CONTEXT_MENU:1-15
+  what:  Prevent Context Menu
+  why:   This code attempts to prevent the context menu from appearing in the browser. While this may be a legitimate security measure, it's important to understand that blocking context menus can sometimes interfere with legitimate browser functionality or accessibility features.  It's essential to have a clear reason for implementing this and to test thoroughly.
+
+  where: filename:codeStartLine-codeEndLine
+  what:  Potential Misuse of handle_event and Client Context
+  why:   The `handle_event` function, while functional, introduces an external dependency and potential for issues related to the `client` context.  Directly triggering events outside the NiceGUI framework can lead to unexpected behavior, difficulties in debugging, and potential conflicts with other NiceGUI components.  It's generally best practice to handle events within the NiceGUI event loop for better control and integration.
+
+  where: #WHITE_FLASH_PREVENT:0-125
+  what:  User-select: none; touch-callout:none; -webkit-touch-callout:none; -webkit-user-callout: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-user-modify: none; -webkit-highlight: none;
+  why:   This code sets the `user-select`, `touch-callout`, and related properties to `none`.  While seemingly benign, this aggressively disables user interaction and input on the page. This can negatively impact usability and accessibility by preventing users from copying text, selecting elements, or interacting with the page in expected ways.  It's a broad suppression of user interaction which can mask underlying vulnerabilities if combined with other behaviors.
+
+  where: filename:skipped
+  what:  skipped
+  why:   skipped
+
+  where: beaverhabits.frontend:82-87
+  what:  Potential SQL Injection Vulnerability
+  why:   The `import_from_json` function uses `json.loads(text)` without proper input validation or sanitization. If the input JSON contains malicious code, it could be executed as SQL code, leading to a SQL injection vulnerability.  Specifically, if a JSON structure inadvertently contains SQL syntax, it could be interpreted and executed by the database layer.
+
+  where: codeStartLine-codeEndLine
+  what:  Hardcoded Secret/Credential - user.email
+  why:   Storing user email directly in code is a significant security risk. If the application is compromised, the attacker gains access to the email address, which can be used for phishing, account takeover, or sending malicious emails.  This also violates the principle of least privilege – the application doesn't need to know the user's email for every operation.
+
+  where: filename:textarea.js
+  what:  Hardcoded Component Name
+  why:   Hardcoding the component name 'textarea.js' into the class definition creates a dependency on a specific file and potentially makes the code less maintainable. If the file structure changes, this could break the code.  It also adds an unnecessary layer of complexity.
+
+  where: add_menu:6-8
+  what:  Potential hardcoded date range in menu creation.
+  why:   The 'add_menu' function, while not directly exploiting vulnerabilities, creates a date range (starting from today - 26 weeks) that could be a target for future manipulation if the application logic surrounding this date range is ever compromised.  This date range is hardcoded and not user-configurable, increasing the attack surface.
+
+  where: filename:heatmap_page-36
+  what:  Hardcoded Secret/Credential: `settings.FIRST_DAY_OF_WEEK`
+  why:   This value is directly embedded in the code.  If the application is deployed to an environment where `FIRST_DAY_OF_WEEK` has a different default value (e.g., a different locale), the application's behavior could be compromised, potentially leading to incorrect date calculations and misinterpretation of historical data.
+
+  where: markdown:1-22
+  what:  Hardcoded Email Address
+  why:   Storing sensitive information like email addresses directly within the source code is a significant security risk. If the code is compromised, the email address is immediately exposed.
+
+  where: chip_sets_page:17-23
+  what:  Hardcoded secret/credential - 'amber'
+  why:   The value '#amber' is hardcoded and represents a color tag. This is a security risk because it could be leveraged in a social engineering attack, or used to craft a malicious payload if the application is used in a vulnerable way. It exposes the application to potential misuse.
+
+  where: nicegui:16
+  what:  Hardcoded Secret/Credential: API Token
+  why:   The API token is directly embedded in the UI, potentially exposing it to unauthorized access. This is a significant security risk.
+
+  where: filename:13-24
+  what:  Hardcoded Secret/Credential - EDIT_ME constant
+  why:   The `EDIT_ME` constant contains CSS code that could potentially expose sensitive information if it accidentally contains debugging details or any other potentially revealing data. This represents a risk, even though the content is CSS, as it's stored directly in the codebase.
+
+  where: codeStartLine-codeEndLine
+  what:  Hardcoded Secrets/Credentials
+  why:   Hardcoding secrets like passwords, API keys, and database credentials directly into the source code is a severe security vulnerability. If the source code is compromised, the secrets are exposed.
+
+  where: filename:codeStartLine-codeEndLine
+  what:  Hardcoded secret/credential: auth_token
+  why:   The `auth_token` is directly retrieved from `app.storage.user` and used without proper handling or encryption. This poses a significant security risk if the application is compromised or if the token is leaked.  Sensitive information should never be stored directly in source code.
+
+  where: DatabasePersistentDict:6-14
+  what:  Potential Exception Handling Issue - Missing try-except block around `crud.update_user_habit_list`
+  why:   The code directly calls `crud.update_user_habit_list` without a `try-except` block. If this function encounters an error (e.g., database connection issues, invalid data), the exception will be unhandled, potentially crashing the application or leading to data inconsistencies.  Robust error handling is crucial for stability and recovery.
+
+  where: filename:codeStartLine-codeEndLine
+  what:  Hardcoded Secrets/Credentials - nicegui.app.storage.user
+  why:   Using `nicegui.app.storage.user` directly to access and potentially store sensitive data (user habit lists) is a significant security risk.  This exposes the data to potential exposure if the storage mechanism itself is compromised or if the application is deployed in an insecure environment.  It also violates the principle of least privilege – the application doesn't need direct access to this storage.
+
+  where: filename:DatabaseImageStorage-codeStartLine-codeEndLine
+  what:  Hardcoded Secret/Credential - User email used in ImageObject constructor.
+  why:   Hardcoding user email addresses in the ImageObject constructor is a security risk.  It exposes the user's email, which could be used in social engineering attacks, or if the application is compromised, attackers could use this information to target users.
+
+  where: filename:codeStartLine-codeEndLine
+  what:  Hardcoded Secret/Credential - HABITS_STORAGE setting
+  why:   The `HABITS_STORAGE` setting is directly used in conditional logic. This could be vulnerable if the environment where the code is deployed is compromised, allowing an attacker to modify the storage type and potentially gain unauthorized access to user data, or misconfigure the application for unintended consequences.
+
+  where: FilePersistentDict:10-23
+  what:  Potential ValueError during file loading
+  why:   The code attempts to load data from the JSON file using `json.loads()`. If the file is not a valid JSON format, this will raise a `ValueError`.  This is a critical vulnerability as it can lead to application crashes or unexpected behavior.
+
+  where: filename:health,codeStartLine-codeEndLine
+  what:  Potential information disclosure in health endpoint - Python version exposed.
+  why:   Exposing the Python version in the health check endpoint can be a security risk.  It provides attackers with information about the application's environment, which could be used in future attacks or to tailor exploits.
+
+  where: google_one_tap_login:11-16
+  what:  Hardcoded Google One Tap Client ID
+  why:   Hardcoding secrets like the client ID directly into the code is a critical security vulnerability.  If the client ID is compromised, an attacker could impersonate the application and gain unauthorized access.
+
+  where: filename:skipped
+  what:  skipped
+  why:   skipped
+
+  where: filename:codeStartLine-codeEndLine
+  what:  Hardcoded secrets/credentials - `ASTRO_DIST_PATH = "statics/astro/dist"`
+  why:   This directly contains a path to a directory containing static files.  If this directory is exposed, attackers can potentially gain access to sensitive files or files containing sensitive information (e.g., configuration files, user data, etc.).
+
+  where: filename:codeStartLine-codeEndLine
+  what:  Hardcoded Secrets/Credentials
+  why:   The code does not handle sensitive information like API keys or passwords, leaving them vulnerable if exposed or compromised.  While this example doesn't appear to contain any secrets, the absence of secure secret handling is a significant risk.
+
+  where: filename:0-8
+  what:  Hardcoded Secrets/Credentials - Potential for environment variable misuse
+  why:   While this code doesn't directly expose a secret, the reliance on `settings.is_dev()` to control the logger's level introduces a potential vulnerability.  If the `settings.is_dev()` function itself is compromised or has vulnerabilities, an attacker could manipulate the logging level to reveal sensitive information or bypass logging entirely, making it harder to detect malicious activity.  Also, 'settings' is likely an object containing configurations, and if it's not properly secured, it could be the entry point for an attack.
+
+  where: identity:1-1
+  what:  Hardcoded Version and Identity
+  why:   Hardcoding the version and identity directly into the code creates several security and maintenance risks. It makes it difficult to track changes, manage deployments, and roll back to previous versions. It also exposes the application's identity, which could be exploited.
+
+  where: file:test_index_page-34
+  what:  Insecure use of UI page function without proper input validation or sanitization.
+  why:   The `index_page_ui` function directly uses the `days` and `habits` data without validating or sanitizing them. This could lead to vulnerabilities if the `days` data is manipulated by an attacker, potentially leading to unexpected behavior or, in a more complex scenario, a denial-of-service attack. Similarly, if the `habits` list is compromised, it could be used to inject malicious data into the UI, leading to XSS or other attacks.
+
+  where: filename:codeStartLine-codeEndLine
+  what:  Hardcoded Secret: Password
+  why:   Storing passwords directly in the codebase is a major security risk. If the code is committed to a public repository or compromised, the password can be easily accessed. This violates security best practices and could lead to unauthorized access to user accounts.
+
+  where: filename:skipped
+  what:  skipped
+  why:   skipped
+
+  where: s2d(date_str):1-8
+  what:  Potential format string vulnerability
+  why:   The `strptime` function is vulnerable to format string attacks if the input `date_str` comes from an untrusted source.  An attacker could craft a malicious `date_str` that, when parsed, could lead to arbitrary code execution or information disclosure. While the current code uses a hardcoded format string ('%Y-%m-%d'), and the input comes from within the test suite, a production environment where `date_str` comes from an external source is a critical security risk.
+
+  where: filename:1
+  what:  Potential misuse of NiceGUI testing plugin without proper context.
+  why:   While the NiceGUI testing plugin is a valid component, simply importing it without further explanation or integration into a test suite might indicate a lack of understanding of how to properly utilize it for security testing. It's crucial to understand how this plugin interacts with the application being tested and whether it introduces any vulnerabilities (e.g., exposing sensitive information during testing). Without further context on its intended use, there's an elevated risk that it's not being applied correctly, which could lead to unforeseen security implications.  It's crucial to analyze how this plugin is used in the testing framework.
+
+  where: filename:1-1
+  what:  Hardcoded Secret/Credential
+  why:   Storing secrets like 'storage_secret' directly in the code is a critical security vulnerability. This exposes the application's storage credentials to anyone who can access the source code.  This includes unauthorized developers, CI/CD pipelines, and potentially malicious actors.  This can lead to unauthorized access, data breaches, or service disruption.

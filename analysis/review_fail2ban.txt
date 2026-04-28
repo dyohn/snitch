@@ -1,0 +1,528 @@
+Bandit MEDIUM/HIGH vs Snitch — fail2ban
+========================================================================
+
+[0] B301 | MEDIUM | csocket.py:93
+    Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+
+  [gemma3]
+    where: # emacs: -*- mode: python; py-indent-offset: 4; indent-tabs-mode: t -*-
+# vi: set ft=python sts=4 ts=4 sw=4 noet :
+    what:  Unused comment lines with editor directives.  These are not part of the executable code and serve no functional purpose.
+
+  [llama3.1]
+    where: filename:12-14
+    what:  Insecure use of cPickle module for serialization and deserialization.
+
+  [qwen2.5]
+    where: CSocket.py:40-59
+    what:  Hardcoded secrets/credentials
+
+------------------------------------------------------------------------
+
+[1] B604 | MEDIUM | action.py:1042
+    Function call with shell=True parameter identified, possible security issue.
+
+  [gemma3]
+    where: filename:codeStartLine-codeEndLine
+    what:  Hardcoded Secret/Credential
+
+  [llama3.1]
+    where: test.py:6-6
+    what:  Hardcoded secret/credential
+
+  [qwen2.5]
+    where: fail2ban/server/action.py:5-7
+    what:  Hardcoded secrets/credentials
+
+------------------------------------------------------------------------
+
+[2] B301 | MEDIUM | asyncserver.py:106
+    Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[3] B608 | MEDIUM | database.py:358
+    Possible SQL injection vector through string-based query construction.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[4] B608 | MEDIUM | database.py:369
+    Possible SQL injection vector through string-based query construction.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[5] B608 | MEDIUM | database.py:377
+    Possible SQL injection vector through string-based query construction.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[6] B608 | MEDIUM | database.py:446
+    Possible SQL injection vector through string-based query construction.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[7] B604 | MEDIUM | filtersystemd.py:46
+    Function call with shell=True parameter identified, possible security issue.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[8] B307 | MEDIUM | jail.py:249
+    Use of possibly insecure function - consider using safer ast.literal_eval.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[9] B307 | MEDIUM | jail.py:257
+    Use of possibly insecure function - consider using safer ast.literal_eval.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[10] B307 | MEDIUM | mytime.py:176
+    Use of possibly insecure function - consider using safer ast.literal_eval.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[11] B602 | HIGH | utils.py:193
+    subprocess call with shell=True identified, security issue.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[12] B306 | MEDIUM | test_smtp.py:230
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[13] B306 | MEDIUM | test_smtp.py:230
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[14] B306 | MEDIUM | actiontestcase.py:529
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[15] B104 | MEDIUM | banmanagertestcase.py:234
+    Possible binding to all interfaces.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[16] B108 | MEDIUM | clientreadertestcase.py:1004
+    Probable insecure usage of temp file/directory.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[17] B108 | MEDIUM | clientreadertestcase.py:1005
+    Probable insecure usage of temp file/directory.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[18] B108 | MEDIUM | databasetestcase.py:166
+    Probable insecure usage of temp file/directory.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[19] B108 | MEDIUM | databasetestcase.py:187
+    Probable insecure usage of temp file/directory.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[20] B306 | MEDIUM | fail2banregextestcase.py:633
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[21] B113 | MEDIUM | digest.py:50
+    Call to requests without timeout
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    where: digest.py:15-23
+    what:  Hardcoded secrets/credentials
+
+------------------------------------------------------------------------
+
+[22] B306 | MEDIUM | filtertestcase.py:795
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[23] B306 | MEDIUM | filtertestcase.py:881
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[24] B306 | MEDIUM | filtertestcase.py:1150
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[25] B604 | MEDIUM | filtertestcase.py:1498
+    Function call with shell=True parameter identified, possible security issue.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[26] B306 | MEDIUM | filtertestcase.py:1850
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[27] B306 | MEDIUM | filtertestcase.py:1865
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[28] B306 | MEDIUM | filtertestcase.py:1967
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[29] B306 | MEDIUM | filtertestcase.py:2550
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[30] B602 | HIGH | misctestcase.py:84
+    subprocess call with shell=True identified, security issue.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[31] B605 | HIGH | misctestcase.py:117
+    Starting a process with a shell, possible injection detected, security issue.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[32] B605 | HIGH | misctestcase.py:133
+    Starting a process with a shell, possible injection detected, security issue.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[33] B605 | HIGH | misctestcase.py:185
+    Starting a process with a shell, possible injection detected, security issue.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[34] B307 | MEDIUM | samplestestcase.py:190
+    Use of possibly insecure function - consider using safer ast.literal_eval.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[35] B307 | MEDIUM | samplestestcase.py:227
+    Use of possibly insecure function - consider using safer ast.literal_eval.
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------
+
+[36] B306 | MEDIUM | servertestcase.py:524
+    Use of insecure and deprecated function (mktemp).
+
+  [gemma3]
+    (no findings in this file)
+
+  [llama3.1]
+    (no findings in this file)
+
+  [qwen2.5]
+    (no findings in this file)
+
+------------------------------------------------------------------------

@@ -1,0 +1,44 @@
+Flagged FP/Hallucinations: yum / llama3.1
+============================================================
+
+--- EGREGIOUS ---
+  where: yum.py:11-15
+  what:  Hardcoded credentials in copyright notice
+  why:   Hardcoding sensitive information such as email addresses or URLs can lead to security issues if the code is publicly exposed.
+
+  where: yum-leak-test.py:12-15
+  what:  Missing Input Validation
+  why:   The sys.argv variable is directly accessed without any input validation, which can lead to security vulnerabilities if an attacker manipulates the command-line arguments.
+
+--- MINOR ---
+  where: 
+  what:  
+  why:   
+
+  where: filename:11-11
+  what:  Hardcoded credentials
+  why:   Sensitive information is hardcoded, making it vulnerable to exposure.
+
+  where: filename:5-6
+  what:  Insecure use of logging module
+  why:   The logger's name is vulnerable to SQL injection attacks.
+
+  where: 
+  what:  
+  why:   
+
+  where: buildPkgs:23-35
+  what:  Insecure usage of hardcoded credentials in FakePackage objects
+  why:   Hardcoded credentials can be exploited by attackers if they gain access to the system.
+
+  where: filename:1-5
+  what:  Insecure path traversal
+  why:   The use of '.' and '..' in sys.path inserts can lead to an attacker being able to access any file on the system, potentially leading to code execution vulnerabilities.
+
+  where: filename:1-4
+  what:  Missing Input Validation and Error Handling
+  why:   The code does not validate user input or handle errors properly, which can lead to security vulnerabilities such as SQL injection or cross-site scripting (XSS).
+
+  where: filename:24-25
+  what:  Unvalidated input in get_pattern function
+  why:   Insecure use of shlex.split() without proper validation of user input.

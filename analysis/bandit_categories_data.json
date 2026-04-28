@@ -1,0 +1,53 @@
+{
+  "repos": [
+    "beaverhabits",
+    "fail2ban",
+    "yum"
+  ],
+  "categories": [
+    "injection",
+    "subprocess/OS",
+    "cryptography",
+    "deserialization",
+    "path/file",
+    "network",
+    "other"
+  ],
+  "counts": {
+    "injection": [
+      1,
+      9,
+      0
+    ],
+    "subprocess/OS": [
+      0,
+      8,
+      0
+    ],
+    "cryptography": [
+      1,
+      0,
+      0
+    ],
+    "deserialization": [
+      0,
+      2,
+      0
+    ],
+    "path/file": [
+      0,
+      16,
+      0
+    ],
+    "network": [
+      1,
+      1,
+      0
+    ],
+    "other": [
+      1,
+      1,
+      0
+    ]
+  }
+}

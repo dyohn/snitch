@@ -1,0 +1,107 @@
+Flagged FP/Hallucinations: beaverhabits / llama3.1
+============================================================
+
+--- MINOR ---
+  where: user_authenticate:12-15
+  what:  Insecure Password Storage
+  why:   Storing passwords in plain text is a significant security risk.
+
+  where: filename:17-18
+  what:  Insecure hardcoded JWT secret
+  why:   Hardcoding sensitive information such as JWT secrets in source code poses a significant security risk. If an attacker gains access to the source code, they can obtain the secret and use it to authenticate with your application.
+
+  where: filename:1-10
+  what:  Potential SQL Injection vulnerability
+  why:   The use of user input in the query without proper sanitization makes it vulnerable to SQL injection attacks.
+
+  where: filename:1-1
+  what:  Insecure Use of `eval()` function
+  why:   Using eval() can pose a significant risk to your application. It allows an attacker to inject malicious code, leading to potential remote code execution (RCE) attacks.
+
+  where: stats_page_ui:23-29
+  what:  Potential SQL injection vulnerability in get_stats_date_range() function
+  why:   The get_stats_date_range() function is not shown in this code snippet, but it's used to retrieve the start and end dates. If these dates are user-controlled or derived from untrusted sources, an attacker could inject malicious SQL queries.
+
+  where: admin_page function on line 12
+  what:  Potential SQL Injection vulnerability in user_email.value
+  why:   The `user_email.value` variable is not properly sanitized before being used in the `views.promote_user_to_pro` function, which may lead to a SQL injection attack.
+
+  where: filename:16-20
+  what:  Missing input validation for days and active_habits
+  why:   Input validation is crucial to prevent potential security vulnerabilities like injection attacks or DoS.
+
+  where: WHITE_FLASH_PREVENT.css:18-25
+  what:  Preventing user selection of text
+  why:   Accessibility issue and potential problems with assistive technologies
+
+  where: beaverhabits.frontend.components:24
+  what:  Potential SQL Injection Vulnerability in habit_history function
+  why:   User-input data may be used to construct an SQL query, allowing for malicious SQL code injection.
+
+  where: Textarea:1-2
+  what:  Insecure framework/API misuse
+  why:   The component parameter could inject malicious JavaScript code.
+
+  where: stats_date_pick_menu:16-32
+  what:  Potential SQL injection vulnerability due to unvalidated user input.
+  why:   The parse_date_range_str function does not properly validate the user-input date range string, which can lead to a SQL injection attack if an attacker provides malicious input.
+
+  where: beaverhabits.frontend.layout:12
+  what:  Uncaught Habit object
+  why:   If an unhandled error occurs in the Habit object, it could lead to a Denial of Service (DoS) attack.
+
+  where: filename:1-14
+  what:  Hardcoded secret/credential (email address)
+  why:   Hardcoding an email address in source code can expose it to potential attackers. This can lead to phishing, spam, or even security breaches if the account is compromised.
+
+  where: settings.py:1-53
+  what:  None
+  why:   None
+
+  where: filename:1-9
+  what:  Hardcoded secrets/credentials
+  why:   The HOME_PAGE and IMPORT_WIKI_PAGE variables contain sensitive information (GitHub repository URL) which could be used by an attacker to gain unauthorized access.
+
+  where: filename:5-5
+  what:  Insecure dependency on nicegui
+  why:   Cross-site scripting (XSS) vulnerabilities if user input is not properly validated or sanitized.
+
+  where: save:8-12
+  what:  Insecure Direct Object Reference (IDOR) vulnerability
+  why:   The `get` method does not properly validate the UUID, allowing an attacker to retrieve any image by manipulating the `uuid` parameter.
+
+  where: filename:6-7
+  what:  Hardcoded credentials
+  why:   The `user_disk_storage` and `user_database_storage` instances are created with hardcoded paths, which can be insecure if these paths are not properly sanitized.
+
+  where: /debug/heap/:line-128
+  what:  Insecure Direct Object Reference (IDOR)
+  why:   Arbitrary access to heap objects via path parameter can lead to exposure of sensitive data or unauthorized access.
+
+  where: init_astro_routes:22-23
+  what:  Insecure path traversal in FileResponse()
+  why:   The code uses absolute paths to serve files without proper validation, which could lead to path traversal attacks.
+
+  where: filename:1-4
+  what:  Hardcoded logging level in production environment
+  why:   The logging level is hardcoded to 'INFO' for production environments, which could lead to sensitive information being logged.
+
+  where: None
+  what:  No security vulnerabilities found
+  why:   
+
+  where: filename:line 22-25
+  what:  Hardcoded email address and password in the habit_user fixture.
+  why:   Using hardcoded credentials makes it easy for attackers to exploit vulnerabilities without needing to crack passwords. It's also a bad practice for testing, as it can lead to inconsistent results if the test is run multiple times.
+
+  where: filename:empty
+  what:  
+  why:   
+
+  where: s2d(date_str):6-7
+  what:  Insecure deserialization of user input
+  why:   The function s2d() uses strptime to parse a date string. If an attacker can manipulate this date string, they may be able to inject malicious data into the application.
+
+  where: filename:1-4
+  what:  Hardcoded Secret/ Credential
+  why:   The storage secret 'NEEDTOBEREPLACED' is hardcoded in the source code, which can lead to security issues if the application is compromised.

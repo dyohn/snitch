@@ -1,0 +1,578 @@
+[
+  {
+    "filename": "pygettext.py",
+    "filepath": "../yum/po/pygettext.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "repos.py",
+    "filepath": "../yum/yum/repos.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fssnapshots.py",
+    "filepath": "../yum/yum/fssnapshots.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "packageSack.py",
+    "filepath": "../yum/yum/packageSack.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "yumRepo.py",
+    "filepath": "../yum/yum/yumRepo.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "sqlutils.py",
+    "filepath": "../yum/yum/sqlutils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "rpmtrans.py",
+    "filepath": "../yum/yum/rpmtrans.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "history.py",
+    "filepath": "../yum/yum/history.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "depsolve.py",
+    "filepath": "../yum/yum/depsolve.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "mdparser.py",
+    "filepath": "../yum/yum/mdparser.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "rpmsack.py",
+    "filepath": "../yum/yum/rpmsack.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "drpm.py",
+    "filepath": "../yum/yum/drpm.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "pgpmsg.py",
+    "filepath": "../yum/yum/pgpmsg.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "constants.py",
+    "filepath": "../yum/yum/constants.py",
+    "where": "",
+    "what": "",
+    "why": "",
+    "fix": ""
+  },
+  {
+    "filename": "config.py",
+    "filepath": "../yum/yum/config.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "logginglevels.py",
+    "filepath": "../yum/yum/logginglevels.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "failover.py",
+    "filepath": "../yum/yum/failover.py",
+    "where": "failover.py:22-24",
+    "what": "Unvalidated user input in get_serverurl method",
+    "why": "The get_serverurl method allows an attacker to specify a custom index 'i' which can lead to arbitrary code execution.",
+    "fix": "Validate the user input 'i' before using it as an index."
+  },
+  {
+    "filename": "misc.py",
+    "filepath": "../yum/yum/misc.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "Errors.py",
+    "filepath": "../yum/yum/Errors.py",
+    "where": "yum.py:11-15",
+    "what": "Hardcoded credentials in copyright notice",
+    "why": "Hardcoding sensitive information such as email addresses or URLs can lead to security issues if the code is publicly exposed.",
+    "fix": "Replace the hardcoded email address with a placeholder and configure it through environment variables or configuration files."
+  },
+  {
+    "filename": "comps.py",
+    "filepath": "../yum/yum/comps.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../yum/yum/__init__.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "pkgtag_db.py",
+    "filepath": "../yum/yum/pkgtag_db.py",
+    "where": "filename:11-11",
+    "what": "Hardcoded credentials",
+    "why": "Sensitive information is hardcoded, making it vulnerable to exposure.",
+    "fix": "Use environment variables or a secure configuration file for database connection credentials."
+  },
+  {
+    "filename": "repoMDObject.py",
+    "filepath": "../yum/yum/repoMDObject.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "sqlitesack.py",
+    "filepath": "../yum/yum/sqlitesack.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "metalink.py",
+    "filepath": "../yum/yum/metalink.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "igroups.py",
+    "filepath": "../yum/yum/igroups.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "i18n.py",
+    "filepath": "../yum/yum/i18n.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "parser.py",
+    "filepath": "../yum/yum/parser.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "transactioninfo.py",
+    "filepath": "../yum/yum/transactioninfo.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "updateinfo.py",
+    "filepath": "../yum/yum/updateinfo.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "plugins.py",
+    "filepath": "../yum/yum/plugins.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "packages.py",
+    "filepath": "../yum/yum/packages.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "callbacks.py",
+    "filepath": "../yum/yum/callbacks.py",
+    "where": "filename:5-6",
+    "what": "Insecure use of logging module",
+    "why": "The logger's name is vulnerable to SQL injection attacks.",
+    "fix": "Configure logging properly using the `logging.config` module."
+  },
+  {
+    "filename": "update_md.py",
+    "filepath": "../yum/yum/update_md.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "yum-updatesd.py",
+    "filepath": "../yum/yum-updatesd.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "yum-updatesd.py",
+    "filepath": "../yum/bin/yum-updatesd.py",
+    "where": "",
+    "what": "",
+    "why": "",
+    "fix": ""
+  },
+  {
+    "filename": "utils.py",
+    "filepath": "../yum/utils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "transactiontests.py",
+    "filepath": "../yum/test/transactiontests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "yum-leak-test.py",
+    "filepath": "../yum/test/yum-leak-test.py",
+    "where": "yum-leak-test.py:12-15",
+    "what": "Missing Input Validation",
+    "why": "The sys.argv variable is directly accessed without any input validation, which can lead to security vulnerabilities if an attacker manipulates the command-line arguments.",
+    "fix": "Validate user input using functions like argparse or by explicitly checking the length of sys.argv."
+  },
+  {
+    "filename": "skipbroken-tests.py",
+    "filepath": "../yum/test/skipbroken-tests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "packagetests.py",
+    "filepath": "../yum/test/packagetests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "simpleobsoletestests.py",
+    "filepath": "../yum/test/simpleobsoletestests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "merge-history-transactions-tests.py",
+    "filepath": "../yum/test/merge-history-transactions-tests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "pubringtests.py",
+    "filepath": "../yum/test/pubringtests.py",
+    "where": "yum.py:15-16",
+    "what": "Hardcoded secret (GPG key ID and fingerprint)",
+    "why": "Hardcoding secrets, such as GPG key IDs or fingerprints, is a security risk because it makes it easier for an attacker to access the system if they get hold of the code.",
+    "fix": "Replace hardcoded secrets with environment variables or configuration files."
+  },
+  {
+    "filename": "revdepupdatetests.py",
+    "filepath": "../yum/test/revdepupdatetests.py",
+    "where": "revdepupdate.py:17-23",
+    "what": "Potential SQL Injection vulnerability due to unescaped data in yumdb_info.reason",
+    "why": "The yumdb_info.reason attribute is assigned a string value from an external source (the 'reason' parameter). This could potentially lead to a SQL injection attack if the input is not properly sanitized.",
+    "fix": "Use parameterized queries or prepared statements with sanitized user input to prevent SQL injection. Alternatively, escape any special characters in the input before assigning it to yumdb_info.reason."
+  },
+  {
+    "filename": "complexremovetests.py",
+    "filepath": "../yum/test/complexremovetests.py",
+    "where": "buildPkgs:23-35",
+    "what": "Insecure usage of hardcoded credentials in FakePackage objects",
+    "why": "Hardcoded credentials can be exploited by attackers if they gain access to the system.",
+    "fix": "Use environment variables or secure storage mechanisms to store sensitive information."
+  },
+  {
+    "filename": "operationstests.py",
+    "filepath": "../yum/test/operationstests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "settestpath.py",
+    "filepath": "../yum/test/settestpath.py",
+    "where": "filename:1-5",
+    "what": "Insecure path traversal",
+    "why": "The use of '.' and '..' in sys.path inserts can lead to an attacker being able to access any file on the system, potentially leading to code execution vulnerabilities.",
+    "fix": "Only include necessary directories in sys.path and avoid using '.' and '..' to prevent potential path traversal attacks. Instead, specify the correct path to the module or directory."
+  },
+  {
+    "filename": "testbase.py",
+    "filepath": "../yum/test/testbase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "simpleupdatetests.py",
+    "filepath": "../yum/test/simpleupdatetests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "check-po-yes-no.py",
+    "filepath": "../yum/test/check-po-yes-no.py",
+    "where": "po.py:6-8",
+    "what": "SQL injection vulnerability due to string concatenation with user input",
+    "why": "This can lead to arbitrary command execution if an attacker is able to inject malicious input into the glob.glob() function.",
+    "fix": "Use safe string formatting or parameterized queries to prevent injection attacks."
+  },
+  {
+    "filename": "depsolvetests.py",
+    "filepath": "../yum/test/depsolvetests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "misc-tests.py",
+    "filepath": "../yum/test/misc-tests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "rpmdb-cache.py",
+    "filepath": "../yum/test/rpmdb-cache.py",
+    "where": "filename:1-4",
+    "what": "Missing Input Validation and Error Handling",
+    "why": "The code does not validate user input or handle errors properly, which can lead to security vulnerabilities such as SQL injection or cross-site scripting (XSS).",
+    "fix": "Implement proper input validation and error handling mechanisms to prevent security breaches."
+  },
+  {
+    "filename": "simpleremovetests.py",
+    "filepath": "../yum/test/simpleremovetests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "callback.py",
+    "filepath": "../yum/callback.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "completion-helper.py",
+    "filepath": "../yum/completion-helper.py",
+    "where": "filename:24-25",
+    "what": "Unvalidated input in get_pattern function",
+    "why": "Insecure use of shlex.split() without proper validation of user input.",
+    "fix": "Validate the input before passing it to shlex.split(), e.g., by checking for suspicious characters."
+  },
+  {
+    "filename": "yummain.py",
+    "filepath": "../yum/yummain.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "arch.py",
+    "filepath": "../yum/rpmUtils/arch.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "miscutils.py",
+    "filepath": "../yum/rpmUtils/miscutils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../yum/rpmUtils/__init__.py",
+    "where": "rpm_utils.py:2-3",
+    "what": "Insecure Import Statement",
+    "why": "The use of '-tt' as an import statement in a shebang line is not secure. This can lead to unexpected behavior or even code injection.",
+    "fix": "Replace the insecure import statement with the correct Python interpreter path, e.g., '/usr/bin/python3'."
+  },
+  {
+    "filename": "updates.py",
+    "filepath": "../yum/rpmUtils/updates.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "oldUtils.py",
+    "filepath": "../yum/rpmUtils/oldUtils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "transaction.py",
+    "filepath": "../yum/rpmUtils/transaction.py",
+    "where": "transaction_wrapper.py:3-11",
+    "what": "Insecure use of hardcoded credentials",
+    "why": "The script uses a hardcoded root directory '/'. This is a security risk because an attacker could potentially exploit this to gain access to sensitive files.",
+    "fix": "Replace the hardcoded root directory with a configurable or dynamically determined value."
+  },
+  {
+    "filename": "updates-test.py",
+    "filepath": "../yum/rpmUtils/tests/updates-test.py",
+    "where": "filename.py:4-6",
+    "what": "Unvalidated User Input",
+    "why": "This can lead to injection attacks, such as SQL injection or command injection.",
+    "fix": "Validate user input using techniques like whitelisting, sanitization, or parameterized queries."
+  },
+  {
+    "filename": "yumcommands.py",
+    "filepath": "../yum/yumcommands.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "yum-cron.py",
+    "filepath": "../yum/yum-cron/yum-cron.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "output.py",
+    "filepath": "../yum/output.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "rstgenerator.py",
+    "filepath": "../yum/docs/sphinxdocs/rstgenerator.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "conf.py",
+    "filepath": "../yum/docs/sphinxdocs/conf.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "shell.py",
+    "filepath": "../yum/shell.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "cli.py",
+    "filepath": "../yum/cli.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  }
+]

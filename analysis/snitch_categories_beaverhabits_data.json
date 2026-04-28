@@ -1,0 +1,46 @@
+{
+  "repo": "beaverhabits",
+  "categories": [
+    "injection",
+    "authentication",
+    "cryptography",
+    "subprocess/OS",
+    "path traversal",
+    "info disclosure",
+    "other"
+  ],
+  "models": [
+    "gemma3",
+    "llama3.1",
+    "qwen2.5"
+  ],
+  "counts": {
+    "gemma3": [
+      3,
+      34,
+      0,
+      0,
+      0,
+      1,
+      16
+    ],
+    "llama3.1": [
+      11,
+      17,
+      0,
+      0,
+      5,
+      1,
+      22
+    ],
+    "qwen2.5": [
+      2,
+      35,
+      0,
+      0,
+      5,
+      2,
+      10
+    ]
+  }
+}

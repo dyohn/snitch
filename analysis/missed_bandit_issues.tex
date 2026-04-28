@@ -1,0 +1,49 @@
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrrrr}
+\hline
+Repo & Test ID & File & Line & Sev. & Issue (truncated) \\
+\hline
+Beaverhabits & B701 & javascript.py & 71 & HIGH & By default, jinja2 sets autoescape to False. Consider u... \\
+Beaverhabits & B324 & utils.py & 161 & HIGH & Use of weak SHA1 hash for security. Consider usedforsec... \\
+Fail2ban & B604 & action.py & 1042 & MEDIUM & Function call with shell=True parameter identified, pos... \\
+Fail2ban & B301 & asyncserver.py & 106 & MEDIUM & Pickle and modules that wrap it can be unsafe when used... \\
+Fail2ban & B608 & database.py & 358 & MEDIUM & Possible SQL injection vector through string-based quer... \\
+Fail2ban & B608 & database.py & 369 & MEDIUM & Possible SQL injection vector through string-based quer... \\
+Fail2ban & B608 & database.py & 377 & MEDIUM & Possible SQL injection vector through string-based quer... \\
+Fail2ban & B608 & database.py & 446 & MEDIUM & Possible SQL injection vector through string-based quer... \\
+Fail2ban & B604 & filtersystemd.py & 46 & MEDIUM & Function call with shell=True parameter identified, pos... \\
+Fail2ban & B307 & jail.py & 249 & MEDIUM & Use of possibly insecure function - consider using safe... \\
+Fail2ban & B307 & jail.py & 257 & MEDIUM & Use of possibly insecure function - consider using safe... \\
+Fail2ban & B307 & mytime.py & 176 & MEDIUM & Use of possibly insecure function - consider using safe... \\
+Fail2ban & B602 & utils.py & 193 & HIGH & subprocess call with shell=True identified, security is... \\
+Fail2ban & B306 & test_smtp.py & 230 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B306 & test_smtp.py & 230 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B306 & actiontestcase.py & 529 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B104 & banmanagertestcase.py & 234 & MEDIUM & Possible binding to all interfaces. \\
+Fail2ban & B108 & clientreadertestcase.py & 1004 & MEDIUM & Probable insecure usage of temp file/directory. \\
+Fail2ban & B108 & clientreadertestcase.py & 1005 & MEDIUM & Probable insecure usage of temp file/directory. \\
+Fail2ban & B108 & databasetestcase.py & 166 & MEDIUM & Probable insecure usage of temp file/directory. \\
+Fail2ban & B108 & databasetestcase.py & 187 & MEDIUM & Probable insecure usage of temp file/directory. \\
+Fail2ban & B306 & fail2banregextestcase.py & 633 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B113 & digest.py & 50 & MEDIUM & Call to requests without timeout \\
+Fail2ban & B306 & filtertestcase.py & 795 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B306 & filtertestcase.py & 881 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B306 & filtertestcase.py & 1150 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B604 & filtertestcase.py & 1498 & MEDIUM & Function call with shell=True parameter identified, pos... \\
+Fail2ban & B306 & filtertestcase.py & 1850 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B306 & filtertestcase.py & 1865 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B306 & filtertestcase.py & 1967 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B306 & filtertestcase.py & 2550 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+Fail2ban & B602 & misctestcase.py & 84 & HIGH & subprocess call with shell=True identified, security is... \\
+Fail2ban & B605 & misctestcase.py & 117 & HIGH & Starting a process with a shell, possible injection det... \\
+Fail2ban & B605 & misctestcase.py & 133 & HIGH & Starting a process with a shell, possible injection det... \\
+Fail2ban & B605 & misctestcase.py & 185 & HIGH & Starting a process with a shell, possible injection det... \\
+Fail2ban & B307 & samplestestcase.py & 190 & MEDIUM & Use of possibly insecure function - consider using safe... \\
+Fail2ban & B307 & samplestestcase.py & 227 & MEDIUM & Use of possibly insecure function - consider using safe... \\
+Fail2ban & B306 & servertestcase.py & 524 & MEDIUM & Use of insecure and deprecated function (mktemp). \\
+\hline
+\end{tabular}
+\caption{Bandit MEDIUM/HIGH issues not found by any Snitch LLM scan}
+\label{tab:missed_bandit}
+\end{table}

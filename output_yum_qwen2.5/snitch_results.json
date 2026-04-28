@@ -1,0 +1,578 @@
+[
+  {
+    "filename": "pygettext.py",
+    "filepath": "../yum/po/pygettext.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "repos.py",
+    "filepath": "../yum/yum/repos.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fssnapshots.py",
+    "filepath": "../yum/yum/fssnapshots.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "packageSack.py",
+    "filepath": "../yum/yum/packageSack.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "yumRepo.py",
+    "filepath": "../yum/yum/yumRepo.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "sqlutils.py",
+    "filepath": "../yum/yum/sqlutils.py",
+    "where": "dhm/strtools.py:80-81",
+    "what": "Syntax error in exception class name",
+    "why": "In Python, exception classes should not have a trailing comma. The use of a trailing comma is typically used when defining multiple exceptions on the same line, which is unnecessary and causes syntax errors.",
+    "fix": "Remove the trailing comma from the `TokenizeError` exception definition."
+  },
+  {
+    "filename": "rpmtrans.py",
+    "filepath": "../yum/yum/rpmtrans.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "history.py",
+    "filepath": "../yum/yum/history.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "depsolve.py",
+    "filepath": "../yum/yum/depsolve.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "mdparser.py",
+    "filepath": "../yum/yum/mdparser.py",
+    "where": "MDParser.py:17-23",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code directly uses the filename passed as a command-line argument, which could be manipulated to access unintended files or cause other issues.",
+    "fix": "Use a safer method for reading input files, such as using a configuration file or a secure method of providing filenames."
+  },
+  {
+    "filename": "rpmsack.py",
+    "filepath": "../yum/yum/rpmsack.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "drpm.py",
+    "filepath": "../yum/yum/drpm.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "pgpmsg.py",
+    "filepath": "../yum/yum/pgpmsg.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "constants.py",
+    "filepath": "../yum/yum/constants.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "config.py",
+    "filepath": "../yum/yum/config.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "logginglevels.py",
+    "filepath": "../yum/yum/logginglevels.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "failover.py",
+    "filepath": "../yum/yum/failover.py",
+    "where": "priority:65-81",
+    "what": "Insecure cryptographic weakness",
+    "why": "The class `priority` does not implement any form of secure authentication or encryption. It simply cycles through a list of URLs based on the index of failures, which could be predictable and thus vulnerable to certain attacks.",
+    "fix": "Implement secure mechanisms for handling server URL selection, such as using HTTPS, securing the list of URLs with proper access controls, and ensuring that sensitive information is not hardcoded."
+  },
+  {
+    "filename": "misc.py",
+    "filepath": "../yum/yum/misc.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "Errors.py",
+    "filepath": "../yum/yum/Errors.py",
+    "where": "YumBaseError:5-19",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code uses `to_utf8` and `to_unicode` methods from the `i18n` module to convert values. However, it is unclear if these functions handle encoding/decoding of sensitive data properly or if they are used in a way that could expose hardcoded secrets.",
+    "fix": "Review the usage of `to_utf8` and `to_unicode` methods to ensure they do not contain any hardcoded secrets or credentials. If necessary, replace them with secure methods for handling sensitive data."
+  },
+  {
+    "filename": "comps.py",
+    "filepath": "../yum/yum/comps.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../yum/yum/__init__.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "pkgtag_db.py",
+    "filepath": "../yum/yum/pkgtag_db.py",
+    "where": "pkgdb.py:23-49",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code uses a hardcoded path to the SQLite file, which could be a security risk if this file is sensitive or contains confidential information.",
+    "fix": "Use environment variables or configuration files to specify the SQLite file path instead of hardcoding it."
+  },
+  {
+    "filename": "repoMDObject.py",
+    "filepath": "../yum/yum/repoMDObject.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "sqlitesack.py",
+    "filepath": "../yum/yum/sqlitesack.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "metalink.py",
+    "filepath": "../yum/yum/metalink.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "igroups.py",
+    "filepath": "../yum/yum/igroups.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "i18n.py",
+    "filepath": "../yum/yum/i18n.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "parser.py",
+    "filepath": "../yum/yum/parser.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "transactioninfo.py",
+    "filepath": "../yum/yum/transactioninfo.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "updateinfo.py",
+    "filepath": "../yum/yum/updateinfo.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "plugins.py",
+    "filepath": "../yum/yum/plugins.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "packages.py",
+    "filepath": "../yum/yum/packages.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "callbacks.py",
+    "filepath": "../yum/yum/callbacks.py",
+    "where": "callbacks.py:1-7",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains a hard-coded license text, which is not a security issue but should be reviewed to ensure no sensitive information is included.",
+    "fix": "Review the file for any additional hardcoded credentials or sensitive information and remove them if present."
+  },
+  {
+    "filename": "update_md.py",
+    "filepath": "../yum/yum/update_md.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "yum-updatesd.py",
+    "filepath": "../yum/yum-updatesd.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "yum-updatesd.py",
+    "filepath": "../yum/bin/yum-updatesd.py",
+    "where": "/usr/bin/python:3-7",
+    "what": "Insecure option parsing and handling",
+    "why": "Options like --no-fork and --remote-shutdown can be exploited to alter the behavior of the script. This could potentially lead to unauthorized actions or vulnerabilities.",
+    "fix": "Use a more secure options parser, such as argparse, which provides better control over how arguments are parsed and can prevent injection attacks. Additionally, validate input options to ensure they do not introduce unexpected behavior."
+  },
+  {
+    "filename": "utils.py",
+    "filepath": "../yum/utils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "transactiontests.py",
+    "filepath": "../yum/test/transactiontests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "yum-leak-test.py",
+    "filepath": "../yum/test/yum-leak-test.py",
+    "where": "./yum-leak-test.py:24-56",
+    "what": "Potential memory leak in the `yb` object references.",
+    "why": "The `yb` object is created within a loop and not fully deleted, which could lead to a memory leak over time. Garbage collection might help but is not guaranteed to run before each iteration of the loop.",
+    "fix": "Ensure that all references to `yb` are explicitly set to `None` or deleted at the end of each loop iteration to allow garbage collection to handle it properly."
+  },
+  {
+    "filename": "skipbroken-tests.py",
+    "filepath": "../yum/test/skipbroken-tests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "packagetests.py",
+    "filepath": "../yum/test/packagetests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "simpleobsoletestests.py",
+    "filepath": "../yum/test/simpleobsoletestests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "merge-history-transactions-tests.py",
+    "filepath": "../yum/test/merge-history-transactions-tests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "pubringtests.py",
+    "filepath": "../yum/test/pubringtests.py",
+    "where": "pubringTests.py:13-25",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains the hardcoded path to a GPG key file and related files, which could pose a security risk if the source code is exposed.",
+    "fix": "Replace the hardcoded paths with environment variables or configuration settings. Use secure methods for managing and accessing sensitive information."
+  },
+  {
+    "filename": "revdepupdatetests.py",
+    "filepath": "../yum/test/revdepupdatetests.py",
+    "where": "testbase.py:27-39",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code contains hardcoded package names and version numbers which could lead to issues if these values are not updated consistently or if they are exposed in logs or other outputs.",
+    "fix": "Use environment variables or a configuration file to store package names and version numbers. Ensure that sensitive information is never hard-coded into the source code."
+  },
+  {
+    "filename": "complexremovetests.py",
+    "filepath": "../yum/test/complexremovetests.py",
+    "where": "testbase.py:49-67",
+    "what": "Insecure Framework/API misuse",
+    "why": "The code is using the `assertResult` method without checking the actual result, which can lead to potential issues if the operation fails. This can make it difficult to identify and address failures in the test.",
+    "fix": "Modify the assert statement to check the actual result of `self.runOperation`. For example, you could use a more detailed assertion like `self.assertResult(msg)` or add logging to capture the failure."
+  },
+  {
+    "filename": "operationstests.py",
+    "filepath": "../yum/test/operationstests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "settestpath.py",
+    "filepath": "../yum/test/settestpath.py",
+    "where": "./<filename>:1-3",
+    "what": "Insecure path traversal",
+    "why": "By inserting relative paths into the `sys.path` list, an attacker could potentially execute code from arbitrary directories. This is a risk because it allows malicious inputs to alter the module search path.",
+    "fix": "Avoid dynamically modifying `sys.path`. Instead, use explicit imports or configure your project's structure to include necessary modules without risking directory traversal vulnerabilities."
+  },
+  {
+    "filename": "testbase.py",
+    "filepath": "../yum/test/testbase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "simpleupdatetests.py",
+    "filepath": "../yum/test/simpleupdatetests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "check-po-yes-no.py",
+    "filepath": "../yum/test/check-po-yes-no.py",
+    "where": "po.py:2-68",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The script contains hardcoded translations for 'yes', 'y', 'no', and 'n' which might contain sensitive information or could be used to infer the original language content.",
+    "fix": "Remove hardcoded translations and use a secure configuration mechanism such as environment variables, a configuration file with proper access controls, or a database lookup. Ensure that any user input is properly validated and sanitized."
+  },
+  {
+    "filename": "depsolvetests.py",
+    "filepath": "../yum/test/depsolvetests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "misc-tests.py",
+    "filepath": "../yum/test/misc-tests.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "rpmdb-cache.py",
+    "filepath": "../yum/test/rpmdb-cache.py",
+    "where": "test.py:8-9",
+    "what": "__provides_of_requires_exact__ is set to False in a conditional assertion, but the attribute itself may still be used outside of this condition.",
+    "why": "Even though the `__provides_of_requires_exact__` variable is not used directly after the assertion, it could potentially be accessed elsewhere in the code. This can lead to unexpected behavior or security issues if the value changes unexpectedly.",
+    "fix": "Remove the `assert` statement and explicitly set the value of `__provides_of_requires_exact__` where it will be used."
+  },
+  {
+    "filename": "simpleremovetests.py",
+    "filepath": "../yum/test/simpleremovetests.py",
+    "where": "testbase.py:7-36",
+    "what": "Insecure Path Traversal",
+    "why": "The `addRequires` and `addProvides` methods are used to add file paths directly without validation or sanitization. This can lead to injection of arbitrary file paths, which could be exploited to access files outside the intended directory.",
+    "fix": "Sanitize and validate all file paths before adding them to packages using methods like `os.path.abspath`, `os.path.normpath`, or a custom validation function."
+  },
+  {
+    "filename": "callback.py",
+    "filepath": "../yum/callback.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "completion-helper.py",
+    "filepath": "../yum/completion-helper.py",
+    "where": "filename:23-26",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The code is handling exceptions but does not log or handle errors appropriately. This can lead to security issues as sensitive information may be exposed.",
+    "fix": "Consider logging the error message in a secure manner (e.g., using syslog, a secure logging service) and handle the exceptions more robustly."
+  },
+  {
+    "filename": "yummain.py",
+    "filepath": "../yum/yummain.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "arch.py",
+    "filepath": "../yum/rpmUtils/arch.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "miscutils.py",
+    "filepath": "../yum/rpmUtils/miscutils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../yum/rpmUtils/__init__.py",
+    "where": "rpmutils.py:1-3",
+    "what": "Missing Docstring in Class Definition",
+    "why": "Docstrings are essential for documenting the purpose and usage of classes. They provide information to other developers about what the class does, which can help with maintenance and understanding the codebase.",
+    "fix": "Add a docstring to describe the purpose of the RpmUtilsError class."
+  },
+  {
+    "filename": "updates.py",
+    "filepath": "../yum/rpmUtils/updates.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "oldUtils.py",
+    "filepath": "../yum/rpmUtils/oldUtils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "transaction.py",
+    "filepath": "../yum/rpmUtils/transaction.py",
+    "where": "filename:3-4",
+    "what": "Hardcoded credentials or secrets",
+    "why": "The code contains hardcoded strings that may represent sensitive information, such as paths or flags.",
+    "fix": "Replace hardcoded strings with environment variables or configuration files. For example, use 'root' instead of hardcoding the path."
+  },
+  {
+    "filename": "updates-test.py",
+    "filepath": "../yum/rpmUtils/tests/updates-test.py",
+    "where": "multilib.py:1-4",
+    "what": "Cross-site Scripting (XSS) Potential",
+    "why": "The code does not validate or escape input before printing it to the console. This can lead to XSS vulnerabilities if an attacker injects malicious scripts.",
+    "fix": "Validate and escape all user inputs before printing them. For example, use a library like `html` in Python to escape any special characters."
+  },
+  {
+    "filename": "yumcommands.py",
+    "filepath": "../yum/yumcommands.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "yum-cron.py",
+    "filepath": "../yum/yum-cron/yum-cron.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "output.py",
+    "filepath": "../yum/output.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "rstgenerator.py",
+    "filepath": "../yum/docs/sphinxdocs/rstgenerator.py",
+    "where": "generateFile:23-29",
+    "what": "Hardcoded secrets/credentials",
+    "why": "The script uses hardcoded paths and directory names, which can expose sensitive information if the source code is shared or stored insecurely.",
+    "fix": "Use environment variables or configuration files to store paths and directories instead of hardcoding them. For example: `source_directory = os.getenv('SOURCE_DIR', os.getcwd())`."
+  },
+  {
+    "filename": "conf.py",
+    "filepath": "../yum/docs/sphinxdocs/conf.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "shell.py",
+    "filepath": "../yum/shell.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "cli.py",
+    "filepath": "../yum/cli.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  }
+]

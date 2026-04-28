@@ -1,11 +1,16 @@
 import json
+import logging
+import re
 from collections.abc import Iterator
 from typing import Any, Dict
+
 import requests
 
 from snitch.models import SastResult
 from snitch.prompts import LLM_SAST_PROMPT, LLM_USER_TEMPLATE
 from snitch.repo_io import RepositoryIO
+
+logger = logging.getLogger(__name__)
 
 
 class SastAgent:
@@ -15,7 +20,6 @@ class SastAgent:
         base_url: str = "http://localhost:11434",
     ):
         """Local FREE detector powered by Ollama
-
         Requirements:
           - Ollama installed (https://ollama.com)
           - Ollama server running:  `ollama serve`
@@ -26,7 +30,7 @@ class SastAgent:
         self.chat_url = f"{self.base_url}/api/chat"
 
     def _call_llm_raw(self, text: str) -> str:
-        """Call Ollama chat aPI and return raw text response"""
+        """Call Ollama chat API and return raw text response"""
         payload = {
             "model": self.model_name,
             "messages": [
@@ -38,41 +42,45 @@ class SastAgent:
             ],
             "stream": False,
         }
-
         resp = requests.post(self.chat_url, json=payload)
         resp.raise_for_status()
         data = resp.json()
-
-        # Ollama chat API returns:
-        # {"message": {"role": "...", "content": "..."}, ...}
         raw = data.get("message", {}).get("content", "")
         if not raw:
-            # fallback if something weird happens
             raw = "{}"
         return raw
 
     def _parse_json(self, raw: str) -> Dict[str, Any]:
+        logger.debug("Raw LLM response:\n%s", raw)
         raw = raw.strip()
-
-        # Handle ```json ...``` wrappers if the model adds them
+        match = re.search(r'\{[^{}]*"where"[^{}]*\}', raw, re.DOTALL)
+        if match:
+            try:
+                return json.loads(match.group())
+            except Exception as exc:
+                logger.warning(
+                    "Regex-extracted JSON failed to parse (%s): %s",
+                    exc,
+                    match.group(),
+                )
         if raw.startswith("```"):
             raw = raw.strip("`")
             if raw.lower().startswith("json"):
                 raw = raw[4:].strip()
-
         try:
-            parsed = json.loads(raw)
-        except Exception:
-            parsed = {
+            return json.loads(raw)
+        except Exception as exc:
+            logger.warning(
+                "JSON parse failed (%s). Raw content was:\n%s",
+                exc,
+                raw,
+            )
+            return {
                 "where": "skipped",
                 "what": "skipped",
                 "why": "skipped",
                 "fix": "skipped",
             }
-
-        # TODO Normalize / cleanup here?
-
-        return parsed
 
     def run(self, repo: RepositoryIO) -> Iterator[SastResult]:
         """Iterate every file in repo and yield a SastResult for each."""
@@ -85,13 +93,6 @@ class SastAgent:
             )
 
     def analyze(self, text: str) -> Dict[str, Any]:
-        """Return a dict with:
-        {
-            "where": file:startLine-endLine,
-            "what": "...",
-            "why": "...",
-            "fix": "..."
-        }
-        """
+        """Return a dict with where/what/why/fix keys."""
         raw = self._call_llm_raw(text)
         return self._parse_json(raw)

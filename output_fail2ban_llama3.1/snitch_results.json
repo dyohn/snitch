@@ -1,0 +1,650 @@
+[
+  {
+    "filename": "setup.py",
+    "filepath": "../fail2ban/setup.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "protocol.py",
+    "filepath": "../fail2ban/fail2ban/protocol.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "setup.py",
+    "filepath": "../fail2ban/fail2ban/setup.py",
+    "where": "file1.py:2-4",
+    "what": "License file not being checked for updates",
+    "why": "Potential security issues if newer version contains vulnerabilities.",
+    "fix": "Consider adding a check to update the license file periodically or when the application starts."
+  },
+  {
+    "filename": "csocket.py",
+    "filepath": "../fail2ban/fail2ban/client/csocket.py",
+    "where": "filename:12-14",
+    "what": "Insecure use of cPickle module for serialization and deserialization.",
+    "why": "Potential RCE vulnerability due to lack of input validation, error handling, and secure coding practices.",
+    "fix": "Replace cPickle with pickle module. Implement proper input validation, error handling, and secure coding practices."
+  },
+  {
+    "filename": "fail2bancmdline.py",
+    "filepath": "../fail2ban/fail2ban/client/fail2bancmdline.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "configparserinc.py",
+    "filepath": "../fail2ban/fail2ban/client/configparserinc.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "jailreader.py",
+    "filepath": "../fail2ban/fail2ban/client/jailreader.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "configreader.py",
+    "filepath": "../fail2ban/fail2ban/client/configreader.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "actionreader.py",
+    "filepath": "../fail2ban/fail2ban/client/actionreader.py",
+    "where": "filename:10-13",
+    "what": "Potential SQL Injection vulnerability in CommandAction",
+    "why": "The `CommandAction` class does not properly sanitize user input, allowing for potential SQL injection attacks.",
+    "fix": "Implement proper sanitization of user input and parameterize database queries to prevent SQL injection."
+  },
+  {
+    "filename": "filterreader.py",
+    "filepath": "../fail2ban/fail2ban/client/filterreader.py",
+    "where": "filterReader.py:9-10",
+    "what": "Potential cross-site scripting (XSS) vulnerability due to missing validation of user input.",
+    "why": "If user input is not properly sanitized, an attacker could inject malicious JavaScript code that would be executed by the client's web browser.",
+    "fix": "Use a library like html.escape or bleach to sanitize user input and prevent XSS attacks."
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../fail2ban/fail2ban/client/__init__.py",
+    "where": "filename:9-11",
+    "what": "Hardcoded secret/credential",
+    "why": "The file contains hardcoded credentials, specifically 'Cyril Jaquier' and contact information. This is a security risk as it can be used by an attacker to impersonate the author.",
+    "fix": "Remove or replace hardcoded credentials with environment variables or secure storage."
+  },
+  {
+    "filename": "jailsreader.py",
+    "filepath": "../fail2ban/fail2ban/client/jailsreader.py",
+    "where": "fail2ban.py:7-8",
+    "what": "Insecure use of hardcoded credentials",
+    "why": "Hardcoded string may contain sensitive information that can be used to identify the author or system, leading to unauthorized access.",
+    "fix": "Use environment variables or configuration files to store sensitive information instead of hardcoding it in the code."
+  },
+  {
+    "filename": "configurator.py",
+    "filepath": "../fail2ban/fail2ban/client/configurator.py",
+    "where": "fail2ban.py:7-7",
+    "what": "Insecure import statement with relative path (. helpers)",
+    "why": "Relative imports can lead to package conflicts and break the application. This should be avoided.",
+    "fix": "Change the import statement to use absolute paths or refactor the code to avoid using relative imports."
+  },
+  {
+    "filename": "fail2banregex.py",
+    "filepath": "../fail2ban/fail2ban/client/fail2banregex.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fail2banserver.py",
+    "filepath": "../fail2ban/fail2ban/client/fail2banserver.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fail2banclient.py",
+    "filepath": "../fail2ban/fail2ban/client/fail2banclient.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fail2banreader.py",
+    "filepath": "../fail2ban/fail2ban/client/fail2banreader.py",
+    "where": "fail2ban_reader.py:8-12",
+    "what": "Hardcoded secret/credential",
+    "why": "The logtarget '/var/log/fail2ban.log' is hardcoded in the code, which can be a security risk if it's not properly sanitized.",
+    "fix": "Replace the hardcoded value with a configurable one or use environment variables."
+  },
+  {
+    "filename": "beautifier.py",
+    "filepath": "../fail2ban/fail2ban/client/beautifier.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "asyncore.py",
+    "filepath": "../fail2ban/fail2ban/compat/asyncore.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "asynchat.py",
+    "filepath": "../fail2ban/fail2ban/compat/asynchat.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../fail2ban/fail2ban/__init__.py",
+    "where": "time.py:26-27",
+    "what": "Insecure Use of `strptime` Function",
+    "why": "The `strptime` function is called without checking if it's been already initialized, which can lead to thread safety issues.",
+    "fix": "Use a thread-safe equivalent like `time.strptime` instead of calling `strptime` directly."
+  },
+  {
+    "filename": "observer.py",
+    "filepath": "../fail2ban/fail2ban/server/observer.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "mytime.py",
+    "filepath": "../fail2ban/fail2ban/server/mytime.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "failmanager.py",
+    "filepath": "../fail2ban/fail2ban/server/failmanager.py",
+    "where": "FailManager.py:4-5",
+    "what": "Insecure use of threading.Lock",
+    "why": "Can lead to denial-of-service (DoS) attack if an attacker is able to starve the lock.",
+    "fix": "Consider using a lock-free data structure or implementing a more robust locking mechanism."
+  },
+  {
+    "filename": "strptime.py",
+    "filepath": "../fail2ban/fail2ban/server/strptime.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "utils.py",
+    "filepath": "../fail2ban/fail2ban/server/utils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "jailthread.py",
+    "filepath": "../fail2ban/fail2ban/server/jailthread.py",
+    "where": "jail_thread.py:1-8",
+    "what": "Insecure use of excepthook to handle exceptions in threads.",
+    "why": "Using `excepthook` directly in a thread can lead to issues like exception being caught by the main thread's excepthook, causing unexpected behavior.",
+    "fix": "Implement a thread-safe logging mechanism or customize error handling for each thread."
+  },
+  {
+    "filename": "database.py",
+    "filepath": "../fail2ban/fail2ban/server/database.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "action.py",
+    "filepath": "../fail2ban/fail2ban/server/action.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "jails.py",
+    "filepath": "../fail2ban/fail2ban/server/jails.py",
+    "where": "filename:14-18",
+    "what": "Insecure use of thread-local storage (TLS)",
+    "why": "TLS can be used to store sensitive information, but it's not secure if not properly handled. In this case, the Lock object is used in a way that may lead to a race condition.",
+    "fix": "Use a more robust synchronization mechanism, such as a mutex or a lock-free data structure."
+  },
+  {
+    "filename": "jail.py",
+    "filepath": "../fail2ban/fail2ban/server/jail.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "banmanager.py",
+    "filepath": "../fail2ban/fail2ban/server/banmanager.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "filterpoll.py",
+    "filepath": "../fail2ban/fail2ban/server/filterpoll.py",
+    "where": "filter.py:43-44",
+    "what": "Potential logging vulnerability",
+    "why": "Malicious data or code injection through log file path manipulation.",
+    "fix": "Validate and sanitize user-input data, use parameterized queries or prepared statements (if applicable)"
+  },
+  {
+    "filename": "filterpyinotify.py",
+    "filepath": "../fail2ban/fail2ban/server/filterpyinotify.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "datetemplate.py",
+    "filepath": "../fail2ban/fail2ban/server/datetemplate.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "filter.py",
+    "filepath": "../fail2ban/fail2ban/server/filter.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "failregex.py",
+    "filepath": "../fail2ban/fail2ban/server/failregex.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "actions.py",
+    "filepath": "../fail2ban/fail2ban/server/actions.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "transmitter.py",
+    "filepath": "../fail2ban/fail2ban/server/transmitter.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../fail2ban/fail2ban/server/__init__.py",
+    "where": "filename:6-7",
+    "what": "Potential hardcoded credentials",
+    "why": "The code includes a comment with an email address and physical location of the Free Software Foundation, which could potentially be used for phishing or other malicious purposes.",
+    "fix": "Remove any comments containing sensitive information."
+  },
+  {
+    "filename": "asyncserver.py",
+    "filepath": "../fail2ban/fail2ban/server/asyncserver.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "server.py",
+    "filepath": "../fail2ban/fail2ban/server/server.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "ipdns.py",
+    "filepath": "../fail2ban/fail2ban/server/ipdns.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "ticket.py",
+    "filepath": "../fail2ban/fail2ban/server/ticket.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "filtersystemd.py",
+    "filepath": "../fail2ban/fail2ban/server/filtersystemd.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "datedetector.py",
+    "filepath": "../fail2ban/fail2ban/server/datedetector.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "exceptions.py",
+    "filepath": "../fail2ban/fail2ban/exceptions.py",
+    "where": "fail2ban_exceptions.py:1-5",
+    "what": "Potential security risk due to hardcoded copyright notice with sensitive information (USA address)",
+    "why": "The hardcoded copyright notice includes the address of the Free Software Foundation, which could be used for malicious purposes.",
+    "fix": "Remove or modify the hardcoded copyright notice to avoid exposing sensitive information."
+  },
+  {
+    "filename": "helpers.py",
+    "filepath": "../fail2ban/fail2ban/helpers.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "version.py",
+    "filepath": "../fail2ban/fail2ban/version.py",
+    "where": "fail2ban.py:9-13",
+    "what": "Insecure path traversal due to hardcoded string concatenation",
+    "why": "Concatenating user input or external data into paths can lead to arbitrary file access attacks. In this case, the version number is concatenated with '.' and possibly other characters in normVersion().",
+    "fix": "Avoid using string concatenation for building paths. Instead, use os.path.join() or a library that handles path manipulation securely."
+  },
+  {
+    "filename": "samplestestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/samplestestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "utils.py",
+    "filepath": "../fail2ban/fail2ban/tests/utils.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "observertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/observertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "fail2banregextestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/fail2banregextestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "clientbeautifiertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/clientbeautifiertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "test_smtp.py",
+    "filepath": "../fail2ban/fail2ban/tests/action_d/test_smtp.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../fail2ban/fail2ban/tests/action_d/__init__.py",
+    "where": "fail2ban.py:1-6",
+    "what": "Insecure license declaration",
+    "why": "The license declared in the file is GPL version 2. However, some of the lines are not wrapped properly which may lead to issues when editing or modifying the code.",
+    "fix": "Ensure that all lines are properly indented and wrapped for easier reading and modification."
+  },
+  {
+    "filename": "actiontestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/actiontestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "tickettestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/tickettestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "misctestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/misctestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "action_nomethod.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action_nomethod.py",
+    "where": "test.py:2-5",
+    "what": "Insecure Class/Interface Implementation",
+    "why": "The TestAction class has no implementation, which can lead to unexpected behavior and security vulnerabilities when instances of this class are created.",
+    "fix": "Implement the TestAction class by adding methods for jail and name initialization, start action execution, and other necessary functionality."
+  },
+  {
+    "filename": "action_checkainfo.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action_checkainfo.py",
+    "where": "fail2ban_server_action.py:8-9",
+    "what": "Potential Command Injection",
+    "why": "The code uses string formatting to log IP addresses and failure counts without properly sanitizing user input. This could allow an attacker to inject malicious commands.",
+    "fix": "Use a safe logging method, such as the `logging` module's built-in support for formatting values using `%r`, or switch to a secure logging library like Loguru. Additionally, consider using parameterized queries or prepared statements if interacting with a database."
+  },
+  {
+    "filename": "action.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action.py",
+    "where": "test.py:6-6",
+    "what": "Hardcoded secret/credential",
+    "why": "The string 'Hello' is hardcoded as an instance variable and potentially sensitive information. If this value were to be compromised, it could lead to unauthorized access or other security issues.",
+    "fix": "Instead of hardcoding the secret, consider setting it through a configuration file or environment variable."
+  },
+  {
+    "filename": "action_modifyainfo.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action_modifyainfo.py",
+    "where": "server.py:2-3",
+    "what": "Hardcoded IP address deletion in ban and unban methods",
+    "why": "Deleting IP addresses from the aInfo dictionary can lead to security vulnerabilities, as it may prevent the system from tracking valid bans or unban actions.",
+    "fix": "Instead of deleting 'ip' from aInfo, consider removing it when necessary by setting it to None or using del to delete the key only when you are sure it is safe to do so."
+  },
+  {
+    "filename": "action_noAction.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action_noAction.py",
+    "where": "fail2ban/server/action.py:1-3",
+    "what": "Unused import",
+    "why": "The import 'from fail2ban.server.action import ActionBase' is unused in this code snippet. This can be a sign of poor code organization or a copy-paste error.",
+    "fix": "Remove the unused import statement to declutter the code and improve maintainability."
+  },
+  {
+    "filename": "action_errors.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/action.d/action_errors.py",
+    "where": "action.py:4-8",
+    "what": "Unhandled Exceptions",
+    "why": "Raising an exception without error handling can lead to application crashes or unexpected behavior.",
+    "fix": "Add try-except blocks around the start, stop, ban, and unban methods to handle potential errors."
+  },
+  {
+    "filename": "ignorecommand.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/ignorecommand.py",
+    "where": "filename:3-4",
+    "what": "Insecure Path Traversal",
+    "why": "The script does not properly validate user input when checking for specific IP addresses. This can lead to potential path traversal attacks.",
+    "fix": "Validate user input more strictly, for example, by using regular expressions to check for valid IP addresses."
+  },
+  {
+    "filename": "digest.py",
+    "filepath": "../fail2ban/fail2ban/tests/files/config/apache-auth/digest.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "__init__.py",
+    "filepath": "../fail2ban/fail2ban/tests/__init__.py",
+    "where": "filename:3-3",
+    "what": "Potential SQL injection vulnerability",
+    "why": "The use of string formatting with untrusted input can lead to SQL injection attacks, which allow attackers to inject malicious SQL code and potentially extract or modify sensitive data.",
+    "fix": "Use parameterized queries instead of string formatting. For example, you can use the `sqlite3` module's `paramstyle='qmark'` parameter."
+  },
+  {
+    "filename": "fail2banclienttestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/fail2banclienttestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "failmanagertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/failmanagertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "dummyjail.py",
+    "filepath": "../fail2ban/fail2ban/tests/dummyjail.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "clientreadertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/clientreadertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "servertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/servertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "datedetectortestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/datedetectortestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "databasetestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/databasetestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "filtertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/filtertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "banmanagertestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/banmanagertestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "sockettestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/sockettestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "actionstestcase.py",
+    "filepath": "../fail2ban/fail2ban/tests/actionstestcase.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "conf.py",
+    "filepath": "../fail2ban/doc/conf.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  },
+  {
+    "filename": "smtp.py",
+    "filepath": "../fail2ban/config/action.d/smtp.py",
+    "where": "skipped",
+    "what": "skipped",
+    "why": "skipped",
+    "fix": "skipped"
+  }
+]

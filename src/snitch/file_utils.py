@@ -17,7 +17,7 @@ def read_all_from_folder(path: Path) -> list[tuple[Path, str]]:
     for entry in path.iterdir():
         if entry.is_symlink():
             continue
-        if entry.is_file():
+        if entry.is_file() and entry.suffix == ".py":
             results.append((entry, read_sourcecode(entry)))
         elif entry.is_dir():
             results.extend(read_all_from_folder(entry))
