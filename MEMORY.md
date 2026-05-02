@@ -46,6 +46,10 @@ Collaborator fixed the core JSON parsing problem: the LLM wraps its JSON object 
 
 `file_utils.read_all_from_folder` — `entry.suffix == ".py"` guard restored so non-Python files are skipped. Reverted in the collaborator merge; reapplied by request.
 
+## `generate_diagrams.py` — PDF diagram generator (2026-05-02)
+
+Standalone script at repo root. `--diagram {snitch-components,experimental-pipeline,all}` CLI. Saves each figure as a PDF plus a companion `_data.json` to `diagrams/`. Color palette: `_BLUE` (Snitch modules), `_YELLOW` (external/human), `_GRAY` dashed (boundaries), `_GREEN` (output metrics), `_PURPLE` (Bandit baseline). Key implementation note: `FancyBboxPatch` with `boxstyle="round,pad=0.04"` renders the visible border 0.04 data units beyond the specified coordinates — fork arrow destinations and arc start/end points must account for this offset to avoid overlapping the border.
+
 ## Logging instrumentation reapplied (2026-04-15)
 
 `sast_agent.py` — `logger = logging.getLogger(__name__)` added. DEBUG log emits raw LLM response; WARNING logs fire on both parse failure paths (regex extraction and final fallback). `run_snitch.py` — `logging.basicConfig` configured in `main()`: DEBUG level when `--verbose` is set, WARNING otherwise.

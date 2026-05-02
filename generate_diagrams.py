@@ -23,9 +23,11 @@ DIAGRAMS_DIR = Path("diagrams")
 # Color palette
 # ---------------------------------------------------------------------------
 
-_BLUE = dict(fc="#dbeafe", ec="#1d4ed8", lw=1.8)  # snitch module
-_YELLOW = dict(fc="#fef9c3", ec="#b45309", lw=1.8)  # external entity
-_GRAY = dict(fc="#f1f5f9", ec="#64748b", lw=1.5, ls="--")  # pkg boundary
+_BLUE = dict(fc="#dbeafe", ec="#1d4ed8", lw=1.8)    # snitch module
+_YELLOW = dict(fc="#fef9c3", ec="#b45309", lw=1.8)  # external / human
+_GRAY = dict(fc="#f1f5f9", ec="#64748b", lw=1.5, ls="--")  # boundary
+_GREEN = dict(fc="#dcfce7", ec="#166534", lw=1.8)   # output metric
+_PURPLE = dict(fc="#ede9fe", ec="#6d28d9", lw=1.8)  # Bandit baseline
 
 _C_ARROW = "#1e3a5f"
 _C_HTTP = "#7c3aed"
@@ -327,11 +329,174 @@ def diagram_snitch_components() -> None:
 
 
 # ---------------------------------------------------------------------------
+# Diagram: Experimental pipeline overview
+# ---------------------------------------------------------------------------
+
+
+def diagram_experimental_pipeline() -> None:
+    fig, ax = plt.subplots(figsize=(8.5, 11))
+    ax.set_xlim(0, 8.5)
+    ax.set_ylim(0, 11)
+    ax.set_aspect("auto")
+    ax.axis("off")
+
+    C_LN = _C_ARROW
+    LW = 1.4
+
+    # ── Target repositories ──────────────────────────────────────────────────
+
+    repos = [("Beaverhabits", 1.5), ("Fail2ban", 4.25), ("Yum", 7.0)]
+    for name, cx in repos:
+        _box(ax, cx, 10.2, 1.8, 0.6, name, style=_YELLOW)
+
+    # ── Bus bar and fork to parallel scan tracks ─────────────────────────────
+
+    Y_REPO_BOT = 9.9    # repo center 10.2 − h/2 0.3
+    Y_BUS = 9.55
+    Y_FORK = 9.0
+    CX_BANDIT = 2.0
+    CX_SNITCH = 5.75    # center of Snitch boundary
+
+    for cx in [r[1] for r in repos]:
+        ax.plot([cx, cx], [Y_REPO_BOT, Y_BUS], color=C_LN, lw=LW, zorder=2)
+    ax.plot([1.5, 7.0], [Y_BUS, Y_BUS], color=C_LN, lw=LW, zorder=2)
+    ax.plot([4.25, 4.25], [Y_BUS, Y_FORK], color=C_LN, lw=LW, zorder=2)
+    ax.plot(
+        [CX_BANDIT, CX_SNITCH], [Y_FORK, Y_FORK], color=C_LN, lw=LW, zorder=2
+    )
+
+    # ── Parallel scan tracks ─────────────────────────────────────────────────
+
+    Y_SCAN = 7.85
+
+    # Left track — Bandit
+    _box(ax, CX_BANDIT, Y_SCAN, 2.2, 0.75,
+         "Bandit", "Baseline SAST Tool", style=_PURPLE)
+    ax.annotate(
+        "", xy=(CX_BANDIT, Y_SCAN + 0.375 + 0.04), xytext=(CX_BANDIT, Y_FORK),
+        arrowprops=dict(arrowstyle="->", color=C_LN, lw=LW,
+                        shrinkA=0, shrinkB=0),
+        zorder=2,
+    )
+
+    # Right track — Snitch (three model sub-tracks)
+    SN_LEFT, SN_W = 3.5, 4.5
+    SN_BOT, SN_H = 7.35, 1.1
+    ax.add_patch(FancyBboxPatch(
+        (SN_LEFT, SN_BOT), SN_W, SN_H,
+        boxstyle="round,pad=0.04",
+        facecolor=_GRAY["fc"],
+        edgecolor=_GRAY["ec"],
+        linewidth=_GRAY["lw"],
+        linestyle=_GRAY["ls"],
+        zorder=1, clip_on=False,
+    ))
+    ax.text(
+        SN_LEFT + 0.15, SN_BOT + SN_H - 0.07,
+        "«scanner»  Snitch",
+        fontsize=7.5, color="#64748b", style="italic", zorder=4, va="top",
+    )
+    for label, cx in [("gemma3", 4.3), ("llama3.1", 5.75), ("qwen2.5", 7.2)]:
+        _box(ax, cx, Y_SCAN - 0.05, 1.1, 0.58, label, style=_BLUE)
+
+    ax.annotate(
+        "", xy=(CX_SNITCH, SN_BOT + SN_H + 0.04), xytext=(CX_SNITCH, Y_FORK),
+        arrowprops=dict(arrowstyle="->", color=C_LN, lw=LW,
+                        shrinkA=0, shrinkB=0),
+        zorder=2,
+    )
+
+    # ── Pass 1: generate review listings ────────────────────────────────────
+
+    Y_P1 = 5.7
+    _box(ax, 4.25, Y_P1, 5.5, 0.85,
+         "Pass 1",
+         "Generate Review Listings & Annotation Template",
+         style=_BLUE)
+
+    # Bandit → Pass 1 (arcs left, away from Snitch region)
+    _arrow(ax, CX_BANDIT, Y_SCAN, 4.25, Y_P1, rad=-0.3)
+    # Snitch boundary bottom → Pass 1
+    ax.annotate(
+        "", xy=(4.25, Y_P1), xytext=(CX_SNITCH, SN_BOT - 0.04),
+        arrowprops=dict(arrowstyle="->", color=C_LN, lw=LW,
+                        connectionstyle="arc3,rad=0.2",
+                        shrinkA=0, shrinkB=10),
+        zorder=2,
+    )
+
+    # ── Manual annotation (human step) ───────────────────────────────────────
+
+    Y_MAN = 4.2
+    _box(ax, 4.25, Y_MAN, 4.2, 0.72,
+         "Manual Annotation",
+         "Analyst reviews side-by-side listings",
+         style=_YELLOW)
+    _arrow(ax, 4.25, Y_P1, 4.25, Y_MAN)
+
+    # ── Pass 2: score computation ─────────────────────────────────────────────
+
+    Y_P2 = 2.85
+    _box(ax, 4.25, Y_P2, 5.5, 0.85,
+         "Pass 2",
+         "Cross-Reference & Score Computation",
+         style=_BLUE)
+    _arrow(ax, 4.25, Y_MAN, 4.25, Y_P2)
+
+    # ── Output metrics ───────────────────────────────────────────────────────
+
+    Y_MET = 1.5
+    for label, cx in [("Recall", 1.8), ("FP Rate", 4.25), ("Composite Score", 6.7)]:
+        _box(ax, cx, Y_MET, 2.0, 0.65, label, style=_GREEN)
+
+    _arrow(ax, 4.25, Y_P2, 1.8, Y_MET, rad=0.25)
+    _arrow(ax, 4.25, Y_P2, 4.25, Y_MET)
+    _arrow(ax, 4.25, Y_P2, 6.7, Y_MET, rad=-0.25)
+
+    # ── Legend ───────────────────────────────────────────────────────────────
+
+    ax.legend(
+        handles=[
+            mpatches.Patch(
+                fc=_YELLOW["fc"], ec=_YELLOW["ec"],
+                lw=1.5, label="External / Human Step",
+            ),
+            mpatches.Patch(
+                fc=_PURPLE["fc"], ec=_PURPLE["ec"],
+                lw=1.5, label="Bandit (Baseline SAST)",
+            ),
+            mpatches.Patch(
+                fc=_BLUE["fc"], ec=_BLUE["ec"],
+                lw=1.5, label="Automated Stage",
+            ),
+            mpatches.Patch(
+                fc=_GREEN["fc"], ec=_GREEN["ec"],
+                lw=1.5, label="Output Metric",
+            ),
+        ],
+        loc="lower right",
+        fontsize=7.5,
+        framealpha=0.9,
+    )
+
+    ax.set_title(
+        "Experimental Pipeline Overview",
+        fontsize=13, fontweight="bold", pad=12,
+    )
+
+    _save(fig, "experimental_pipeline", {
+        "repos": [r[0] for r in repos],
+        "models": ["gemma3", "llama3.1", "qwen2.5"],
+    })
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
 DIAGRAMS = {
     "snitch-components": diagram_snitch_components,
+    "experimental-pipeline": diagram_experimental_pipeline,
 }
 
 

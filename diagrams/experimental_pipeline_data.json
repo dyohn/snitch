@@ -1,0 +1,12 @@
+{
+  "repos": [
+    "Beaverhabits",
+    "Fail2ban",
+    "Yum"
+  ],
+  "models": [
+    "gemma3",
+    "llama3.1",
+    "qwen2.5"
+  ]
+}
